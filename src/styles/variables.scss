@@ -1,0 +1,149 @@
+@import '../fonts/stylesheet.css';
+
+$gilroy: "Gilroy";
+$gilroyBold: "GilroyBold";
+$gilroyHeavy: "GiloryHeavy";
+$gilroyExtraBold: "GilroyExtraBold";
+$gilroySemiBold: "GilroySemiBold";
+$gilroyLight: "GilroyLight";
+$gilroyMedium: "GilroyMedium";
+$openSans: "OpenSans";
+$openSansSemiBold: "OpenSansSemiBold";
+$openSansLight: 'OpenSansLight';
+$FARegular: 'FARegular';
+
+$containerMargin1: 105px;
+$containerMargin2: 70px;
+$containerMargin3: 20px;
+
+$color1: #f3f3f3;
+$color2: #e87b5a;
+
+$paddingButtonMax: clamp(30px, 2vmax, 40px);
+$paddingButtonMid: clamp(10px, 2vmax, 30px);
+$paddingButtonSmall: clamp(5px, 3vmax, 30px);
+
+@mixin container($margin: $containerMargin1 ) {
+  margin: 0 $margin;
+  box-sizing: border-box;
+  @media (max-width: 1600px) {
+    margin: 0 $containerMargin2;
+  }
+  @media (max-width: 1199px) {
+    margin: 0 $containerMargin3;
+  }
+}
+
+@mixin font14 {
+  font-size: 14px;
+  line-height: 1;
+  @media (max-width: 1000px) {
+    font-size: 12px;
+  }
+}
+@mixin font16 {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  @media (max-width: 1366px) {
+    line-height: 26px;
+  }
+/*  @media (max-width: 1000px) {
+    font-size: 1.8229vw;
+  }*/
+
+}
+@mixin font22 {
+  font-size: max(1.15vw, 16px);
+  line-height: 1;
+}
+@mixin font24 {
+  font-size: max(1.25vw, 16px);
+  line-height: 1;
+}
+@mixin font26 {
+  font-size: max(1.35vw, 18px);
+  line-height: 1.154;
+}
+@mixin font30 {
+  font-size: max(1.5625vw, 22px);
+  line-height: 1;
+}
+@mixin font38 {
+  font-size: max(1.9792vw, 26px);
+  line-height: 1;
+/*  @media (max-width: 1366px) {
+    font-size: 1.9030vw;
+  }
+  @media (max-width: 1000px) {
+    font-size: 3.3854vw;
+  }*/
+}
+@mixin font44 {
+  font-size: max(2.29vw, 32px);
+  @media (max-width: 1366px) {
+    font-size: 2.34vw;
+  }
+  @media (max-width: 1000px) {
+    font-size: 4.1667vw;
+  }
+}
+@mixin font140 {
+  font-size: 7.2917vw;
+  line-height: 1;
+  @media (max-width: 1366px) {
+    font-size: 7.3161vw;
+  }
+  @media (max-width: 1000px) {
+    font-size:  7.8125vw;
+  }
+}
+
+@mixin buttonSVG($deg) {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px #e87b5a solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: 0.3s;
+  cursor: pointer;
+  svg {
+    width: 20px;
+    height: auto;
+    margin: 0;
+    transform: rotate($deg);
+  }
+  &.arr {
+    transition: 0.3s;
+  }
+}
+
+@mixin button($bg: transparent , $hoverBg: #e87b5a) {
+  font-family: $openSansSemiBold;
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 1px solid #e87b5a;
+  color: white;
+  background: $bg;
+  cursor: pointer;
+  &:hover {
+    background: $hoverBg;
+  }
+}
+
+
+@mixin shadowBig {
+  -webkit-box-shadow: -6px 5px 27px 0px rgba(1, 2, 2, 0.4);
+  -moz-box-shadow: -6px 5px 27px 0px rgba(1, 2, 2, 0.4);
+  box-shadow: -6px 5px 27px 0px rgba(1, 2, 2, 0.4);
+}
+
+@mixin shadowSmall {
+  -webkit-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  -moz-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+}
