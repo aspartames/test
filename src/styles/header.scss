@@ -10,30 +10,30 @@ $concaveBottomLeft: bottomLeft;
     position: absolute;
     width: 20px;
     height: 20px;
-    padding:23px 25px;
+    padding:13px 15px;
     @if $position == bottomLeft {
       background:-moz-radial-gradient(0 100%, circle, rgba(204,0,0,0) 24px, $color1 25px);
       background:-o-radial-gradient(0 100%, circle, rgba(204,0,0,0) 24px, $color1 25px);
-      background:-webkit-radial-gradient(0 100%, circle, rgba(204,0,0,0) 24px, $color1 25px);
+      background:-webkit-radial-gradient(0 100%, circle, rgba(204,0,0,0) 14px, $color1 15px);
       background-position: bottom left;
       -moz-background-size:50% 50%;
       -webkit-background-size:50% 50%;
       background-size:50% 50%;
       background-repeat:no-repeat;
-      bottom: -24px;
-      right: -36px;
+      bottom: -14px;
+      right: -34px;
     }
     @if $position == topRight {
       background:-moz-radial-gradient(100% 0, circle, rgba(204,0,0,0) 24px, $color1 25px);
       background:-o-radial-gradient(100% 0, circle, rgba(204,0,0,0) 24px, $color1 25px);
-      background:-webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 24px, $color1 15px);
+      background:-webkit-radial-gradient(100% 0, circle, rgba(204,0,0,0) 14px, $color1 15px);
       background-position: bottom right;
       -moz-background-size:50% 50%;
       -webkit-background-size:50% 50%;
       background-size:50% 50%;
       background-repeat:no-repeat;
-      bottom: 0;
-      right: -24px;
+      bottom: 1px;
+      right: -14px;
     }
   }
 }
@@ -42,7 +42,14 @@ $concaveBottomLeft: bottomLeft;
   position: fixed;
   width: 100vw;
   z-index: 100;
-  padding: 22px $containerMargin1;
+  padding: 20px $containerMargin1;
+  & li{
+    list-style-type: none;
+  }
+  @media (max-width: 1600px) {
+    padding: 22px $containerMargin2;
+
+  }
 }
 
 .header_container {
@@ -59,7 +66,7 @@ $concaveBottomLeft: bottomLeft;
 
   & h1 {
     font-family: $gilroyExtraBold;
-    font-size: 26px;
+    @include font26;
     line-height: 30px;
     margin: 0;
     color: white;
@@ -72,15 +79,24 @@ $concaveBottomLeft: bottomLeft;
   justify-content: space-between;
   align-items: center;
   background: white;
-  border-radius: 40px;
-  & nav {
-    display: flex;
-    justify-content: space-between;
-    width: 980px;
-  }
+  border-radius: 60px;
+  width: 100%;
+  position: relative;
+}
+
+.header_nav{
+  width: 980px;
   & a:hover{
     color: $color2;
   }
+}
+.header_nav_list{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 $paddingOverlay: 24px;
@@ -91,15 +107,15 @@ $paddingOverlayClasses: $paddingOverlay - $paddingYellowClasses;
   align-items: center;
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
 }
-.header_nav_item_wrapper{
+.header_nav_item_overlay{
   position: relative;
   display: flex;
   align-items: center;
   padding: $paddingOverlay;
-  &.overlay{
+  &.hover{
     background: $color1;
     height: calc(100% - 10px);
-    border-radius: 30px 30px 0 0;
+    border-radius: 40px 30px 0 0;
     @include concave($concaveTopRight);
   }
   &.classes{
@@ -121,15 +137,14 @@ $paddingOverlayClasses: $paddingOverlay - $paddingYellowClasses;
     display: flex;
     align-items: center;
     & span{
+      @include font22;
       font-family: $gilroySemiBold;
-      font-size: 22px;
       line-height: 30px;
     }
     &.classes{
       padding-left: 0;
     }
-
-  }
+}
 
 .theme_toggle_header {
   border: 1px solid $color2;
@@ -139,7 +154,7 @@ $paddingOverlayClasses: $paddingOverlay - $paddingYellowClasses;
   display: inline-block;
   width: 18px;
   height: 18px;
-  margin-right: 14px;
+  margin-right: 12px;
   & span {
     position: absolute;
     display: block;
@@ -165,7 +180,7 @@ $paddingOverlayClasses: $paddingOverlay - $paddingYellowClasses;
   margin-left: 10px;
 }
 
-.header_nav_item_list{
+.header_nav_drop_list{
   background: $color1;
   position: absolute;
   left: 0;
@@ -175,58 +190,78 @@ $paddingOverlayClasses: $paddingOverlay - $paddingYellowClasses;
   border-radius: 0 30px 30px 30px;
   margin: 0;
   z-index: 999;
-  & li{
-    font-family: $gilroyMedium;
-    list-style-type: none;
-    font-size: 20px;
-    line-height: 46px;
-    white-space: nowrap;
-  }
+
 }
 .classes_list{
   @include concave($concaveBottomLeft);
   padding: 4px 12px 12px 0;
   border-radius: 0 0 0 20px;
-  & li{
-    font-family: $gilroyMedium;
-    list-style-type: none;
-    font-size: 32px;
-    line-height: 54px;
-    white-space: nowrap;
-    background: white;
-    border-radius: 0 30px 30px 0 ;
-    padding-left: 64px;
-    padding-right: 24px;
-    margin: 10px 0;
-    & img{
-      margin-left: 52px;
-    }
+
+}
+.header_drop_list_item{
+  font-family: $gilroyMedium;
+  list-style-type: none;
+  /*font-size: 20px;*/
+  font-size: max(1.15vw, 16px);
+  line-height: 46px;
+  white-space: nowrap;
+}
+.classesDropItem{
+  font-family: $gilroyMedium;
+  list-style-type: none;
+  font-size: 32px;
+  line-height: 54px;
+  background: white;
+  border-radius: 0 20px 20px 0 ;
+  padding-left: 66px;
+  padding-right: 24px;
+  margin: 10px 0;
+  & img{
+    margin-left: 52px;
   }
 }
 
-
 .header_classes_content{
+  $left: calc(var(--headerNavDropListWidth) + 11px);
   background: $color1;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translate(calc(100% - 10px), calc(100% - 10px));
+  left: $left;
+  top: 0;
   padding: 30px;
   border-radius: 0 20px 20px 20px;
   margin: 0;
   z-index: 345;
-  width: 51.7vw !important;
+  width: calc(var(--headerNavContainerWidth) - $left) !important;
   height: 680px;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: wrap;
 }
-
-.header_classes_content_item{
-  width: 50%;
+.header_classes_content_list{
+  display: flex;
+  flex-flow: column wrap;
   background: #2da3d2;
+  white-space: normal;
+  height: 600px; ///////////////////////////////// установить высоту от переменной
+}
+.header_classes_content_item{
+  max-width: 50%;
   margin: 0;
   padding: 0;
-
 }
 
+.header_classes_title{
+  @include font16;
+  font-family: $gilroyExtraBold;
+}
+
+.header_classes_chapter{
+  background: #fca204;
+  @include font16;
+  font-family: $gilroyMedium;
+  list-style-type: none;
+  counter-reset: section;
+  padding-left: 0;
+  & li:before{
+    content: "§ " counter(section) ". ";
+    counter-increment: section;
+  }
+
+}

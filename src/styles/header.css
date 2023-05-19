@@ -1,9 +1,18 @@
+@charset "UTF-8";
 @import '../fonts/stylesheet.css';
 .header {
   position: fixed;
   width: 100vw;
   z-index: 100;
-  padding: 22px 105px;
+  padding: 20px 105px;
+}
+.header li {
+  list-style-type: none;
+}
+@media (max-width: 1600px) {
+  .header {
+    padding: 22px 70px;
+  }
 }
 
 .header_container {
@@ -21,7 +30,8 @@
 }
 .header_title_wrapper h1 {
   font-family: "GilroyExtraBold";
-  font-size: 26px;
+  font-size: max(1.35vw, 18px);
+  line-height: 1.154;
   line-height: 30px;
   margin: 0;
   color: white;
@@ -33,15 +43,25 @@
   justify-content: space-between;
   align-items: center;
   background: white;
-  border-radius: 40px;
+  border-radius: 60px;
+  width: 100%;
+  position: relative;
 }
-.header_nav_container nav {
-  display: flex;
-  justify-content: space-between;
+
+.header_nav {
   width: 980px;
 }
-.header_nav_container a:hover {
+.header_nav a:hover {
   color: #e87b5a;
+}
+
+.header_nav_list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .header_nav_item {
@@ -50,35 +70,35 @@
   filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
 }
 
-.header_nav_item_wrapper {
+.header_nav_item_overlay {
   position: relative;
   display: flex;
   align-items: center;
   padding: 24px;
 }
-.header_nav_item_wrapper.overlay {
+.header_nav_item_overlay.hover {
   background: #f3f3f3;
   height: calc(100% - 10px);
-  border-radius: 30px 30px 0 0;
+  border-radius: 40px 30px 0 0;
 }
-.header_nav_item_wrapper.overlay:after {
+.header_nav_item_overlay.hover:after {
   content: "";
   position: absolute;
   width: 20px;
   height: 20px;
-  padding: 23px 25px;
+  padding: 13px 15px;
   background: -moz-radial-gradient(100% 0, circle, rgba(204, 0, 0, 0) 24px, #f3f3f3 25px);
   background: -o-radial-gradient(100% 0, circle, rgba(204, 0, 0, 0) 24px, #f3f3f3 25px);
-  background: -webkit-radial-gradient(100% 0, circle, rgba(204, 0, 0, 0) 24px, #f3f3f3 15px);
+  background: -webkit-radial-gradient(100% 0, circle, rgba(204, 0, 0, 0) 14px, #f3f3f3 15px);
   background-position: bottom right;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
   background-size: 50% 50%;
   background-repeat: no-repeat;
-  bottom: 0;
-  right: -24px;
+  bottom: 1px;
+  right: -14px;
 }
-.header_nav_item_wrapper.classes {
+.header_nav_item_overlay.classes {
   padding: 10px;
   margin-right: 14px;
   height: 100%;
@@ -97,8 +117,9 @@
   align-items: center;
 }
 .header_nav_item_title span {
+  font-size: max(1.15vw, 16px);
+  line-height: 1;
   font-family: "GilroySemiBold";
-  font-size: 22px;
   line-height: 30px;
 }
 .header_nav_item_title.classes {
@@ -114,7 +135,7 @@
   display: inline-block;
   width: 18px;
   height: 18px;
-  margin-right: 14px;
+  margin-right: 12px;
 }
 .menu_icon span {
   position: absolute;
@@ -140,7 +161,7 @@
   margin-left: 10px;
 }
 
-.header_nav_item_list {
+.header_nav_drop_list {
   background: #f3f3f3;
   position: absolute;
   left: 0;
@@ -150,13 +171,6 @@
   border-radius: 0 30px 30px 30px;
   margin: 0;
   z-index: 999;
-}
-.header_nav_item_list li {
-  font-family: "GilroyMedium";
-  list-style-type: none;
-  font-size: 20px;
-  line-height: 46px;
-  white-space: nowrap;
 }
 
 .classes_list {
@@ -168,56 +182,104 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  padding: 23px 25px;
+  padding: 13px 15px;
   background: -moz-radial-gradient(0 100%, circle, rgba(204, 0, 0, 0) 24px, #f3f3f3 25px);
   background: -o-radial-gradient(0 100%, circle, rgba(204, 0, 0, 0) 24px, #f3f3f3 25px);
-  background: -webkit-radial-gradient(0 100%, circle, rgba(204, 0, 0, 0) 24px, #f3f3f3 25px);
+  background: -webkit-radial-gradient(0 100%, circle, rgba(204, 0, 0, 0) 14px, #f3f3f3 15px);
   background-position: bottom left;
   -moz-background-size: 50% 50%;
   -webkit-background-size: 50% 50%;
   background-size: 50% 50%;
   background-repeat: no-repeat;
-  bottom: -24px;
-  right: -36px;
+  bottom: -14px;
+  right: -34px;
 }
-.classes_list li {
+
+.header_drop_list_item {
+  font-family: "GilroyMedium";
+  list-style-type: none;
+  /*font-size: 20px;*/
+  font-size: max(1.15vw, 16px);
+  line-height: 46px;
+  white-space: nowrap;
+}
+
+.classesDropItem {
   font-family: "GilroyMedium";
   list-style-type: none;
   font-size: 32px;
   line-height: 54px;
-  white-space: nowrap;
   background: white;
-  border-radius: 0 30px 30px 0;
-  padding-left: 64px;
+  border-radius: 0 20px 20px 0;
+  padding-left: 66px;
   padding-right: 24px;
   margin: 10px 0;
 }
-.classes_list li img {
+.classesDropItem img {
   margin-left: 52px;
 }
 
 .header_classes_content {
   background: #f3f3f3;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  transform: translate(calc(100% - 10px), calc(100% - 10px));
+  left: calc(var(--headerNavDropListWidth) + 11px);
+  top: 0;
   padding: 30px;
   border-radius: 0 20px 20px 20px;
   margin: 0;
   z-index: 345;
-  width: 51.7vw !important;
+  width: calc(var(--headerNavContainerWidth) - (var(--headerNavDropListWidth) + 11px)) !important;
   height: 680px;
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+}
+
+.header_classes_content_list {
+  display: flex;
+  flex-flow: column wrap;
+  background: #2da3d2;
+  white-space: normal;
+  height: 600px;
 }
 
 .header_classes_content_item {
-  width: 50%;
-  background: #2da3d2;
+  max-width: 50%;
   margin: 0;
   padding: 0;
+}
+
+.header_classes_title {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  /*  @media (max-width: 1000px) {
+      font-size: 1.8229vw;
+    }*/
+  font-family: "GilroyExtraBold";
+}
+@media (max-width: 1366px) {
+  .header_classes_title {
+    line-height: 26px;
+  }
+}
+
+.header_classes_chapter {
+  background: #fca204;
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  /*  @media (max-width: 1000px) {
+      font-size: 1.8229vw;
+    }*/
+  font-family: "GilroyMedium";
+  list-style-type: none;
+  counter-reset: section;
+  padding-left: 0;
+}
+@media (max-width: 1366px) {
+  .header_classes_chapter {
+    line-height: 26px;
+  }
+}
+.header_classes_chapter li:before {
+  content: "§ " counter(section) ". ";
+  counter-increment: section;
 }
 
 /*# sourceMappingURL=header.css.map */
