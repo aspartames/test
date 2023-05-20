@@ -1,0 +1,5 @@
+:root {
+    --light: #f3f3f3;
+    --dark: #356390;
+    --theme: var(--light)
+}

@@ -1,0 +1,107 @@
+@import "../styles/variables";
+
+.theme_toggle_wrapper{
+  width: 150px;
+  height: 60px;
+  border: 1px solid $color1;
+  border-radius: 30px;
+  margin-right: 14px;
+  padding: 0 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &.header_theme_toggle{
+    border: 1px solid $color2;
+  }
+  @media (max-width: 1600px) {
+    width: 102px;
+    height: 42px;
+    padding: 0 8px;
+  }
+}
+.theme_eye{
+  width: 30px;
+  height: 20px;
+  margin: 0 8px;
+  @media (max-width: 1600px) {
+    width: 20px;
+    height: 14px;
+    margin: 1px 4px 0 4px;
+  }
+}
+
+input[type="checkbox"]{
+  position: relative;
+  top: 2px;
+  width: 72px;
+  height: 40px;
+  outline: none;
+  -webkit-appearance:none;
+  background: $color2;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+  &.dark{
+    background: #7292bc;
+  }
+  @media (max-width: 1600px) {
+    width: 50px;
+    height: 30px;
+  }
+}
+
+input[type="checkbox"]:before{
+  position: absolute;
+  content: "";
+  background: url("../images/sun.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  top: 10px;
+  left: 12px;
+  z-index: 0;
+  transition: 0.3s;
+  @media (max-width: 1600px) {
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    left: 8px;
+  }
+}
+
+input[type="checkbox"]:after{
+  position: absolute;
+  content: "";
+  background: url("../images/moon.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  top: 10px;
+  right: 12px;
+  z-index: 0;
+  transition: 0.3s;
+  opacity: 0;
+  transform: translateX(-143%);
+  @media (max-width: 1600px) {
+    width: 16px;
+    height: 16px;
+    top: 8px;
+    right: 8px;
+  }
+}
+
+input:checked[type="checkbox"]:before{
+  transform: translateX(143%);
+  opacity: 0;
+}
+
+input:checked[type="checkbox"]:after{
+  transform: translateX(-0%);
+  opacity: 1;
+}
