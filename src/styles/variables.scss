@@ -24,6 +24,8 @@ $paddingButtonMax: clamp(30px, 2vmax, 40px);
 $paddingButtonMid: clamp(10px, 2vmax, 30px);
 $paddingButtonSmall: clamp(5px, 3vmax, 30px);
 
+$transition: 0.3s;
+
 @mixin container($margin: $containerMargin1 ) {
   margin: 0 $margin;
   box-sizing: border-box;

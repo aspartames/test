@@ -14,7 +14,9 @@ body {
     font-size: 16px;
     overflow-x: hidden;
 }
-
+body.disableScroll{
+    overflow: hidden;
+}
 main {
     display: block;
     min-height: calc(100vh - 480px);
