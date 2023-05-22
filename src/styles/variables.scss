@@ -16,6 +16,7 @@ $FARegular: 'FARegular';
 $containerMargin1: 105px;
 $containerMargin2: 70px;
 $containerMargin3: 20px;
+$containerMargin4: 10px;
 
 $color1: var(--theme);
 $color2: #e87b5a;
@@ -82,12 +83,6 @@ $transition: 0.3s;
 @mixin font38 {
   font-size: max(1.9792vw, 26px);
   line-height: 1;
-/*  @media (max-width: 1366px) {
-    font-size: 1.9030vw;
-  }
-  @media (max-width: 1000px) {
-    font-size: 3.3854vw;
-  }*/
 }
 @mixin font44 {
   font-size: max(2.29vw, 32px);
@@ -141,6 +136,7 @@ $transition: 0.3s;
   color: white;
   background: $bg;
   cursor: pointer;
+  transition: $transition;
   &:hover {
     background: $hoverBg;
   }

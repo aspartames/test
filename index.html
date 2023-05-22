@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="src/styles/themeToggle.css">
     <link rel="stylesheet" type="text/css" href="src/libraries/slick-theme.css">
     <link rel="stylesheet" type="text/css" href="src/libraries/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous">
+
+
     <title>Title</title>
 </head>
 <body>
@@ -211,22 +214,15 @@
                 </label>
             </div>
         </div>
-        <div class="region">
-            <span class="city_name">Санкт-Петербург</span>
-            <div class="ssc">
-                <div class="xx">
-                    <span>Ваш город<span>Санкт-Петербург</span>?</span>
-                    <div>
-                        <button>Да, верно</button>
-                        <button>Нет, другой</button>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
-
     <div class="mobile_header_menu">
         <div class="mobile_header_nav_container">
+            <div class="mobile_region">
+                <div class="mobile_region_name_wrapper">
+                    <i class="fa fa-times m_form_close" aria-hidden="true"></i>
+                </div>
+                <div class="mobile_form_wrapper"></div>
+            </div>
             <nav class="container">
                 <ul class="mobile_header_List"></ul>
             </nav>
@@ -275,6 +271,18 @@
                 <p>8 класс</p>
                 <p>Находится <br> в разработке</p>
             </button>
+        </div>
+        <div class="region">
+            <span class="region_city_name">Санкт-Петербург</span>
+            <div class="region_check_wrapper">
+                <div class="region_check">
+                    <span>Ваш город <span>Санкт-Петербург</span>?</span>
+                    <div class="region_buttons">
+                        <button class="region_hidden">Да, верно</button>
+                        <button class="modal_open">Нет, другой</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section class="main_section">
@@ -391,8 +399,84 @@
             </div>
         </div>
     </section>
-</main>
+    <div class="modal">
+        <div class="city_select">
+            <form id="city_select_form" action="#" method="POST">
+                <label class="city_input_label" for="city_input">Выбор региона</label>
+                <input id="city_input" type="text" name="cityInput" placeholder="Введите название города">
+                <button type="submit" class="mobile_city_submit">
+                       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                       Искать
+                   </button>
 
+
+                <ul class="cities_tags">
+                    <li class="city_tag">
+                        <label for="city-moskva">Москва</label>
+                        <input type="radio" id="city-moskva" name="city" value="Москва">
+                    </li>
+                    <li class="city_tag">
+                        <label for="city-spb">Санкт-Петербург</label>
+                        <input type="radio" id="city-spb" name="city" value="Санкт-Петербург">
+                    </li>
+                    <li class="city_tag">
+                        <label for="city-kazan">Казань</label>
+                        <input type="radio" id="city-kazan" name="city" value="Казань">
+                    </li>
+                    <li class="city_tag">
+                        <label for="city-novosibirsk">Новосибирск</label>
+                        <input type="radio" id="city-novosibirsk" name="city" value="Новосибирск">
+                    </li>
+                    <li class="city_tag">
+                        <label for="city-samara">Самара</label>
+                        <input type="radio" id="city-samara" name="city" value="Самара">
+                    </li>
+
+                </ul>
+                <div class="cities_list_wrapper">
+                    <ul id="cities_list">
+                        <li>
+                            <span class="cities_list_letter">A</span>
+                            <ul>
+                                <li class="cities_list_item">
+                                    <label for="city-abakan">Абакан</label>
+                                    <input type="radio" id="city-abakan" name="city" value="Абакан">
+                                </li>
+                                <li class="cities_list_item">
+                                    <label for="city-aksayi">Аксай</label>
+                                    <input type="radio" id="city-aksayi" name="city" value="Аксай">
+                                </li>
+                                <li class="cities_list_item">
+                                    <label for="city-aleksin">Алексин</label>
+                                    <input type="radio" id="city-aleksin" name="city" value="Алексин">
+                                </li>
+                                <li class="cities_list_item">
+                                    <label for="city-altay">Алтайский край</label>
+                                    <input type="radio" id="city-altay" name="city" value="Алтайский край">
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+            <div class="cities_list_gradient"></div>
+            <i class="fa fa-times modal_close" aria-hidden="true"></i>
+        </div>
+        <div class="modal_background"></div>
+    </div>
+    <section class="mobile_main">
+        <div class="mobile_main_classes">
+                <label for="mobile_selected_class">Классы и разделы</label>
+                <select id='mobile_selected_class'>
+                    <option value="5">5 класс</option>
+                    <option value="6">6 класс</option>
+                    <option value="7" disabled>7 класс</option>
+                    <option value="8" disabled>8 класс</option>
+                </select>
+        </div>
+        <div class="mobile_main_classes_content"></div>
+    </section>
+</main>
 <footer class="footer">
     <div hidden class="footer_grid">
         <h2 class="footer_title">Основы духовно-нравственной культуры народов России</h2>
@@ -453,7 +537,7 @@
     const setHeaderClassesContentWidth = () =>{
         let overlayClassesWidth = $('.header_nav_item_overlay.classes').outerWidth()
         let headerNavContainerWidth  = $('.header_nav_container').width();
-        console.log(overlayClassesWidth)
+
         $('.classes_list').css('--width', `${overlayClassesWidth}px`)
         $('.header_classes_content')
             .css('--headerNavContainerWidth', `${headerNavContainerWidth}px`)
@@ -501,7 +585,7 @@
         }
     }
 
-    const getTabletHeader = () =>{
+    const setTabletHeader = () =>{
         let mobileList = document.querySelector('.mobile_header_List')
         let classesItems = document.querySelectorAll('.classes_drop_item')
         let headerNavItems = document.querySelectorAll('.header_nav_item')
@@ -521,7 +605,7 @@
                             </div>` : ``}
                         </li>`)
         if(mobileList.children.length < 1){
-            classesItems.forEach(el => {
+            isMobile() && classesItems.forEach(el => {
                 if(!el.classList.contains('mobileEnable')){
                     return ''
                 }
@@ -535,13 +619,25 @@
                 }
                 const span = el.querySelector('.header_nav_item_title')
                 const content = el.querySelector('.header_nav_item_drop')
-                console.log(el)
                 if(span){
                     mobileList.insertAdjacentHTML('beforeend', tem(span, content))
                 }
             })
             tabletListToggle()
         }
+        let regionCityName = document.querySelector('.region_city_name')
+        let citySelectForm = document.querySelector('#city_select_form')
+        let mobileRegionNameWrapper = document.querySelector('.mobile_region_name_wrapper')
+        let mobileFormWrapper = document.querySelector('.mobile_form_wrapper')
+
+        if(mobileFormWrapper.children.length < 1){
+            let name = regionCityName.cloneNode(true)
+            let form = citySelectForm.cloneNode(true)
+            mobileRegionNameWrapper.insertAdjacentElement("afterbegin", name);
+            mobileFormWrapper.insertAdjacentElement("afterbegin", form);
+        }
+
+
     }
 
     const removeTabletHeader = () => {
@@ -549,6 +645,8 @@
     }
 
     const isTablet = () => $(window).width() <= 983
+
+    const isMobile = () => $(window).width() <= 500
 
     const tabletCheck = (tabletCallback, notTabletCallback) => {
         if (isTablet()) {
@@ -567,7 +665,7 @@
     }
 
     const setTabletSettings = () => {
-        getTabletHeader()
+        setTabletHeader()
         getTabletThemeToggle()
     }
     const removeTabletSettings = () => {
@@ -580,7 +678,7 @@
 
     const setHeaderFixed = () => {
         $(window).scroll(function() {
-            if (!isTablet() && $(this).scrollTop() > 10) {
+            if ($(this).scrollTop() > 10) {
                 $('.header').addClass('header_fixed');
                 $('.header_title_wrapper').addClass('header_fixed');
                 $('.header_nav_container').addClass('header_fixed');
@@ -594,6 +692,115 @@
         });
     }
 
+
+
+
+
+    const closeModal = () => {
+        $('.modal').removeClass('active')
+        $('body').removeClass('disableScroll')
+        $('.region_check_wrapper').addClass('hidden')
+    }
+
+    const formCitySelectSubmit = () =>{
+        if(!isTablet()){
+            $("#cities_list input").change(function() {
+                let selectedCity = $("input[name='city']:checked").val();
+                $("input[name='cityInput']").val(selectedCity);
+                $("#city_select_form").submit(function () {
+                    return false
+                });
+                closeModal()
+
+            });
+            $(".city_tag input").change(function() {
+                let selectedCity = $("input[name='city']:checked").val();
+                $("input[name='cityInput']").val(selectedCity);
+                $("#city_select_form").submit(function () {
+                    return false
+                });
+                closeModal()
+            });
+        }
+        else {
+            $(".mobile_city_submit").click(function (){
+                $("#city_select_form").submit(function () {
+                    return false
+                });
+            })
+        }
+    }
+
+    const modalWindow = () => {
+        if (!isTablet()){
+            $('.modal_open').click(function (){
+                $('.modal').addClass('active')
+                $('body').addClass('disableScroll')
+            })
+
+            $('.modal_close').click(function (){
+                closeModal()
+            })
+            $('.modal_background').click(function (){
+                closeModal()
+            })
+        }
+    }
+
+    const region = () =>{
+        if (!isTablet()) {
+            $('.region_hidden').click(function () {
+                $('.region_check_wrapper').addClass('hidden')
+            })
+
+            $('.region_city_name').click(function () {
+                $('.region_check_wrapper').removeClass('hidden')
+            })
+        }
+        else {
+            $('.region_city_name').click(function () {
+                $('.mobile_form_wrapper').slideDown()
+            })
+            $('.m_form_close').click(function () {
+                $('.mobile_form_wrapper').slideUp()
+            })
+        }
+    }
+
+
+
+    const mobileSelectClasses = () => {
+        if(!isMobile()) return ''
+
+        const mobileClassesContent = $('.mobile_main_classes_content')
+        const setContent = (number) => {
+            const clone = $('.header_classes_content').clone()[number].children
+            mobileClassesContent.append(clone)
+        }
+
+        setContent(0)
+
+        $('#mobile_selected_class').change(function (){
+            mobileClassesContent.empty()
+
+            const selectedClassNumber = $('#mobile_selected_class').val()
+
+            switch (true){
+                case selectedClassNumber === '5': setContent(0)
+                    break
+                case selectedClassNumber === '6': setContent(1)
+                    break
+                case selectedClassNumber === '7': setContent(2)
+                    break
+                case selectedClassNumber === '8': setContent(3)
+                    break
+                default: return ''
+            }
+        })
+    }
+
+
+
     $(document).ready(function () {
 
         tabletSize(setTabletSettings, removeTabletSettings)
@@ -602,13 +809,21 @@
 
         setHeaderFixed()
 
+        formCitySelectSubmit()
 
+        modalWindow()
 
+        region()
 
+        mobileSelectClasses()
 
 
 
         $('.mobile_menu_icon').click(function (){
+            $('.m_nav_item_content').slideUp();
+            $('.mobile_form_wrapper').slideUp()
+            $('.m_nav_item_arrow').removeClass('active');
+
             $(this).find('.mobile_icon_container').toggleClass('active');
             $('.header').toggleClass('activeMobile');
             $('.mobile_header_nav_container').toggleClass('active');
@@ -666,10 +881,6 @@
             },
             function () {}
         )
-
-
-
-
 
 
 
@@ -740,9 +951,14 @@
         setHeaderClassesContentWidth()
 
         $(window).on('resize', function() {
-            setTimeout(()=>{
+            formCitySelectSubmit()
+            modalWindow()
+            region()
+            const t = setTimeout(()=>{
                 setHeaderClassesContentWidth()
             },500)
+
+            return () => clearTimeout(t)
         });
 
     });

@@ -33,6 +33,11 @@
     height: 60px;
   }
 }
+@media (max-width: 500px) {
+  .theme_toggle_wrapper {
+    display: none;
+  }
+}
 
 .theme_eye {
   width: 30px;
