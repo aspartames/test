@@ -60,6 +60,11 @@
     display: none;
   }
 }
+@media (max-width: 500px) {
+  .theme_toggle_wrapper {
+    display: none;
+  }
+}
 
 .theme_toggle_eye {
   font-size: 24px;
