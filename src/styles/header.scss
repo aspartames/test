@@ -10,7 +10,7 @@ $concaveBottomLeft: bottomLeft;
     width: 20px;
     height: 20px;
     padding:13px 15px;
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
     }
     @if $position == topRight {
       background:-moz-radial-gradient(100% 0, circle, rgba(204,0,0,0) 24px, $color1 25px);
@@ -23,6 +23,9 @@ $concaveBottomLeft: bottomLeft;
       background-repeat:no-repeat;
       bottom: 1px;
       right: -14px;
+      @media (max-width: $laptop) {
+        bottom: -6px;
+      }
     }
     @if $position == bottomLeft {
       background:-moz-radial-gradient(0 100%, circle, rgba(204,0,0,0) 24px, $color1 25px);
@@ -38,6 +41,7 @@ $concaveBottomLeft: bottomLeft;
     }
   }
 }
+
 
 .header {
   position: fixed;
@@ -60,14 +64,14 @@ $concaveBottomLeft: bottomLeft;
       width: 0;
     }
   }
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     padding: 12px $containerMargin2;
   }
   @media (max-width: 1199px) {
     padding: 22px $containerMargin3 18px;
     height: 105px;
   }
-  @media (max-width: 500px) {
+  @media (max-width: $mobile) {
     padding: 20px $containerMargin4 ;
     height: 84px;
     background: white;
@@ -75,24 +79,24 @@ $concaveBottomLeft: bottomLeft;
   }
 
 }
-
 .header_container {
   display: grid;
   grid-template-areas: "title title title nav nav nav nav nav nav nav nav nav";
   grid-template-columns: repeat(12, 1fr);
   width: 100%;
-  @media (max-width: 1100px) {
+  @media (max-width: $tablet) {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-  }
-  @media (max-width: 1000px) {
     align-items: center;
   }
   @media (max-width: 640px) {
     justify-content: flex-start;
   }
 }
+
+
+/////////////////////////////////////////// title  //////////////////////////////////////////
+
 .header_title_wrapper {
   grid-area: title;
   display: flex;
@@ -105,14 +109,14 @@ $concaveBottomLeft: bottomLeft;
     margin: 0;
     color: white;
     transition: 0.3s;
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
      line-height: 21px;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: $tablet) {
       font-size: 26px;
       line-height: 30px;
     }
-    @media (max-width: 500px) {
+    @media (max-width: $mobile) {
       font-size: 18px;
       line-height: 20px;
       max-width: 276px;
@@ -125,7 +129,7 @@ $concaveBottomLeft: bottomLeft;
   &.header_fixed{
     & h1 {
       color: black;
-      @media (max-width: 1000px) {
+      @media (max-width: $tablet) {
         color: white;
         background: linear-gradient(90deg, rgba(253,93,16,1) 0%, rgba(240,11,107,1) 100%);
         -webkit-background-clip: text;
@@ -139,10 +143,13 @@ $concaveBottomLeft: bottomLeft;
     }
   }
 
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet) {
     max-width: 400px;
   }
 }
+
+
+/////////////////////////////////////////// navigation  /////////////////////////////////////
 
 .header_nav_container {
   grid-area: nav;
@@ -158,7 +165,7 @@ $concaveBottomLeft: bottomLeft;
   &.header_fixed{
     border: 1px solid #d5d5d5;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet) {
     display: none;
   }
 }
@@ -168,7 +175,7 @@ $concaveBottomLeft: bottomLeft;
   & a:hover{
     color: $color2;
   }
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     width: 730px;
   }
   @media (max-width: 1550px) {
@@ -184,13 +191,8 @@ $concaveBottomLeft: bottomLeft;
   padding: 0;
 }
 
-$paddingOverlay: 24px;
-$paddingYellowClasses: 14px;
-$paddingOverlayClasses: $paddingOverlay - $paddingYellowClasses;
 
-$paddingOverlayMid: 14px;
-$paddingYellowClassesMid: 6px;
-$paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
+/////////////////////////////////////////// nav item  //////////////////////////////////////////
 
 .header_nav_item{
   display: flex;
@@ -199,6 +201,18 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
   }
 }
+
+
+/////////////////////////////////////////// nav item overlay  //////////////////////////////////
+
+$paddingOverlay: 24px;
+$paddingYellowClasses: 14px;
+$paddingOverlayClasses: $paddingOverlay - $paddingYellowClasses;
+
+$paddingOverlayMid: 14px;
+$paddingYellowClassesMid: 6px;
+$paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
+
 .header_nav_item_overlay{
   position: relative;
   display: flex;
@@ -222,9 +236,10 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
         all: unset;
       }
     }
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
       padding: $paddingOverlayClassesMid;
       margin-right: 2px;
+      border-radius: 30px 30px 0 0;
     }
   }
   &.disable{
@@ -237,7 +252,7 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     }
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     padding: $paddingOverlayMid;
   }
 }
@@ -249,7 +264,7 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
   border-radius: 30px;
   padding: $paddingYellowClasses 26px;
   z-index: 100;
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     padding: $paddingYellowClassesMid calc($paddingYellowClassesMid + 12px);
   }
 }
@@ -267,6 +282,22 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     }
 }
 
+.header_arrow{
+  height: 12px;
+  width: auto;
+  margin-left: 10px;
+  transition: 0.3s;
+  &.hover{
+    transform: rotate(180deg);
+  }
+  @media (max-width: $laptop) {
+    margin-top: 2px;
+    margin-left: 6px;
+    height: 8px;
+
+  }
+
+}
 .menu_icon {
   position: relative;
   display: inline-block;
@@ -305,7 +336,7 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
         transform: rotate(-45deg) translate(50%, -50%);
       }
     }
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
       transform: translateX(-25%);
 
       & span {
@@ -320,7 +351,7 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
         }
       }
     }
-    @media (max-width: 1000px) {
+    @media (max-width: $tablet) {
       transform: translateX(-30%);
       & span {
         &:nth-child(1) {
@@ -336,32 +367,19 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     }
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     width: 14px;
     height: 14px;
     margin-right: 8px;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet) {
     width: 20px;
     height: 20px;
   }
 }
-.header_arrow{
-  height: 12px;
-  width: auto;
-  margin-left: 10px;
-  transition: 0.3s;
-  &.hover{
-    transform: rotate(180deg);
-  }
-  @media (max-width: 1600px) {
-    margin-top: 2px;
-    margin-left: 6px;
-    height: 8px;
 
-  }
 
-}
+/////////////////////////////////////////// drop list //////////////////////////////////
 
 .header_nav_drop_list {
   display: none;
@@ -379,10 +397,11 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     display: block;
   }
 
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     padding: 18px;
+    transform: translateY(calc(100% - 2px));
   }
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet) {
     all: unset;
   }
 
@@ -397,13 +416,14 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     border-radius: 0 0 0 20px;
   }
 }
+
 .header_drop_list_item{
   @include font22;
   font-family: $gilroyMedium;
   list-style-type: none;
   line-height: 46px;
   white-space: nowrap;
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     line-height: 34px;
   }
 }
@@ -415,13 +435,14 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
   & img{
     /*
     margin-left: 52px;
     */
     width: auto;
     height: 18px;
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
       margin-left: 26px;
       height: 14px;
       width: auto;
@@ -430,7 +451,7 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
   & svg{
     height: 24px;
     width: auto;
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
       height: 20px;
     }
     & path{
@@ -443,7 +464,10 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
       fill: black;
     }
   }
-  @media (max-width: 1600px) {
+  &.disabled{
+    cursor: auto;
+  }
+  @media (max-width: $laptop) {
     padding-left: 48px;
     padding-right: 24px;
 
@@ -459,7 +483,12 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     color: black;
   }
 }
+
+
+/////////////////////////////////////////// classes content //////////////////////////////////
+
 $headerClassesContentHeight: 690px;
+$headerClassesContentHeight2: 546px;
 $headerClassesContentPadding: 22px;
 $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesContentPadding * 2;
 
@@ -479,6 +508,9 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   &.hover{
     display: block;
   }
+  @media (max-width: $laptop) {
+    height: $headerClassesContentHeight2;
+  }
 }
 
 .header_classes_content_list{
@@ -487,7 +519,10 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   white-space: normal;
   gap: 14px;
   height: $headerClassesContentListHeight;
-  @media (max-width: 1000px) {
+  @media (max-width: $laptop) {
+    height: $headerClassesContentHeight2;
+  }
+  @media (max-width: $tablet) {
     flex-flow: column nowrap;
     height: 100%;
     padding-bottom: 28px;
@@ -497,7 +532,10 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   width: 50%;
   margin: 0 0 4px 0;
   padding: 0;
-  @media (max-width: 1000px) {
+  @media (max-width: $laptop) {
+    margin: 0;
+  }
+  @media (max-width: $tablet) {
     width: 100%;
   }
 
@@ -510,12 +548,11 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   margin: 0 0 -4px 0;
   padding: 0;
   display: block;
-  @media (max-width: 500px) {
+  @media (max-width: $mobile) {
     font-size: 22px;
     line-height: 44px;
   }
 }
-
 .header_classes_chapter{
   @include font16;
   line-height: 22px;
@@ -526,7 +563,10 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   margin-top: 10px;
   & li{
       margin: 22px 0;
-      @media (max-width: 500px) {
+    @media (max-width: $laptop) {
+      margin: 14px 0;
+    }
+      @media (max-width: $mobile) {
         font-size: 22px;
         line-height: 44px;
       }
@@ -535,27 +575,15 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     content: "§ " counter(section) ". ";
     counter-increment: section;
   }
-}
-
-
-
-
-
-
-.mobile_header_menu{
-  display: none;
-  @media (max-width: 1000px) {
-    display: block;
-    opacity: 1;
-    transition: 0.3s;
-    transform: translateY(-720px);
-    &.active{
-      opacity: 1;
-      transform: translateY(0%);
-    }
+  @media (max-width: $laptop) {
+    line-height: 1.2;
   }
-
 }
+
+
+
+
+/////////////////////////////////////////// mobile header //////////////////////////////////
 
 .mobile_menu_icon{
   width: 68px;
@@ -569,10 +597,10 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   transition: 0.3s;
   z-index: 100;
   margin-right: 20px;
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet) {
     display: flex;
   }
-  @media (max-width: 500px) {
+  @media (max-width: $mobile) {
     width: 50px;
     height: 44px;
     margin-right: 10px;
@@ -586,14 +614,31 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   padding: 0;
 }
 
+.mobile_header_menu{
+  display: none;
+  @media (max-width: $tablet) {
+    display: block;
+    opacity: 1;
+    transition: 0.3s;
+    transform: translateY(-720px);
+    &.active{
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+}
+
+
+/////////////////////////////////////////// mobile navigation //////////////////////////////////
+
+
 .mobile_header_nav_container{
   width: 100vw;
   margin-left: - $containerMargin3;
   background: $color1;
   z-index: 1;
 }
-
-
 
 .m_nav_item {
   border-top: 1px solid #c2c2c2;
@@ -611,7 +656,6 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     }
   }
 }
-
 .m_nav_item_title {
   background-color: #f5f5f5;
   cursor: pointer;
@@ -629,7 +673,6 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   }
 
 }
-
 .m_nav_item_content {
   padding: 0 26px 20px 26px;
   display: none;
@@ -640,8 +683,6 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     font-size: 18px;
   }
 }
-
-
 .m_nav_item_arrow {
   width: 15px;
   height: 15px;

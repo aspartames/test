@@ -160,7 +160,6 @@ const init = () =>{
     svgHover()
     region()
     modalWindow()
-    setHeaderClassesContentWidth()
 
     // tablet and mobile
     setTabletHeader()
@@ -171,6 +170,12 @@ const init = () =>{
     // forms
     submitFormCitySelectTablet()
     submitFormCitySelect()
+
+    const t = setTimeout(() => {
+        setHeaderClassesContentWidth()
+    }, 500)
+
+    return () => clearTimeout(t)
 }
 
 

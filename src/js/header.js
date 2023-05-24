@@ -37,7 +37,7 @@ const navItemOverlay = () => {
             $('.classes_list').removeClass('classes_hover')
         }
         $('.classes_drop_item').not(this).removeClass('hover')
-        $(this).find('.class_number').removeClass('hover')
+        $('.class_number').not(this).removeClass('hover')
         $('.header_classes_content').removeClass('hover')
         $(this).parent('.classes_list').removeClass('classes_hover')
         $('.header_nav_item_overlay.classes').addClass('concave_disable')
@@ -64,6 +64,8 @@ const navItemOverlay = () => {
 
     $('.classes_drop_item').hover(
         function () {
+            if($(this).hasClass('disabled')) return ''
+
             // remove previous
             clearClassesDropItemStyle(true)
 
@@ -76,8 +78,7 @@ const navItemOverlay = () => {
             $('.header_nav_item_overlay.classes').removeClass('concave_disable')
 
         },
-        function () {
-        }
+        function () {}
     )
 }
 
@@ -108,7 +109,7 @@ const setTabletHeader = () => {
                         </li>`)
     if (mobileList.children.length < 1) {
         !isMobile() && classesItems.forEach(el => {
-            if (!el.classList.contains('mobileEnable')) {
+            if (el.classList.contains('disabled')) {
                 return ''
             }
             const span = el.querySelector('.class_number')
