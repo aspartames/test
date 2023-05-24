@@ -1,5 +1,31 @@
 :root {
     --light: #f3f3f3;
-    --dark: #356390;
-    --theme: var(--light)
+    --dark: #5f83b0;
+    --dark2: #295A87FF;
+    --themeColor: var(--light);
+    --theme: 'light';
+
+    --lightBackground: #f3f3f3;
+    --darkBackground: linear-gradient(90deg, rgba(41,90,135,1) 0%, rgba(94,130,175,1) 68%, rgba(40,89,134,1) 84%, rgba(40,89,134,1) 100%);
+
+    --backgroundColor: var(--lightBackground);
+
+
+    --textGradientLight1: linear-gradient(90deg, rgba(4,62,104,1) 0%, rgba(138,155,183,1) 40%, rgba(252,162,4,1) 80%);
+    --textGradientLight2: linear-gradient(90deg, rgba(4,62,104,1) 0%, rgba(138,155,183,1) 65%, rgba(252,162,4,1) 100%);
+    --textGradientDark1: linear-gradient(90deg, rgb(252, 162, 4) 0%, rgb(138, 155, 183) 30%, rgb(95, 131, 176) 80%);
+    --textGradientDark2: linear-gradient(90deg, rgb(252, 162, 4) 20%, rgba(138,155,183,1) 65%, rgb(95, 131, 176) 100%);
+
+    --mainPageHeaderGradient1: var(--textGradientLight1);
+    --mainPageHeaderGradient2: var(--textGradientLight2);
+
+    --objectBackground: var(--light);
+    --objectBackground2: white;
+    --borderColor: black;
+
+    --textColorLight: #656565;
+    --textColorDark: var(--light);
+
+    --titleColor: black;
+    --textColor: --textColorLight;
 }

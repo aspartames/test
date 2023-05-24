@@ -93,7 +93,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px var(--theme) solid;
+  border: 1px #f3f3f3 solid;
   border-radius: 40px;
   height: 80px;
 }

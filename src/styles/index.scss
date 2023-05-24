@@ -141,10 +141,11 @@
   top: clamp(466px, 33.3333vmax, 640px);*/
   position: relative;
   width: 100%;
-  background: $color1;
+  background: var(--backgroundColor);
   padding: clamp(40px, 3.9063vmax, 76px) 0 110px 0;
   border-radius: 0 0 45px 45px;
   z-index: 2;
+  transition: $transition;
   @media (max-width: 1600px) {
     padding-bottom: 86px;
   }
@@ -175,14 +176,14 @@
   &:first-child{
     text-align: left;
     background: rgb(4,62,104);
-    background: linear-gradient(90deg, rgba(4,62,104,1) 0%, rgba(138,155,183,1) 40%, rgba(252,162,4,1) 80%);
+    background: var(--mainPageHeaderGradient1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
   &:last-child{
     text-align: right;
     background: rgb(4,62,104);
-    background: linear-gradient(90deg, rgba(4,62,104,1) 0%, rgba(138,155,183,1) 65%, rgba(252,162,4,1) 100%);
+    background: var(--mainPageHeaderGradient2);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -382,13 +383,14 @@
   & h3{
     @include font38;
     font-family: $gilroySemiBold;
-    margin: 28px 0 22px ;
+    margin: 28px 0 22px;
+    color: var(--titleColor);
   }
   & p{
     @include font16();
     font-family: $openSans;
     max-width: 376px;
-    color: #656565;
+    color: var(--textColor);
     margin-bottom: 40px;
     @media (max-width: 1366px) {
       margin-bottom: 30px;
@@ -414,8 +416,8 @@
   right: $containerMargin1;
   top: 24px;
   width: 29vw;
-  background: $color1;
-  border: 2px solid black;
+  background: var(--objectBackground);
+  border: 2px solid var(--borderColor);
   border-radius: 30px;
   padding: 36px;
   z-index: 112;
@@ -434,10 +436,10 @@
     border-right: 66px solid;
     border-bottom: 36px solid;
     border-left: 60px solid;
-    border-color: $color1 transparent transparent $color1;
+    border-color: var(--objectBackground) transparent transparent var(--objectBackground);
     @media (max-width: 1000px) {
       left: 27.5%;
-      border-color: white transparent transparent white;
+      border-color: var(--objectBackground2) transparent transparent var(--objectBackground2);
     }
 
   }
@@ -448,7 +450,7 @@
     border-right: 66px solid;
     border-bottom: 36px solid;
     border-left: 60px solid;
-    border-color: #000000 transparent transparent #000000;
+    border-color: var(--borderColor) transparent transparent var(--borderColor);
     @media (max-width: 1000px) {
       left: calc(27.5% - 2px);
     }
@@ -459,6 +461,7 @@
     font-family: $gilroyBold;
     line-height: 1.1;
     margin: 0 0 26px 0;
+    color: var(--titleColor);
     @media (max-width: 1366px) {
       margin-bottom: 14px;
     }
@@ -470,7 +473,7 @@
   & p{
     @include font16;
     font-family: $openSansLight;
-    color: black;
+    color: var(--textColor);
     margin: 0;
   }
 
@@ -485,7 +488,7 @@
   @media (max-width: 1000px) {
     padding: 26px;
     line-height: 1.2;
-    background: white;
+    background: var(--objectBackground2);
   }
 }
 
@@ -699,7 +702,7 @@
   }
   @media (max-width: 1199px) {
     right: $containerMargin3;
-    top: 105px;
+    top: 84px;
   }
   @media (max-width: 1000px) {
     display: none;
@@ -1060,6 +1063,14 @@
   border: 1px solid $color2;
   font-size: 16px;
   font-family: $openSansSemiBold;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/V.png");
+  background-position: calc(100% - 20px) center;
+  background-repeat: no-repeat;
+
   &:focus{
     outline: none;
   }

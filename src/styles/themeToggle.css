@@ -3,7 +3,7 @@
 .theme_toggle_wrapper {
   width: 144px;
   height: 60px;
-  border: 1px solid var(--theme);
+  border: 1px solid #f3f3f3;
   border-radius: 30px;
   margin-right: 14px;
   padding: 0 12px;

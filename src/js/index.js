@@ -147,7 +147,6 @@ const setTabletSettings = () => {
 const setMobileSettings = () => {
     setTabletHeader()
     setTabletThemeToggle()
-    mobileSelectClasses()
 }
 
 
