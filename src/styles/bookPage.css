@@ -1,0 +1,306 @@
+@charset "UTF-8";
+@import '../fonts/stylesheet.css';
+@import '../styles/ThemeColors.css';
+.container {
+  margin: 0 105px;
+  box-sizing: border-box;
+}
+@media (max-width: 1600px) {
+  .container {
+    margin: 0 70px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
+.book_page {
+  position: relative;
+  width: 100%;
+  background: var(--backgroundColor);
+  padding: clamp(40px, 3.9063vmax, 76px) 0 110px 0;
+  border-radius: 0 0 45px 45px;
+  z-index: 2;
+  padding-top: 370px;
+}
+@media (max-width: 1600px) {
+  .book_page {
+    padding-bottom: 86px;
+  }
+}
+@media (max-width: 1100px) {
+  .book_page {
+    padding-top: 26px;
+    padding-bottom: 0;
+  }
+}
+
+.book_page_nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.book_page_nav button {
+  font-family: "OpenSansSemiBold";
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 1px solid #e87b5a;
+  color: white;
+  background: white;
+  cursor: pointer;
+  transition: 0.3s;
+  color: black;
+  display: flex;
+  align-items: center;
+  transition: none;
+}
+.book_page_nav button:hover {
+  background: #e87b5a;
+}
+.book_page_nav button:hover {
+  color: white;
+}
+
+.book_page_nav_arrow {
+  font-size: max(1.15vw, 16px);
+  line-height: 1;
+  color: black;
+  margin: 0 16px 0 0;
+}
+.book_page_nav_arrow.next {
+  margin: 0 0 0 16px;
+}
+.book_page_nav_arrow.hover {
+  color: white;
+}
+
+.book_page_nav_next {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.next_title {
+  font-family: "Gilroy";
+  font-size: 18px;
+  line-height: 20px;
+  max-width: 508px;
+  text-align: right;
+  margin-right: 20px;
+}
+
+.book_page_content_title {
+  font-size: max(2.29vw, 32px);
+  font-family: "GilroyBold";
+}
+@media (max-width: 1600px) {
+  .book_page_content_title {
+    font-size: 2.34vw;
+  }
+}
+@media (max-width: 1100px) {
+  .book_page_content_title {
+    font-size: 4.1667vw;
+  }
+}
+.book_page_content_title:before {
+  content: "§";
+  margin-right: 10px;
+}
+
+.book_page_content {
+  display: flex;
+  gap: 20px;
+}
+
+.book_page_content_essential {
+  flex: 1;
+}
+
+.book_page_content_additional {
+  flex: 1;
+}
+
+.book_page_paragraph {
+  font-size: max(0.9375vw, 14px);
+  line-height: 30px;
+  font-family: "OpenSans";
+  margin-bottom: 48px;
+}
+@media (max-width: 1600px) {
+  .book_page_paragraph {
+    line-height: 22px;
+  }
+}
+@media (max-width: 1100px) {
+  .book_page_paragraph {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.book_page_term {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  /*  @media (max-width: $tablet) {
+      font-size: 1.8229vw;
+    }*/
+  -webkit-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  -moz-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  font-family: "OpenSans";
+  background: white;
+  padding: 32px 42px;
+  border-radius: 60px;
+  width: 100%;
+  margin-bottom: 52px;
+  line-height: 20px;
+}
+@media (max-width: 1600px) {
+  .book_page_term {
+    line-height: 26px;
+  }
+}
+.book_page_term strong:first-child {
+  font-family: "GilroyBold";
+  text-transform: uppercase;
+}
+
+.book_page_list ul {
+  font-size: max(0.9375vw, 14px);
+  line-height: 30px;
+  font-family: "OpenSans";
+  line-height: 30px;
+  margin: 0 0 0 7px;
+  list-style-type: "•";
+}
+@media (max-width: 1600px) {
+  .book_page_list ul {
+    line-height: 22px;
+  }
+}
+@media (max-width: 1100px) {
+  .book_page_list ul {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+.book_page_list li {
+  padding-left: 9px;
+}
+
+.book_page_list_text {
+  font-size: max(0.9375vw, 14px);
+  line-height: 30px;
+  font-family: "OpenSans";
+  line-height: 30px;
+  margin: 0;
+}
+@media (max-width: 1600px) {
+  .book_page_list_text {
+    line-height: 22px;
+  }
+}
+@media (max-width: 1100px) {
+  .book_page_list_text {
+    font-size: 18px;
+    line-height: 30px;
+  }
+}
+
+.book_page_poetry {
+  margin-left: 20%;
+}
+
+.book_page_content_video h4 {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  /*  @media (max-width: $tablet) {
+      font-size: 1.8229vw;
+    }*/
+  font-family: "OpenSansSemiBold";
+  text-align: center;
+  margin-top: 26px;
+}
+@media (max-width: 1600px) {
+  .book_page_content_video h4 {
+    line-height: 26px;
+  }
+}
+
+.video_wrapper {
+  border-radius: 30px;
+  overflow: hidden;
+  width: 100%;
+  height: 26vw;
+}
+.video_wrapper iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.book_page_geography_title {
+  font-size: max(1.9792vw, 26px);
+  line-height: 1;
+  font-family: "GilroyBold";
+}
+
+.map_wrapper {
+  width: 100%;
+}
+.map_wrapper iframe {
+  width: 100%;
+  height: 32vw;
+}
+
+.book_page_attractions {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.book_page_attractions_item {
+  width: 100%;
+}
+.book_page_attractions_item h5 {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  /*  @media (max-width: $tablet) {
+      font-size: 1.8229vw;
+    }*/
+  line-height: 20px;
+  font-family: "OpenSansSemiBold";
+}
+@media (max-width: 1600px) {
+  .book_page_attractions_item h5 {
+    line-height: 26px;
+  }
+}
+
+.attractions_image_wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 12.604vw;
+  border-radius: 20px;
+}
+.attractions_image_wrapper img {
+  height: 100%;
+  width: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*# sourceMappingURL=bookPage.css.map */

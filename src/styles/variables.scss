@@ -39,7 +39,27 @@ $transition: 0.3s;
   @media (max-width: 1199px) {
     margin: 0 $containerMargin3;
   }
+  @media (max-width: $mobile) {
+    margin: 0 $containerMargin3;
+  }
 }
+
+@mixin main{
+  position: relative;
+  width: 100%;
+  background: var(--backgroundColor);
+  padding: clamp(40px, 3.9063vmax, 76px) 0 110px 0;
+  border-radius: 0 0 45px 45px;
+  z-index: 2;
+  @media (max-width: $laptop) {
+    padding-bottom: 86px;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 26px;
+    padding-bottom: 0;
+  }
+}
+
 
 @mixin font14 {
   font-size: 14px;
@@ -58,6 +78,17 @@ $transition: 0.3s;
     font-size: 1.8229vw;
   }*/
 
+}
+@mixin font18{
+  font-size: max(0.9375vw, 14px);
+  line-height: 30px;
+  @media (max-width: $laptop) {
+    line-height: 22px;
+  }
+  @media (max-width: $tablet) {
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 @mixin font20 {
   font-size: max(1.15vw, 16px);

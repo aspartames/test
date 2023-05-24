@@ -51,6 +51,11 @@
     margin: 0 20px;
   }
 }
+@media (max-width: 600px) {
+  .footer_grid {
+    margin: 0 20px;
+  }
+}
 @media (max-width: 1100px) {
   .footer_grid {
     grid-template-areas: "t t t t" "a m l l" "g g g g" "b b b b ";

@@ -147,20 +147,7 @@
 .main_section {
 /*  position: absolute;
   top: clamp(466px, 33.3333vmax, 640px);*/
-  position: relative;
-  width: 100%;
-  background: var(--backgroundColor);
-  padding: clamp(40px, 3.9063vmax, 76px) 0 110px 0;
-  border-radius: 0 0 45px 45px;
-  z-index: 2;
-  transition: $transition;
-  @media (max-width: $laptop) {
-    padding-bottom: 86px;
-  }
-  @media (max-width: $tablet) {
-    padding-top: 26px;
-    padding-bottom: 0;
-  }
+  @include main;
   @media (max-width: $mobile) {
     display: none;
   }
