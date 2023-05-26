@@ -1,9 +1,5 @@
 @import "../styles/variables.scss";
 
-@mixin text{
-  @include font18;
-  font-family: $openSans;
-}
 
 .container{
   @include container();
@@ -11,7 +7,14 @@
 
 .book_page{
   @include main;
-  padding-top: 370px;
+  padding-top: 186px;
+  padding-bottom: 68px;
+  @media (max-width: $laptop) {
+    padding-top: 128px;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 152px;
+  }
 }
 
 
@@ -21,20 +24,33 @@
   width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 48px;
+  padding-left: 5px;
+  margin-bottom: 38px;
   & button {
     @include button(white, $color2);
     color: black;
     display: flex;
     align-items: center;
     transition: none;
-
+    padding: 12px 26px;
+    border-radius: 20px;
     &:hover{
       color: white;
     }
+    @media (max-width: $tablet) {
+      padding: 15px 30px;
+
+    }
   }
 }
-
+.book_page_nav_button{
+  & span{
+    margin-left: 4px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+}
 .book_page_nav_arrow{
   @include font22;
   color: black;
@@ -57,33 +73,53 @@
   font-family: $gilroy;
   font-size: 18px;
   line-height: 20px;
-  max-width: 508px;
+  max-width: 510px;
   text-align: right;
   margin-right: 20px;
+  color: var(--titleColor);
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.book_page_content_nav{
+@include contentNavButton;
 }
 
-
+.book_page_mobile_nav{
+  display: none;
+  @media (max-width: $mobile) {
+    display: flex;
+    margin-bottom: 32px;
+  }
+}
 /////////////////////////////////// content ////////////////////////////////////////////
 
-.book_page_content_section{
 
+
+.book_page_content_section{
+  margin-bottom: 50px;
 }
 
 .book_page_content_title{
-  @include font44;
-  font-family: $gilroyBold;
+  @include titlePage;
   &:before{
     content: '§';
     margin-right: 10px;
   }
+
+
 }
 
 .book_page_content{
   display: flex;
   gap: 20px;
+  @media (max-width: $tablet) {
+    display: block;
+  }
 }
 
 .book_page_content_essential{
+  @include tabletContent;
   flex: 1;
 }
 .book_page_content_additional{
@@ -94,28 +130,32 @@
 
 .book_page_paragraph{
   @include text;
-  margin-bottom: 48px;
+  margin-top: 0;
+  margin-bottom: 32px;
 }
 
 .book_page_term{
   @include font16;
   @include shadowSmall;
+  display: inline-block;
   font-family: $openSans;
   background: white;
-  padding: 32px 42px;
-  border-radius: 60px;
+  padding: 26px 44px;
+  border-radius: 40px;
   width: 100%;
-  margin-bottom: 52px;
+  margin-top: 14px;
+  margin-bottom: 40px;
   line-height: 20px;
   & strong{
     &:first-child{
-      font-family: $gilroyBold;
+      font-family: $gilroyBlack;
       text-transform: uppercase;
     }
   }
 }
 
 .book_page_list{
+  margin-bottom: 30px;
   & ul{
     @include text;
     line-height: 30px;
@@ -134,18 +174,28 @@
 }
 
 .book_page_poetry{
-  margin-left: 20%;
+  display: inline-block;
+  margin-left: 17%;
+  margin-top: 36px;
+  margin-bottom: 66px;
 }
 
 /////////////////////////////////// additional content ////////////////////////////////////////////
 
+.book_page_content_audio{
+    margin-bottom: 28px;
+}
+
 
 .book_page_content_video{
+  @include tabletContent;
+  margin-bottom: 40px;
+  color: var(--titleColor);
   & h4{
     @include font16;
     font-family: $openSansSemiBold;
     text-align: center;
-    margin-top: 26px;
+    margin-top: 22px;
   }
 }
 
@@ -153,36 +203,59 @@
   border-radius: 30px;
   overflow: hidden;
   width: 100%;
-  height: 26vw;
+  height: 25.6vw;
   & iframe{
     width: 100%;
     height: 100%;
   }
+  @media (max-width: $tablet) {
+    height: 420px;
+  }
+  @media (max-width: $mobile) {
+    height: 51vw;
+  }
+
 }
 
+.book_page_slider_container{
+  @include tabletContent;
 
+}
 
 /////////////////////////////////// geography ////////////////////////////////////////////
 
+.book_page_geography{
+  @include tabletContent;
+}
 
 .book_page_geography_title{
-  @include font38;
-  font-family: $gilroyBold;
+
+  @include sectionTitle;
+  text-align: left;
 }
 
 .map_wrapper{
   width: 100%;
+  margin-bottom: 48px;
   & iframe{
     width: 100%;
-    height: 32vw;
+    height: 31.2vw;
+  }
+  @media (max-width: $tablet) {
+    display: none;
   }
 }
 
 
 .book_page_attractions{
- display: flex;
+  display: flex;
   justify-content: space-between;
   gap: 20px;
+  margin-bottom: 52px;
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
+
 }
 
 .book_page_attractions_item{
@@ -191,7 +264,18 @@
     @include font16;
     line-height: 20px;
     font-family: $openSansSemiBold;
+    color: var(--titleColor);
+    @media (max-width: $tablet) {
+      margin-top: 18px;
+    }
   }
+  @media (max-width: $tablet) {
+    width: calc(50% - 10px);
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+
 }
 
 .attractions_image_wrapper{
@@ -208,4 +292,431 @@
     left: 50%;
     transform: translate(-50%, -50%);
   }
+  @media (max-width: $tablet) {
+    width: 100%;
+    height:  26.82vw;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    height:  202px;
+  }
 }
+
+
+/////////////////////////////////// quote ////////////////////////////////////////////
+@mixin mediaOverlay(){
+  @include shadowSmall;
+  position: relative;
+  background: white;
+  border-radius: 40px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 11px 0;
+  min-height: 80px;
+  & h5{
+    @include font16;
+    line-height: 20px;
+    font-family: $openSansSemiBold;
+    margin: 0;
+  }
+  & h6{
+    @include font16;
+    line-height: 20px;
+    font-family: $openSansLight;
+    margin: 0;
+  }
+}
+@mixin mediaTitleContainer(){
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 20px;
+}
+
+@mixin mediaLink{
+  display: inline-block;
+  border: 1px solid $color2;
+  border-radius: 30px;
+  padding: 6px;
+  background: transparent;
+  margin-left: 16px;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+@mixin mediaLinkInner($hoverBG){
+  @include font16;
+  line-height: 30px;
+  font-family: $openSansSemiBold;
+  padding: 8px 20px;
+  border-radius: 27px;
+  display: flex;
+  align-items: center;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+  color: black;
+  &.hover{
+    color: white;
+    background: $hoverBG;
+  }
+}
+@mixin mediaLinkIcon($color){
+  display: inline;
+  font-size: 20px;
+  margin-right: 14px;
+  & path{
+    fill: $color;
+  }
+  &.hover{
+    & path {
+      fill: white;
+    }
+  }
+}
+
+
+.quote_wrapper{
+  @include mediaOverlay;
+  @include shadowSmall;
+  padding: 20px 10px 20px 40px;
+  margin-top: 48px;
+  & blockquote{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.quote_text{
+  @include font16;
+  line-height: 20px;
+  font-family: $openSansSemiBold;
+  margin: 0 18px 0 0;
+}
+.quote_cite{
+  @include font16;
+  line-height: 20px;
+  font-family: $openSansLight;
+  font-style: normal;
+  position: relative;
+}
+.quote_link{
+ @include mediaLink;
+}
+.quote_link_inner{
+  @include mediaLinkInner($color2)
+}
+.quote_icon{
+  @include mediaLinkIcon(black);
+  font-size: 26px;
+}
+
+
+.book_page_content_audio{
+  @include tabletContent;
+}
+.audio_wrapper {
+  @include mediaOverlay;
+}
+.audio_container{
+  @include mediaTitleContainer;
+}
+.audio{
+  background: #e87b5a;
+  position: absolute;
+}
+.audio_controls {
+  position: relative;
+  width: 52px;
+  height: 46px;
+  margin-right: 20px;
+}
+.audio_button{
+  position: absolute;
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  transition: $transition;
+  &.play_icon{
+    z-index: 2;
+    opacity: 1;
+    &.played{
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+  &.pause_icon{
+    z-index: 1;
+    opacity: 0;
+    &.played{
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+}
+.audio_button_icon {
+  font-size: 46px;
+  cursor: pointer;
+  position: relative;
+}
+.audio_links{
+  display: flex;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.audio_link{
+  @include mediaLink;
+  margin-left: 10px;
+}
+.audio_link_inner{
+  @include mediaLinkInner($color2);
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.audio_link_icon_wrapper{
+    &.hover{
+    filter: brightness(0) invert(1);
+  }
+}
+.audio_link_icon{
+  font-size: 26px;
+  line-height: 30px;
+  display: block;
+  &.fa-apple{
+    color: black;
+    transform: translateY(-1px);
+  }
+  &.fa-itunes-note{
+    color: #cb6ae2;
+    transform: translateX(-1px);
+  }
+  &.fa-yandex{
+    color: #f43d1c;
+    transform: translateX(-1px);
+  }
+}
+
+
+.documents_downloads_wrapper{
+  @include mediaOverlay;
+}
+.documents_name_wrapper{
+  @include mediaTitleContainer;
+  margin-left: 18px;
+}
+.documents_icon{
+  font-size: 46px;
+  line-height: 30px;
+  margin-right: 20px;
+}
+.document_link_container{
+  display: flex;
+  align-items: center;
+}
+.document_link{
+  @include mediaLink;
+}
+.document_link_inner{
+  @include mediaLinkInner(#688ab7);
+}
+.cloud_download_icon{
+  @include mediaLinkIcon(#688ab7);
+}
+.document_link_file_name{
+  @include font16;
+  font-family: $openSansLight;
+}
+
+
+
+
+////////////////////////// music ////////////////////////////
+
+.book_page_content_music {
+  margin-bottom: 28px;
+  & h3{
+   @include sectionTitle;
+ }
+}
+
+
+//////////////////// documents /////////////////////////////////
+
+.book_page_content_documents{
+  @include tabletContent;
+  margin-bottom: 28px;
+  & h3{
+    @include sectionTitle;
+  }
+}
+
+//////////////////// library //////////////////////////////////
+
+.main_book_content_library{
+  @include tabletContent;
+  margin-bottom: 28px;
+  & h3{
+    @include sectionTitle;
+  }
+}
+
+
+
+
+.book_page_slider_wrapper{
+  position: relative;
+  max-height: 31.25vw;
+  max-width: 44.01vw;
+  overflow: hidden;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  @media (max-width: $tablet) {
+    max-height: 513px;
+    max-width: 100%;
+  }
+  @media (max-width: $mobile) {
+    all: unset;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+
+  }
+
+}
+
+.book_page_slide{
+  position: relative;
+  height: 31.25vw;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  @media (max-width: $tablet) {
+    height: 513px;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+.book_page_slider_img_background{
+  position: absolute;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  filter: blur(5px);
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.book_page_slider_img{
+  position: absolute;
+  height: 100%;
+  width: auto;
+  @media (max-width: $mobile) {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
+.book_page_slide_name{
+  @include font16;
+  font-family: $openSansSemiBold;
+  text-align: center;
+  display: none;
+  color: var(--titleColor);
+  &.visible{
+    display: block;
+  }
+  @media (max-width: $mobile) {
+    display: block;
+    margin-bottom: 38px;
+  }
+}
+.book_page_slick_control{
+  right: 50%;
+  transform: translateX(50%);
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+.book_page_slide_description{
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+
+.book_page_dropdown_content {
+  @include shadowSmall;
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  width: 100%;
+  z-index: 10;
+}
+
+.book_page_dropdown_content button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 10px;
+  background: white;
+  border: none;
+
+}
+
+.book_page_mobile_nav:hover .book_page_dropdown_content {
+  display: block;
+}
+
+.book_page_mobile_nav_bg{
+  background: #ffc800;
+  width: 100%;
+  height: 46px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 20px;
+  padding: 0 20px;
+  & span{
+    font-family: $openSans;
+    font-size: 16px;
+    line-height: 30px;
+  }
+
+}
+
+
+
+.book_page_mobile_menu_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+  & .menu_line {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin: 2px 0;
+  }
+}
+
+

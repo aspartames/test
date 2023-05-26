@@ -14,6 +14,9 @@ const themeToggle = () => {
             root.css('--textColor', 'var(--textColorDark)');
             root.css('--objectBackground', 'var(--dark2)');
             root.css('--objectBackground2', 'var(--dark2)');
+            root.css('--headerBG', '#2a5b88');
+            root.css('--headerTitle', 'white');
+            root.css('--mapCardBackground', 'var(--darkBackground)');
 
 
             $('.theme_toggle').each(function () {
@@ -35,6 +38,9 @@ const themeToggle = () => {
             root.css('--textColor', 'var(--textColorLight)');
             root.css('--objectBackground', 'var(--light)');
             root.css('--objectBackground2', 'white');
+            root.css('--headerBG', 'white');
+            root.css('--headerTitle', 'var(--headerGradient)');
+            root.css('--mapCardBackground', 'linear-gradient(180deg, rgba(243,243,243,1) 33%, rgba(255,255,255,1) 33%)');
 
         }
     });

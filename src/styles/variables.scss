@@ -6,6 +6,7 @@ $tablet: 1100px;
 $mobile: 600px;
 
 $gilroy: "Gilroy";
+$gilroyBlack: "GilroyBlack";
 $gilroyBold: "GilroyBold";
 $gilroyHeavy: "GiloryHeavy";
 $gilroyExtraBold: "GilroyExtraBold";
@@ -74,9 +75,9 @@ $transition: 0.3s;
   @media (max-width: $laptop) {
     line-height: 26px;
   }
-/*  @media (max-width: $tablet) {
-    font-size: 1.8229vw;
-  }*/
+  @media (max-width: $tablet) {
+    font-size: 16px;
+  }
 
 }
 @mixin font18{
@@ -117,6 +118,9 @@ $transition: 0.3s;
 @mixin font38 {
   font-size: max(1.9792vw, 26px);
   line-height: 1;
+  @media (max-width: $tablet) {
+    font-size: 38px;
+  }
 }
 @mixin font44 {
   font-size: max(2.29vw, 32px);
@@ -176,6 +180,40 @@ $transition: 0.3s;
   }
 }
 
+@mixin navButtonBack(){
+  @include button(white, $color2);
+  color: black;
+  display: flex;
+  align-items: center;
+  transition: none;
+  padding: 12px 26px;
+  border-radius: 20px;
+  &:hover{
+    color: white;
+  }
+  & span{
+    margin-left: 4px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+  & .nav_arrow{
+    @include font22;
+    color: black;
+    margin: 0 16px 0 0;
+    &.next{
+      margin: 0 0 0 16px;
+    }
+    &.hover{
+      color: white;
+    }
+  }
+  @media (max-width: $tablet) {
+    padding: 15px 30px;
+
+  }
+}
+
 
 @mixin shadowBig {
   -webkit-box-shadow: -6px 5px 27px 0px rgba(1, 2, 2, 0.4);
@@ -187,4 +225,69 @@ $transition: 0.3s;
   -webkit-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
   -moz-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
   box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+}
+
+@mixin titlePage {
+  @include font44;
+  font-family: $gilroyBlack;
+  margin-bottom: 36px;
+  color: var(--titleColor);
+  @media (max-width: $tablet) {
+    font-size: 44px;
+    margin-bottom: 46px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+@mixin text{
+  @include font18;
+  font-family: $openSans;
+  color: var(--textColor);
+}
+
+@mixin sectionTitle{
+  @include font38;
+  font-family: $gilroyBold;
+  margin-bottom: 26px;
+  text-align: center;
+  color: var(--titleColor);
+}
+
+@mixin contentNavButton{
+  justify-content: flex-start;
+  gap: 20px;
+  margin-bottom: 40px;
+  display: none;
+  & button{
+    background: $color2;
+    padding: 10px 28px;
+    border-radius: 30px;
+    cursor: pointer;
+    border: none;
+    @include font16;
+    font-family: $openSansSemiBold;
+    line-height: 3;
+    color: white;
+    &.active{
+      background: #3c4a53;
+    }
+  }
+  @media (max-width: $tablet) {
+    display: flex;
+  }
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+@mixin tabletContent{
+  @media (max-width: $tablet) {
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
 }

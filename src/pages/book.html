@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <main>
+        <section class="book_section">
+                <h2>Классы и разделы</h2>
+            <div class="book_content">
+
+            </div>
+        </section>
+    </main>
+
+    <script>
+        const createBookContent = () => {
+            const mobileClassesContent = $('.book_content')
+            const setContent = (number) => {
+                const clone = $('.header_classes_content').clone()[number].children
+                mobileClassesContent.append(clone)
+            }
+
+            setContent(0)
+
+            $('#mobile_selected_class').change(function () {
+                mobileClassesContent.empty()
+
+                const selectedClassNumber = $('#mobile_selected_class').val()
+
+                switch (true) {
+                    case selectedClassNumber === '5':
+                        setContent(0)
+                        break
+                    case selectedClassNumber === '6':
+                        setContent(1)
+                        break
+                    case selectedClassNumber === '7':
+                        setContent(2)
+                        break
+                    case selectedClassNumber === '8':
+                        setContent(3)
+                        break
+                    default:
+                        return ''
+                }
+            })
+        }
+        createBookContent()
+    </script>
+</body>
+</html>

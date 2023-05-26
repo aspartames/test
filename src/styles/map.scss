@@ -1,0 +1,280 @@
+@import "../styles/variables";
+
+.map{
+  @include main;
+  padding-top: 148px;
+  @media (max-width: $laptop) {
+    padding-top: 96px;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 106px;
+  }
+}
+
+.map_title{
+  @include titlePage;
+  margin-bottom: 30px;
+  @media (max-width: $laptop) {
+    margin-bottom: 48px;
+  }
+  @media (max-width: $tablet) {
+    line-height: 1;
+    margin-bottom: 46px;
+  }
+}
+
+.map_search{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+  @media (max-width: $laptop) {
+    flex-direction: column;
+  }
+}
+.map_form_wrapper{
+  flex: 1;
+  @media (max-width: $laptop) {
+    margin-bottom: 12px;
+  }
+}
+.map_filter{
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @media (max-width: $laptop) {
+    margin-bottom: 4px;
+  }
+  @media (max-width: $tablet) {
+    display: inline-block;
+  }
+}
+
+.map_search_form{
+  position: relative;
+}
+
+#map_search_input{
+  @include font22;
+  font-family: $gilroy;
+  color: #656565;
+  line-height: 3;
+  width: 100%;
+  border-radius: 40px;
+  -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2) inset;
+  -moz-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2) inset;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2) inset;  border: 1px solid $color1;
+  padding: 0 38px;
+  min-height: 80px;
+  &:focus{
+    outline:none;
+    border: 1px solid $color2;
+  }
+  @media (max-width: $laptop) {
+    line-height: 3;
+  }
+  @media (max-width: $tablet) {
+    font-size: 22px;
+    line-height: 30px;
+    padding: 30px 24px;
+    border-radius: 40px;
+    margin: 0 0;
+  }
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 20px 24px;
+  }
+
+}
+
+#map_search_submit{
+  @include button($color2, $color2);
+  position: absolute;
+  color: white;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  line-height: 30px;
+  border-radius: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.5s;
+  width: 154px;
+  & svg{
+    margin-right: 10px;
+    height: 20px;
+    width: auto;
+    & path{
+      fill: white;
+    }
+  }
+  @media (max-width: $tablet) {
+    top: 14px;
+    right: 14px;
+  }
+  @media (max-width: $mobile) {
+    font-size: 16px;
+    line-height: 22px;
+    padding: 10px 0;
+    top: 18px;
+    right: 18px;
+  }
+}
+
+
+.checkbox_button {
+  @include button(white);
+  border-radius: 30px;
+  color: black;
+  margin-left: 20px;
+  max-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0s;
+  &:hover{
+    background: white;
+  }
+  & input{
+    display: none;
+  }
+  & .fa-xmark{
+    display: none;
+    margin-right: 10px;
+    font-size: 22px;
+    line-height: 0;
+    color: white;
+  }
+  &.selected{
+    background: #7292bc;
+    border: 1px solid #7292bc;
+    color: white;
+    & .fa-xmark{
+      display: inline-block;
+    }
+  }
+  @media (max-width: $tablet) {
+    display: none !important;
+  }
+}
+
+.map_filter_select{
+  display: none;
+  min-width: 312px;
+  padding: 12px 28px;
+  border-radius: 20px;
+  border: 1px solid $color2;
+  font-size: 16px;
+  font-family: $openSansSemiBold;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/angleDown.png");
+  background-position: calc(100% - 20px) center;
+  background-repeat: no-repeat;
+  & option{
+    font-size: 22px;
+  }
+  &:focus{
+    outline: none;
+  }
+  @media (max-width: $tablet) {
+    display: inline-block;
+  }
+}
+.map_wrapper{
+  width: 100%;
+  height: 31.25vw;
+  margin-bottom: 52px;
+  & iframe{
+    width: 100%;
+    height: 100%;
+  }
+  @media (max-width: $laptop) {
+    margin-bottom: 44px;
+  }
+  @media (max-width: $tablet) {
+    margin-bottom: 48px;
+    min-height: 485px;
+  }
+}
+
+.map_items_wrapper{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 0;
+  column-gap: 20px;
+  margin-bottom: 8px;
+  @media (max-width: $laptop) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media (max-width: $tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 14px;
+  }
+}
+
+.map_item{
+  width: 100%;
+  & h5{
+    @include font16;
+    line-height: 20px;
+    font-family: $openSansSemiBold;
+    color: var(--titleColor);
+    @media (max-width: $laptop) {
+      margin-top: 16px;
+    }
+    @media (max-width: $tablet) {
+      margin-top: 18px;
+    }
+  }
+
+  @media (max-width: $mobile) {
+    width: 100%;
+  }
+}
+
+.map_item_image_wrapper{
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 12.604vw;
+  border-radius: 20px;
+  & img{
+    height: 100%;
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @media (max-width: $laptop) {
+    height: 230px;
+  }
+  @media (max-width: $tablet) {
+    width: 100%;
+    height:  26.82vw;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    height:  202px;
+  }
+}
+
+.show_more_map{
+  @include button($color2);
+  position: relative;
+  right: -50%;
+  border-radius: 30px;
+  transform: translateX(-50%);
+  @media (max-width: $tablet) {
+    margin-bottom: 82px;
+  }
+}
+
+
+
+
+

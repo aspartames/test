@@ -1,4 +1,16 @@
 @font-face {
+    font-family: 'GilroyBlack';
+    src: url('Gilroy-Black.eot');
+    src: local('Gilroy Black'), local('Gilroy-Black'),
+    url('Gilroy-Black.eot?#iefix') format('embedded-opentype'),
+    url('Gilroy-Black.woff') format('woff'),
+    url('Gilroy-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+
+@font-face {
     font-family: 'GilroyExtraBold';
     src: url('Gilroy-ExtraBold.eot');
     src: local('Gilroy ExtraBold'), local('Gilroy-ExtraBold'),
