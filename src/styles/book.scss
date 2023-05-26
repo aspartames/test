@@ -1,0 +1,150 @@
+@import "../styles/variables.scss";
+
+.book{
+  @include main;
+  padding-top: 146px;
+  @media (max-width: $laptop) {
+    padding-top: 116px;
+  }
+  @media (max-width: $tablet) {
+    padding-top: 98px;
+  }
+}
+
+.book_section{
+  & img{
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    width: 32vw;
+    height: auto;
+    @media (max-width: $laptop) {
+      top: 40%;
+    }
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.book_title{
+  @include titlePage;
+  margin-bottom: 48px;
+  @media (max-width: $laptop) {
+    margin-bottom: 34px;
+  }
+}
+
+.book_classes{
+  margin-bottom: 42px;
+
+  & ul{
+    display: flex;
+    gap: 68px;
+    justify-content: flex-end;
+  }
+  & li{
+    @include font32;
+    font-family: $gilroy;
+    list-style-type: none;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+.book_class_number{
+  cursor: pointer;
+  color: var(--titleColor);
+  &.active{
+    font-family: $gilroyExtraBold;
+  }
+}
+.book_classes_content_wrapper{
+  @include shadowBig;
+  float: right;
+  border-radius: 40px 0 0 40px;
+  width: 64.58vw;
+  min-height: 51.56vw;
+  background: white;
+  padding: 26px 54px;
+  position: relative;
+  z-index: 2;
+  @media (max-width: $tablet) {
+    all: unset;
+    width: 100%;
+    height: fit-content;
+    padding: 50px 0;
+  }
+}
+
+.classes_content_list{
+  display: none;
+  list-style-type: none;
+  column-count: 2;
+  & li, & span{
+    @include font22;
+    line-height: 30px;
+    width: 100%;
+    @media (max-width: $tablet) {
+     font-size: 22px;
+      line-height: 30px;
+    }
+  }
+  & li{
+    @include font22;
+    line-height: 30px;
+    width: 100%;
+    @media (max-width: $tablet) {
+      font-size: 22px;
+      line-height: 30px;
+      margin-bottom: 32px;
+
+    }
+  }
+  & span{
+    margin-bottom: 28px;
+  }
+  &.active{
+    display: block;
+  }
+  @media (max-width: $tablet) {
+    column-count: 1;
+    background: white;
+    padding: 38px $containerMargin3 0;
+  }
+}
+
+.content_item{
+  display: inline-block;
+  margin-bottom: 22px;
+}
+
+#book_class_select{
+  display: none;
+  width: 166px;
+  padding: 12px 28px;
+  border-radius: 20px;
+  border: 1px solid $color2;
+  font-size: 16px;
+  font-family: $openSansSemiBold;
+
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/angleDown.png");
+  background-position: calc(100% - 20px) center;
+  background-repeat: no-repeat;
+  margin-bottom: 38px;
+
+  &:focus{
+    outline: none;
+  }
+  & option{
+    font-size: 16px;
+    font-family: $openSansSemiBold;
+  }
+  @media (max-width: $tablet) {
+    display: block;
+  }
+}
