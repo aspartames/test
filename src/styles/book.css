@@ -108,8 +108,12 @@
   cursor: pointer;
   color: var(--titleColor);
 }
+.book_class_number:hover {
+  color: #e87b5a;
+}
 .book_class_number.active {
   font-family: "GilroyExtraBold";
+  color: var(--titleColor);
 }
 
 .book_classes_content_wrapper {

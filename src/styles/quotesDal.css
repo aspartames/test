@@ -1,0 +1,183 @@
+@import '../fonts/stylesheet.css';
+@import '../styles/ThemeColors.css';
+.quote_Dal {
+  position: relative;
+  width: 100%;
+  background: var(--backgroundColor);
+  padding: clamp(40px, 3.9063vmax, 76px) 0 110px 0;
+  border-radius: 0 0 45px 45px;
+  z-index: 2;
+  padding-top: 148px;
+}
+@media (max-width: 1600px) {
+  .quote_Dal {
+    padding-bottom: 86px;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_Dal {
+    padding-top: 26px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 1600px) {
+  .quote_Dal {
+    padding-top: 100px;
+  }
+}
+
+.quote_Dal_section h2 {
+  font-size: max(2.29vw, 32px);
+  font-family: "GilroyBlack";
+  margin-bottom: 36px;
+  color: var(--titleColor);
+  margin-bottom: 36px;
+}
+@media (max-width: 1600px) {
+  .quote_Dal_section h2 {
+    font-size: 2.34vw;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_Dal_section h2 {
+    font-size: 4.1667vw;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_Dal_section h2 {
+    font-size: 44px;
+    margin-bottom: 46px;
+  }
+}
+@media (max-width: 600px) {
+  .quote_Dal_section h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 1600px) {
+  .quote_Dal_section h2 {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_Dal_section h2 {
+    margin-bottom: 46px;
+  }
+}
+
+.quote_Dal_filter {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 36px;
+}
+
+.checkbox_letter {
+  font-size: max(1.67vw, 24px);
+  line-height: 1;
+  font-family: "Gilroy";
+  cursor: pointer;
+  color: var(--titleColor);
+  min-height: 48px;
+  min-width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+.checkbox_letter:hover {
+  background: #e87b5a;
+  color: white;
+}
+.checkbox_letter.selected {
+  font-family: "GilroyBlack";
+}
+.checkbox_letter input {
+  display: none;
+}
+@media (max-width: 1600px) {
+  .checkbox_letter {
+    min-height: 42px;
+    min-width: 42px;
+  }
+}
+@media (max-width: 1100px) {
+  .checkbox_letter {
+    font-size: 24px;
+  }
+}
+
+.checkbox_letters_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1880px) {
+  .checkbox_letters_wrapper {
+    justify-content: flex-start;
+  }
+}
+
+.quote_Dal_items_wrapper {
+  margin-bottom: 48px;
+}
+
+.quote_item {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  -webkit-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  -moz-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  display: inline-block;
+  font-family: "OpenSans";
+  background: white;
+  padding: 26px 44px;
+  border-radius: 40px;
+  width: 100%;
+  margin: 0 0 11px 0;
+  line-height: 20px;
+}
+@media (max-width: 1600px) {
+  .quote_item {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_item {
+    font-size: 16px;
+  }
+}
+.quote_item strong:first-child {
+  font-family: "GilroyBlack";
+  text-transform: uppercase;
+}
+
+.show_more_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.show_more_wrapper button {
+  font-family: "OpenSansSemiBold";
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 1px solid #e87b5a;
+  color: white;
+  background: #e87b5a;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+.show_more_wrapper button:hover {
+  background: #e87b5a;
+}
+@media (max-width: 1100px) {
+  .show_more_wrapper button {
+    margin-bottom: 46px;
+  }
+}
+
+/*# sourceMappingURL=quotesDal.css.map */

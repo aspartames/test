@@ -304,79 +304,9 @@
 
 
 /////////////////////////////////// quote ////////////////////////////////////////////
-@mixin mediaOverlay(){
-  @include shadowSmall;
-  position: relative;
-  background: white;
-  border-radius: 40px;
-  padding: 10px 12px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 0 11px 0;
-  min-height: 80px;
-  & h5{
-    @include font16;
-    line-height: 20px;
-    font-family: $openSansSemiBold;
-    margin: 0;
-  }
-  & h6{
-    @include font16;
-    line-height: 20px;
-    font-family: $openSansLight;
-    margin: 0;
-  }
-}
-@mixin mediaTitleContainer(){
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  padding-right: 20px;
-}
 
-@mixin mediaLink{
-  display: inline-block;
-  border: 1px solid $color2;
-  border-radius: 30px;
-  padding: 6px;
-  background: transparent;
-  margin-left: 16px;
-  @media (max-width: $mobile) {
-    display: none;
-  }
-}
-@mixin mediaLinkInner($hoverBG){
-  @include font16;
-  line-height: 30px;
-  font-family: $openSansSemiBold;
-  padding: 8px 20px;
-  border-radius: 27px;
-  display: flex;
-  align-items: center;
-  word-spacing: 2px;
-  letter-spacing: 1px;
-  white-space: nowrap;
-  color: black;
-  &.hover{
-    color: white;
-    background: $hoverBG;
-  }
-}
-@mixin mediaLinkIcon($color){
-  display: inline;
-  font-size: 20px;
-  margin-right: 14px;
-  & path{
-    fill: $color;
-  }
-  &.hover{
-    & path {
-      fill: white;
-    }
-  }
-}
+
+
 
 
 .quote_wrapper{

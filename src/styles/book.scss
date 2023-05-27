@@ -35,30 +35,12 @@
   }
 }
 
+
 .book_classes{
-  margin-bottom: 42px;
-
-  & ul{
-    display: flex;
-    gap: 68px;
-    justify-content: flex-end;
-  }
-  & li{
-    @include font32;
-    font-family: $gilroy;
-    list-style-type: none;
-  }
-
-  @media (max-width: $tablet) {
-    display: none;
-  }
+  @include classesNavOnPage;
 }
 .book_class_number{
-  cursor: pointer;
-  color: var(--titleColor);
-  &.active{
-    font-family: $gilroyExtraBold;
-  }
+ @include classesNavOnPageNumber;
 }
 .book_classes_content_wrapper{
   @include shadowBig;

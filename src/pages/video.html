@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../styles/index.css">
-  <link rel="stylesheet" type="text/css" href="../styles/mapCard.css">
+  <link rel="stylesheet" type="text/css" href="../styles/video.css">
   <link rel="stylesheet" type="text/css" href="../styles/style.css">
   <link rel="stylesheet" type="text/css" href="../styles/footer.css">
   <link rel="stylesheet" type="text/css" href="../styles/header.css">
@@ -13,7 +13,7 @@
   <link rel="stylesheet" type="text/css" href="../libraries/slick.css">
   <link rel="stylesheet" type="text/css" href="../fonts/fontAwesomeAll.min.css">
 
-  <title>Title</title>
+  <title>Видео</title>
 </head>
 <body>
 <header class="header background">
@@ -343,110 +343,108 @@
   </div>
 </header>
 
-<main class="map_card">
-    <section class="map_card_section">
-      <button class="nav_button_back" onclick="window.location.href='#'">
-        <i class="fa-solid fa-arrow-left nav_arrow"></i>
-        Назад
-      </button>
-      <h2 class="map_card_title">Государственный музей истории Санкт-Петербурга с комплексом Петропавловской крепости</h2>
-      <div class="map_card_content_nav">
-        <button class="map_card_description active">Описание</button>
-        <button class="map_card_position">Положение на карте</button>
-        <button class="map_card_contacts">Контакты и режим работы</button>
+<main class="video">
+  <section class="video_section container">
+    <h2>Видео</h2>
+    <div class="video_nav">
+      <div class="video_classes active">
+        <ul>
+          <li id='all' class="video_class_number">
+            Все видео
+          </li>
+          <li id='class5' class="video_class_number active">
+            5 класс
+          </li>
+          <li id='class6' class="video_class_number">
+            6 класс
+          </li>
+          <li id='class7' class="video_class_number">
+            7 класс
+          </li>
+          <li id='class8' class="video_class_number">
+            8 класс
+          </li>
+        </ul>
       </div>
-      <div class="map_card_content">
-        <div class="left active">
-          <div class="map_card_slider_wrapper">
-            <div class="map_card_slider">
-              <img src="../images/museum.png" alt="img">
-              <img src="../images/museum.png" alt="img">
-              <img src="../images/museum.png" alt="img">
-              <img src="../images/museum.png" alt="img">
-              <img src="../images/mainPage/slide.png" alt="img">
-            </div>
-            <div class="slick_controls map_card_slick_control">
-              <span class="buttonSVG buttonPrevSVG prev_arrow">
-                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path class="arr"
-                                                                                                                fill="#E87B5AFF"
-                                                                                                                d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-                                    </span>
-              <span class="slide_number"></span>
-              <span class="buttonSVG buttonNextSVG next_arrow">
-                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path class="arr" fill="#E87B5AFF"
-                                                                                                            d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224H32c-17.7 0-32 14.3-32 32s14.3 32 32 32h306.7L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"/></svg>
-                                    </span>
-            </div>
-          </div>
-          <p>Государственный музей истории Санкт-Петербурга – один из крупнейших в России исторических музеев. В фондах музея хранится более 1,3 миллиона экспонатов, отражающих историю города на Неве с момента его основания до наших дней.</p>
-          <p>Центром музея является Петропавловская крепость – уникальный памятник истории, архитектуры и фортификационного искусства ХVIII-ХХ веков. Доминанта архитектурного ансамбля - Петропавловский собор - один из символов Санкт-Петербурга, усыпальница Императорского Дома Романовых.</p>
-          <p>Государственный музей истории Санкт-Петербурга объединяет несколько филиалов: Особняк Румянцева на Английской набережной, Музей–квартиру А. А. Блока, Музей С. М. Кирова, Монумент героическим защитникам Ленинграда на площади Победы, Музей печати, Музей петербургского авангарда (дом Матюшина) и Шлиссельбургскую крепость Орешек.</p>
-        </div>
-        <div class="right">
-          <div class="card_map_wrapper">
-            <iframe src="https://yandex.by/map-widget/v1/?ll=76.108570%2C62.119780&z=3.42" frameborder="0"
-                    allowfullscreen="true" style="position:relative;"></iframe>
-          </div>
-          <div class="map_card_links">
-            <div class="map_card_link">
-              <a href="#">
-                <i class="fa-brands fa-vk map_card_link_icon" style="color: #0077ff;"></i>
-              </a>
-              <a href="#">
-                <i class="fa-brands fa-youtube map_card_link_icon" style="color: #f70000;"></i>
-              </a>
-            </div>
-            <div class="map_card_address">
-                <div class="map_card_address_string">
-                  <span class="address_span1">Адрес</span> <span>3Д, территория Петропавловская крепость, Санкт-Петербург</span>
-                </div>
-                <div class="map_card_address_string">
-                  <span class="address_span2">Адрес сайта</span> <span><a href="">https://www.spbmuseum.ru/</a></span>
-                </div>
-                <div class="map_card_address_string">
-                  <span class="address_span3">Номер телефона</span> <span>+7 (812) 230-64-31</span>
-                </div>
-                <div class="map_card_address_string">
-                  <span class="address_span4">Время работы </span> <span>пн 11:00–17:30; вт 11:00–16:30; чт-вс 11:00–17:30</span>
-                </div>
-              </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      <div class="video_filter">
+        <label class="checkbox_button">
+          <input class="video_checkbox" type="checkbox" name="pictures" value="pictures">
+          <i class="fa-solid fa-xmark"></i>
+          Достопримечательности
+        </label>
+        <label class="checkbox_button">
+          <input class="video_checkbox" type="checkbox" name="photos" value="photos">
+          <i class="fa-solid fa-xmark"></i>
+          Презентации
+        </label>
+        <label class="checkbox_button">
+          <input class="video_checkbox" type="checkbox" name="icons" value="icons">
+          <i class="fa-solid fa-xmark"></i>
+          Прочее
+        </label>
 
-  <section class="map_card_places">
-    <div class="container">
-      <h3 class="map_card_places_title">Другие места</h3>
-      <div class="map_card_attractions">
-        <a  href="#" class="map_card_attractions_item">
-          <div class="attractions_image_wrapper">
-            <img src="../images/museum.png" alt="">
-          </div>
-          <h5>Музей «Россия в Великой войне» в Ратной палате. Государственный музей-заповедник «Царское Село»</h5>
-        </a>
-        <a  href="#" class="map_card_attractions_item">
-          <div class="attractions_image_wrapper">
-            <img src="../images/museum.png" alt="">
-          </div>
-          <h5>Ансамбль Московского Кремля с Оружейной палатой и Историческим музеем</h5>
-        </a>
-        <a  href="#" class="map_card_attractions_item">
-          <div class="attractions_image_wrapper">
-            <img src="../images/museum.png" alt="">
-          </div>
-          <h5>Ярославский музей-заповедник</h5>
-        </a>
-        <a  href="#" class="map_card_attractions_item">
-          <div class="attractions_image_wrapper">
-            <img src="../images/museum.png" alt="">
-          </div>
-          <h5>Херсонес Таврический в Севастополе </h5>
-        </a>
+
+        <label>
+          <select class="video_classes_select" name="video_classes_select">
+            <option value="all">Все видео</option>
+            <option value="5">5 класс</option>
+            <option value="6">6 класс</option>
+            <option value="7">7 класс</option>
+            <option value="8">8 класс</option>
+          </select>
+        </label>
+        <label>
+          <select class="video_filter_select" name="video_filter_select">
+            <option value="pictures">Достопримечательности</option>
+            <option value="photos">Презентации</option>
+            <option value="icons">Прочее</option>
+          </select>
+        </label>
+
       </div>
     </div>
+    <div class="videos_wrapper">
+      <div class="videos_item">
+        <div class="video_wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/c746cpRxR7Q?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h5>5 класс. I раздел. § 1. «Что в имени тебе моем?»</h5>
+      </div>
+      <div class="videos_item">
+        <div class="video_wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/c746cpRxR7Q?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h5>5 класс. I раздел. § 1. «Что в имени тебе моем?»</h5>
+      </div>
+      <div class="videos_item">
+        <div class="video_wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/c746cpRxR7Q?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h5>5 класс. I раздел. § 1. «Что в имени тебе моем?»</h5>
+      </div>
+      <div class="videos_item">
+        <div class="video_wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/c746cpRxR7Q?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h5>5 класс. I раздел. § 1. «Что в имени тебе моем?»</h5>
+      </div>
+      <div class="videos_item">
+        <div class="video_wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/c746cpRxR7Q?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h5>5 класс. I раздел. § 1. «Что в имени тебе моем?»</h5>
+      </div>
+      <div class="videos_item">
+        <div class="video_wrapper">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/c746cpRxR7Q?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <h5>5 класс. I раздел. § 1. «Что в имени тебе моем?»</h5>
+      </div>
 
+
+    </div>
   </section>
+
 </main>
 
 <footer class="footer">
@@ -568,13 +566,12 @@
 <script src="../libraries/jquery.js"></script>
 <script type="text/javascript" src="../fonts/fontAwesomeAll.min.js"></script>
 <script type="text/javascript" src="../libraries/slick.min.js"></script>
-<script type="text/javascript" src="../js/common.js"></script>
 <script type="text/javascript" src="../js/themeToggle.js"></script>
 <script type="text/javascript" src="../js/region.js"></script>
 <script type="text/javascript" src="../js/citySelectForm.js"></script>
 <script type="text/javascript" src="../js/header.js"></script>
 <script type="text/javascript" src="../js/mediaLinksHover.js"></script>
 <script type="text/javascript" src="../js/mediaLinks.js"></script>
-<script type="text/javascript" src="../js/mapCard.js"></script>
+<script type="text/javascript" src="../js/video.js"></script>
 
 </html>

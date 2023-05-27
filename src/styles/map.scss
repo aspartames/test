@@ -37,6 +37,7 @@
     margin-bottom: 12px;
   }
 }
+
 .map_filter{
   flex: 1;
   display: flex;
@@ -123,66 +124,12 @@
   }
 }
 
-
 .checkbox_button {
-  @include button(white);
-  border-radius: 30px;
-  color: black;
-  margin-left: 20px;
-  max-height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0s;
-  &:hover{
-    background: white;
-  }
-  & input{
-    display: none;
-  }
-  & .fa-xmark{
-    display: none;
-    margin-right: 10px;
-    font-size: 22px;
-    line-height: 0;
-    color: white;
-  }
-  &.selected{
-    background: #7292bc;
-    border: 1px solid #7292bc;
-    color: white;
-    & .fa-xmark{
-      display: inline-block;
-    }
-  }
-  @media (max-width: $tablet) {
-    display: none !important;
-  }
+  @include checkboxButton;
 }
 
 .map_filter_select{
-  display: none;
-  min-width: 312px;
-  padding: 12px 28px;
-  border-radius: 20px;
-  border: 1px solid $color2;
-  font-size: 16px;
-  font-family: $openSansSemiBold;
-  appearance: none;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  background-image: url("../images/angleDown.png");
-  background-position: calc(100% - 20px) center;
-  background-repeat: no-repeat;
-  & option{
-    font-size: 22px;
-  }
-  &:focus{
-    outline: none;
-  }
-  @media (max-width: $tablet) {
-    display: inline-block;
-  }
+  @include select;
 }
 .map_wrapper{
   width: 100%;
@@ -219,16 +166,7 @@
 .map_item{
   width: 100%;
   & h5{
-    @include font16;
-    line-height: 20px;
-    font-family: $openSansSemiBold;
-    color: var(--titleColor);
-    @media (max-width: $laptop) {
-      margin-top: 16px;
-    }
-    @media (max-width: $tablet) {
-      margin-top: 18px;
-    }
+    @include itemTitle;
   }
 
   @media (max-width: $mobile) {

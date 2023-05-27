@@ -1,0 +1,260 @@
+@import '../fonts/stylesheet.css';
+@import '../styles/ThemeColors.css';
+.quotes {
+  position: relative;
+  width: 100%;
+  background: var(--backgroundColor);
+  padding: clamp(40px, 3.9063vmax, 76px) 0 110px 0;
+  border-radius: 0 0 45px 45px;
+  z-index: 2;
+  padding-top: 148px;
+}
+@media (max-width: 1600px) {
+  .quotes {
+    padding-bottom: 86px;
+  }
+}
+@media (max-width: 1100px) {
+  .quotes {
+    padding-top: 26px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 1600px) {
+  .quotes {
+    padding-top: 100px;
+  }
+}
+
+.quotes_section h2 {
+  font-size: max(2.29vw, 32px);
+  font-family: "GilroyBlack";
+  margin-bottom: 36px;
+  color: var(--titleColor);
+  margin-bottom: 36px;
+}
+@media (max-width: 1600px) {
+  .quotes_section h2 {
+    font-size: 2.34vw;
+  }
+}
+@media (max-width: 1100px) {
+  .quotes_section h2 {
+    font-size: 4.1667vw;
+  }
+}
+@media (max-width: 1100px) {
+  .quotes_section h2 {
+    font-size: 44px;
+    margin-bottom: 46px;
+  }
+}
+@media (max-width: 600px) {
+  .quotes_section h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 1600px) {
+  .quotes_section h2 {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .quotes_section h2 {
+    margin-bottom: 46px;
+  }
+}
+
+.quotes_items_wrapper {
+  margin-bottom: 48px;
+}
+
+.quote_wrapper {
+  -webkit-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  -moz-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  position: relative;
+  background: white;
+  border-radius: 40px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 11px 0;
+  min-height: 80px;
+  -webkit-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  -moz-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  padding: 20px 10px 20px 40px;
+  margin-top: 11px;
+}
+.quote_wrapper h5 {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  line-height: 20px;
+  font-family: "OpenSansSemiBold";
+  margin: 0;
+}
+@media (max-width: 1600px) {
+  .quote_wrapper h5 {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_wrapper h5 {
+    font-size: 16px;
+  }
+}
+.quote_wrapper h6 {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  line-height: 20px;
+  font-family: "OpenSansLight";
+  margin: 0;
+}
+@media (max-width: 1600px) {
+  .quote_wrapper h6 {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_wrapper h6 {
+    font-size: 16px;
+  }
+}
+.quote_wrapper blockquote {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.quote_text {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  line-height: 20px;
+  font-family: "OpenSansSemiBold";
+  margin: 0 18px 0 0;
+}
+@media (max-width: 1600px) {
+  .quote_text {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_text {
+    font-size: 16px;
+  }
+}
+
+.quote_cite {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  line-height: 20px;
+  font-family: "OpenSansLight";
+  font-style: normal;
+  position: relative;
+}
+@media (max-width: 1600px) {
+  .quote_cite {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_cite {
+    font-size: 16px;
+  }
+}
+
+.quote_link {
+  display: inline-block;
+  border: 1px solid #e87b5a;
+  border-radius: 30px;
+  padding: 6px;
+  background: transparent;
+  margin-left: 16px;
+}
+@media (max-width: 600px) {
+  .quote_link {
+    all: unset;
+  }
+}
+
+.quote_link_inner {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  line-height: 30px;
+  font-family: "OpenSansSemiBold";
+  /*
+  padding: 8px 26px;
+  */
+  padding: 8px 26px;
+  border-radius: 27px;
+  display: flex;
+  align-items: center;
+  /*  word-spacing: 2px;
+    letter-spacing: 1px;*/
+  white-space: nowrap;
+  color: black;
+}
+@media (max-width: 1600px) {
+  .quote_link_inner {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .quote_link_inner {
+    font-size: 16px;
+  }
+}
+.quote_link_inner.hover {
+  color: white;
+  background: #e87b5a;
+}
+@media (max-width: 600px) {
+  .quote_link_inner {
+    display: none;
+  }
+}
+
+.quote_icon {
+  display: inline;
+  font-size: 20px;
+  margin-right: 14px;
+  font-size: 26px;
+}
+.quote_icon path {
+  fill: black;
+}
+.quote_icon.hover path {
+  fill: white;
+}
+
+.show_more_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.show_more_wrapper button {
+  font-family: "OpenSansSemiBold";
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 1px solid #e87b5a;
+  color: white;
+  background: #e87b5a;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+.show_more_wrapper button:hover {
+  background: #e87b5a;
+}
+@media (max-width: 1100px) {
+  .show_more_wrapper button {
+    margin-bottom: 46px;
+  }
+}
+
+/*# sourceMappingURL=quotes.css.map */

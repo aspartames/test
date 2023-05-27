@@ -1,0 +1,75 @@
+@import "../styles/variables";
+
+.quotes{
+  @include main;
+  padding-top: 148px;
+  @media (max-width: $laptop) {
+    padding-top: 100px;
+  }
+}
+.quotes_section{
+  & h2{
+    @include titlePage;
+    margin-bottom: 36px;
+    @media (max-width: $laptop) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 46px;
+    }
+  }
+}
+
+.quotes_items_wrapper{
+  margin-bottom: 48px;
+}
+
+.quote_wrapper{
+  @include mediaOverlay;
+  @include shadowSmall;
+  padding: 20px 10px 20px 40px;
+  margin-top: 11px;
+  & blockquote{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.quote_text{
+  @include font16;
+  line-height: 20px;
+  font-family: $openSansSemiBold;
+  margin: 0 18px 0 0;
+}
+.quote_cite{
+  @include font16;
+  line-height: 20px;
+  font-family: $openSansLight;
+  font-style: normal;
+  position: relative;
+}
+.quote_link{
+  @include mediaLink;
+}
+.quote_link_inner{
+  @include mediaLinkInner($color2)
+}
+.quote_icon{
+  @include mediaLinkIcon(black);
+  font-size: 26px;
+}
+
+
+
+.show_more_wrapper{
+  display: flex;
+  justify-content: center;
+  & button{
+    @include button($color2);
+    border-radius: 30px;
+    @media (max-width: $tablet) {
+      margin-bottom: 46px;
+    }
+  }
+}
+

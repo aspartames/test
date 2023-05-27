@@ -292,3 +292,221 @@ $transition: 0.3s;
   }
 }
 
+@mixin classesNavOnPage{
+  margin-bottom: 42px;
+
+  & ul{
+    display: flex;
+    gap: 68px;
+    justify-content: flex-end;
+  }
+  & li{
+    @include font32;
+    font-family: $gilroy;
+    list-style-type: none;
+  }
+
+  @media (max-width: $tablet) {
+    display: none;
+  }
+}
+@mixin classesNavOnPageNumber{
+  cursor: pointer;
+  color: var(--titleColor);
+  &:hover{
+    color: $color2;
+  }
+  &.active{
+    font-family: $gilroyExtraBold;
+    color: var(--titleColor);
+
+  }
+}
+
+@mixin itemTitle{
+  @include font16;
+  line-height: 20px;
+  font-family: $openSansSemiBold;
+  color: var(--titleColor);
+  @media (max-width: $laptop) {
+    margin-top: 16px;
+  }
+  @media (max-width: $tablet) {
+    margin-top: 18px;
+  }
+  @media (max-width: $mobile) {
+    text-align: center;
+  }
+}
+
+@mixin checkboxButton{
+  @include button(white);
+  border-radius: 30px;
+  color: black;
+  margin-left: 20px;
+  max-height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0s;
+  &:hover{
+    background: $color2;
+    color: white;
+  }
+  & input{
+    display: none;
+  }
+  & .fa-xmark{
+    display: none;
+    margin-right: 10px;
+    font-size: 22px;
+    line-height: 0;
+    color: white;
+  }
+  &.selected{
+    background: #7292bc;
+    border: 1px solid #7292bc;
+    color: white;
+    & .fa-xmark{
+      display: inline-block;
+    }
+  }
+  @media (max-width: $tablet) {
+    display: none !important;
+  }
+}
+
+@mixin select{
+  display: none;
+  padding: 12px 52px 12px 28px;
+  border-radius: 20px;
+  border: 1px solid $color2;
+  font-size: 16px;
+  font-family: $openSansSemiBold;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../images/angleDown.png");
+  background-position: calc(100% - 20px) calc(50% + 1px);
+  background-repeat: no-repeat;
+  & option{
+    font-size: 22px;
+  }
+  &:focus{
+    outline: none;
+  }
+  @media (max-width: $tablet) {
+    display: inline-block;
+  }
+}
+
+
+
+@mixin mediaOverlay(){
+  @include shadowSmall;
+  position: relative;
+  background: white;
+  border-radius: 40px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 11px 0;
+  min-height: 80px;
+  & h5{
+    @include font16;
+    line-height: 20px;
+    font-family: $openSansSemiBold;
+    margin: 0;
+  }
+  & h6{
+    @include font16;
+    line-height: 20px;
+    font-family: $openSansLight;
+    margin: 0;
+  }
+}
+@mixin mediaTitleContainer(){
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 20px;
+}
+@mixin mediaTitle{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  & h5{
+    font-family: $gilroyBold;
+    line-height: 1.2;
+    @media (max-width: $tablet) {
+      margin-bottom: -18px;
+    }
+    @media (max-width: $mobile) {
+      margin-bottom: -10px;
+    }
+  }
+  & h6{
+    font-family: $openSansLight;
+    line-height: 1.2;
+    margin: 0;
+  }
+  & .file_size{
+    font-family: $openSansLight;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  @media (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+@mixin mediaLink{
+  display: inline-block;
+  border: 1px solid $color2;
+  border-radius: 30px;
+  padding: 6px;
+  background: transparent;
+  margin-left: 16px;
+  @media (max-width: $mobile) {
+   all: unset;
+  }
+}
+@mixin mediaLinkInner($hoverBG){
+  @include font16;
+  line-height: 30px;
+  font-family: $openSansSemiBold;
+  /*
+  padding: 8px 26px;
+  */
+  padding: 8px 26px;
+  border-radius: 27px;
+  display: flex;
+  align-items: center;
+/*  word-spacing: 2px;
+  letter-spacing: 1px;*/
+  white-space: nowrap;
+  color: black;
+  &.hover{
+    color: white;
+    background: $hoverBG;
+  }
+  @media (max-width: $mobile) {
+  display: none;
+  }
+}
+@mixin mediaLinkIcon($color){
+  display: inline;
+  font-size: 20px;
+  margin-right: 14px;
+  & path{
+    fill: $color;
+  }
+  &.hover{
+    & path {
+      fill: white;
+    }
+  }
+}

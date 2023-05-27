@@ -638,7 +638,7 @@
 }
 @media (max-width: 600px) {
   .quote_link {
-    display: none;
+    all: unset;
   }
 }
 
@@ -647,12 +647,15 @@
   line-height: 1.875;
   line-height: 30px;
   font-family: "OpenSansSemiBold";
-  padding: 8px 20px;
+  /*
+  padding: 8px 26px;
+  */
+  padding: 8px 26px;
   border-radius: 27px;
   display: flex;
   align-items: center;
-  word-spacing: 2px;
-  letter-spacing: 1px;
+  /*  word-spacing: 2px;
+    letter-spacing: 1px;*/
   white-space: nowrap;
   color: black;
 }
@@ -669,6 +672,11 @@
 .quote_link_inner.hover {
   color: white;
   background: #e87b5a;
+}
+@media (max-width: 600px) {
+  .quote_link_inner {
+    display: none;
+  }
 }
 
 .quote_icon {
@@ -812,7 +820,7 @@
 }
 @media (max-width: 600px) {
   .audio_link {
-    display: none;
+    all: unset;
   }
 }
 
@@ -821,12 +829,15 @@
   line-height: 1.875;
   line-height: 30px;
   font-family: "OpenSansSemiBold";
-  padding: 8px 20px;
+  /*
+  padding: 8px 26px;
+  */
+  padding: 8px 26px;
   border-radius: 27px;
   display: flex;
   align-items: center;
-  word-spacing: 2px;
-  letter-spacing: 1px;
+  /*  word-spacing: 2px;
+    letter-spacing: 1px;*/
   white-space: nowrap;
   color: black;
   padding: 0;
@@ -849,6 +860,11 @@
 .audio_link_inner.hover {
   color: white;
   background: #e87b5a;
+}
+@media (max-width: 600px) {
+  .audio_link_inner {
+    display: none;
+  }
 }
 
 .audio_link_icon_wrapper.hover {
@@ -952,7 +968,7 @@
 }
 @media (max-width: 600px) {
   .document_link {
-    display: none;
+    all: unset;
   }
 }
 
@@ -961,12 +977,15 @@
   line-height: 1.875;
   line-height: 30px;
   font-family: "OpenSansSemiBold";
-  padding: 8px 20px;
+  /*
+  padding: 8px 26px;
+  */
+  padding: 8px 26px;
   border-radius: 27px;
   display: flex;
   align-items: center;
-  word-spacing: 2px;
-  letter-spacing: 1px;
+  /*  word-spacing: 2px;
+    letter-spacing: 1px;*/
   white-space: nowrap;
   color: black;
 }
@@ -983,6 +1002,11 @@
 .document_link_inner.hover {
   color: white;
   background: #688ab7;
+}
+@media (max-width: 600px) {
+  .document_link_inner {
+    display: none;
+  }
 }
 
 .cloud_download_icon {

@@ -21,3 +21,16 @@ const setAudioControl = () => {
     });
 }
 
+const setMobileLink = () => {
+    if(isMobile()){
+        $('.media_item').each(function () {
+            const link = $(this).find('a')
+            const name = $(this).find('.media_name_wrapper')
+            const fileSize = $(this).find('.file_size')
+            const mediaName = $(this).find('.media_name')
+
+            $(this).html(link.append(name))
+            mediaName.append(fileSize)
+        })
+    }
+}

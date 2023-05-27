@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../styles/index.css">
-    <link rel="stylesheet" type="text/css" href="../styles/book.css">
+    <link rel="stylesheet" type="text/css" href="../styles/quotesDal.css">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="../styles/footer.css">
     <link rel="stylesheet" type="text/css" href="../styles/header.css">
@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="../libraries/slick.css">
     <link rel="stylesheet" type="text/css" href="../fonts/fontAwesomeAll.min.css">
 
-    <title>Title</title>
+    <title>Спросим у Даля!</title>
 </head>
 <body>
 <header class="header background">
@@ -343,150 +343,43 @@
     </div>
 </header>
 
-<main class="book">
-    <section class="book_section">
-        <div class="container">
-            <h2 class="book_title">Классы и разделы</h2>
-            <div class="book_classes active">
-                <ul>
-                    <li id='class5' class="book_class_number active">
-                        5 класс
-                    </li>
-                    <li id='class6' class="book_class_number">
-                        6 класс
-                    </li>
-                    <li id='class7' class="book_class_number">
-                        7 класс
-                    </li>
-                    <li id='class8' class="book_class_number">
-                        8 класс
-                    </li>
-                </ul>
+<main class="quote_Dal">
+    <section class="quote_Dal_section container">
+        <h2>Спросим у Даля!</h2>
+        <div class="quote_Dal_filter">
+            <div class="checkbox_all_wrapper">
+                <label class="checkbox_letter">
+                    <input class="checkbox_letter_input_all" type="checkbox" name="all" value="all">
+                    Все
+                </label>
             </div>
-            <label>
-                <select name="book_class_select" id="book_class_select">
-                    <option value="5">5 класс</option>
-                    <option value="6">6 класс</option>
-                    <option value="7">7 класс</option>
-                    <option value="8">8 класс</option>
-                </select>
-            </label>
+            <div class="checkbox_letters_wrapper"></div>
         </div>
-        <div class="book_classes_content_wrapper">
-            <ul class="classes_content_list class5 active">
-                    <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">Введение</a>
-                                                        </span>
-                    </li>
-                    <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">I раздел. «Что в имени тебе моем?»</a>
-                                                        </span>
-                        <ol class="header_classes_chapter">
-                            <li><a href="#">Небесный покравитель</a></li>
-                            <li><a href="#">Имя в истории и культуре</a></li>
-                            <li><a href="#">Имя - путеводитель в жизни</a></li>
-                        </ol>
-                    </li>
-                    <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">II раздел. В начале было Слово</a>
-                                                        </span>
-                        <ol class="header_classes_chapter">
-                            <li><a href="#">О законе и благодати</a></li>
-                            <li><a href="#">Поучение детям</a></li>
-                            <li><a href="#">«Ни в сказке сказать, ни пером описать...».
-                                Русская сказка и фольклор</a></li>
-                        </ol>
-                    </li>
-                    <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">III раздел. Истоки Святой Руси и наследие Византии</a>
-                                                        </span>
-                        <ol class="header_classes_chapter">
-                            <li><a href="#">Блаженные изгнанные за правду</a></li>
-                            <li><a href="#">Равноапостольные мать и сын, бабушка и внук</a>
-                            </li>
-                            <li><a href="#">«Премудрость созда себе дом»</a></li>
-                        </ol>
-                    </li>
-                    <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">IV раздел. Образ рая на земле </a>
-                                                        </span>
-                        <ol class="header_classes_chapter">
-                            <li><a href="#">Всякая душа празднику рада</a></li>
-                            <li><a href="#">Не велика штука, да мудровата</a></li>
-                            <li><a href="#">Мой кусочек рая</a></li>
-                        </ol>
-                    </li>
-                    <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">V раздел. Град Святого апостола Петра</a>
-                                                        </span>
-                    </li>
-                    <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">Заключение</a>
-                                                        </span>
-                    </li>
-                </ul>
-            <ul class="classes_content_list class6">
-                <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">Введение</a>
-                                                        </span>
-                </li>
-            </ul>
-            <ul class="classes_content_list class7">
-                <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">III раздел. Истоки Святой Руси и наследие Византии</a>
-                                                        </span>
-                    <ol class="header_classes_chapter">
-                        <li><a href="#">Блаженные изгнанные за правду</a></li>
-                        <li><a href="#">Равноапостольные мать и сын, бабушка и внук</a>
-                        </li>
-                        <li><a href="#">«Премудрость созда себе дом»</a></li>
-                    </ol>
-                </li>
-                <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">IV раздел. Образ рая на земле </a>
-                                                        </span>
-                    <ol class="header_classes_chapter">
-                        <li><a href="#">Всякая душа празднику рада</a></li>
-                        <li><a href="#">Не велика штука, да мудровата</a></li>
-                        <li><a href="#">Мой кусочек рая</a></li>
-                    </ol>
-                </li>
-                <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">V раздел. Град Святого апостола Петра</a>
-                                                        </span>
-                </li>
-                <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">Заключение</a>
-                                                        </span>
-                </li>
-            </ul>
-            <ul class="classes_content_list class8">
-                <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">Введение</a>
-                                                        </span>
-                </li>
-                <li class="header_classes_content_item content_item">
-                                                        <span class="header_classes_title">
-                                                            <a href="#">Заключение</a>
-                                                        </span>
-                </li>
-            </ul>
+        <div class="quote_Dal_items_wrapper">
+            <p class="quote_item">
+                <strong>АЛЬМАНАХ</strong> <strong>&mdash;</strong> м. общее в Европе, арабск. календарь, месяцеслов;   ежегодник, погодник, полетник, белорус. и малорос. рочник; погодно выходящий сборник каких-либо сведений, сочинений;  стар. книга гадательная, кудесная. Альманачный издатель, альманачник, как называют впрочем и составителя и любителя альманахов.
+            </p>
+            <p class="quote_item">
+                <strong> АПОСТОЛ</strong> <strong>—</strong> м. греч. ученик, последователь, приверженец;  учитель правоверия;  название двенадцати учеников Христовых, посланных Им проповедовать Евангелие;  книга деяний и посланий их. Апостолово послание, говоря об известном апостоле; послания апостольские, все. Апостольская церковь, содержащая всецело их учение. Борода апостольская, а усок диавольский, о раскольниках и ханжах. Апостольство ср. звание, состояние, обязанности их. Апостольник м. плат, которым монахи покрывают грудь и шею; куколь.
+            </p>
+            <p class="quote_item">
+                <strong>АУТОДАФЕ</strong> <strong>&mdash;</strong> ср. несклон. испанск. (в переводе: подвиг веры) казнь за преступление против веры, казнь еретика; обычно разумеют костер, сожжение.
+            </p>
+            <p class="quote_item">
+                <strong>АЛЬМАНАХ</strong> <strong>&mdash;</strong> м. общее в Европе, арабск. календарь, месяцеслов;   ежегодник, погодник, полетник, белорус. и малорос. рочник; погодно выходящий сборник каких-либо сведений, сочинений;  стар. книга гадательная, кудесная. Альманачный издатель, альманачник, как называют впрочем и составителя и любителя альманахов.
+            </p>
+            <p class="quote_item">
+                <strong> АПОСТОЛ</strong> <strong>—</strong> м. греч. ученик, последователь, приверженец;  учитель правоверия;  название двенадцати учеников Христовых, посланных Им проповедовать Евангелие;  книга деяний и посланий их. Апостолово послание, говоря об известном апостоле; послания апостольские, все. Апостольская церковь, содержащая всецело их учение. Борода апостольская, а усок диавольский, о раскольниках и ханжах. Апостольство ср. звание, состояние, обязанности их. Апостольник м. плат, которым монахи покрывают грудь и шею; куколь.
+            </p>
+            <p class="quote_item">
+                <strong>АУТОДАФЕ</strong> <strong>&mdash;</strong> ср. несклон. испанск. (в переводе: подвиг веры) казнь за преступление против веры, казнь еретика; обычно разумеют костер, сожжение.
+            </p>
         </div>
-        <img src="../images/book/book.png" alt="book">
+        <div class="show_more_wrapper">
+            <button>Показать еще</button>
+        </div>
     </section>
+
 </main>
 
 <footer class="footer">
@@ -613,7 +506,6 @@
 <script type="text/javascript" src="../js/citySelectForm.js"></script>
 <script type="text/javascript" src="../js/header.js"></script>
 <script type="text/javascript" src="../js/mediaLinksHover.js"></script>
+<script type="text/javascript" src="../js/quotesDal.js"></script>
 <script type="text/javascript" src="../js/mediaLinks.js"></script>
-<script type="text/javascript" src="../js/book.js"></script>
-
 </html>

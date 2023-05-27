@@ -229,7 +229,8 @@
   background: #e87b5a;
 }
 .checkbox_button:hover {
-  background: white;
+  background: #e87b5a;
+  color: white;
 }
 .checkbox_button input {
   display: none;
@@ -257,8 +258,7 @@
 
 .map_filter_select {
   display: none;
-  min-width: 312px;
-  padding: 12px 28px;
+  padding: 12px 52px 12px 28px;
   border-radius: 20px;
   border: 1px solid #e87b5a;
   font-size: 16px;
@@ -267,7 +267,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   background-image: url("../images/angleDown.png");
-  background-position: calc(100% - 20px) center;
+  background-position: calc(100% - 20px) calc(50% + 1px);
   background-repeat: no-repeat;
 }
 .map_filter_select option {
@@ -350,6 +350,11 @@
 @media (max-width: 1100px) {
   .map_item h5 {
     margin-top: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .map_item h5 {
+    text-align: center;
   }
 }
 @media (max-width: 600px) {

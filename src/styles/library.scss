@@ -1,0 +1,121 @@
+@import "../styles/variables";
+
+.library{
+  @include main;
+  padding-top: 148px;
+  @media (max-width: $laptop) {
+    padding-top: 100px;
+  }
+}
+.library_section{
+  & h2{
+    @include titlePage;
+    margin-bottom: 36px;
+    @media (max-width: $laptop) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 46px;
+    }
+  }
+}
+
+.library_filter{
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 36px;
+}
+.checkbox_letter{
+  @include font32;
+  font-family: $gilroy;
+  cursor: pointer;
+  color: var(--titleColor);
+  min-height: 48px;
+  min-width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+  &:hover{
+    background: $color2;
+    color: white;
+  }
+  &.selected{
+    font-family: $gilroyBlack;
+  }
+  & input{
+    display: none;
+  }
+  @media (max-width: $laptop) {
+    min-height: 42px;
+    min-width: 42px;
+  }
+  @media (max-width: $tablet) {
+    font-size: 24px;
+
+  }
+}
+
+.checkbox_letters_wrapper{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  @media (max-width: 1880px) {
+    justify-content: flex-start;
+  }
+}
+.library_items_wrapper{
+  margin-bottom: 48px;
+}
+.media_item{
+  @include mediaOverlay;
+}
+.media_name_wrapper{
+  @include mediaTitleContainer;
+  margin-left: 18px;
+}
+.media_name{
+  @include mediaTitle;
+}
+.media_icon{
+  font-size: 46px;
+  line-height: 30px;
+  margin-right: 20px;
+}
+.media_link_container{
+  display: flex;
+  align-items: center;
+}
+.media_link{
+  @include mediaLink;
+}
+.media_link_inner{
+  @include mediaLinkInner(#688ab7);
+  & span:last-child{
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+
+.cloud_download_icon{
+  @include mediaLinkIcon(#688ab7);
+}
+.media_link_file_name{
+  @include font16;
+  font-family: $openSansLight;
+}
+
+.show_more_wrapper{
+  display: flex;
+  justify-content: center;
+  & button{
+    @include button($color2);
+    border-radius: 30px;
+    @media (max-width: $tablet) {
+      margin-bottom: 46px;
+    }
+  }
+}

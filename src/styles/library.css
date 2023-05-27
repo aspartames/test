@@ -1,0 +1,343 @@
+@import '../fonts/stylesheet.css';
+@import '../styles/ThemeColors.css';
+.library {
+  position: relative;
+  width: 100%;
+  background: var(--backgroundColor);
+  padding: clamp(40px, 3.9063vmax, 76px) 0 110px 0;
+  border-radius: 0 0 45px 45px;
+  z-index: 2;
+  padding-top: 148px;
+}
+@media (max-width: 1600px) {
+  .library {
+    padding-bottom: 86px;
+  }
+}
+@media (max-width: 1100px) {
+  .library {
+    padding-top: 26px;
+    padding-bottom: 0;
+  }
+}
+@media (max-width: 1600px) {
+  .library {
+    padding-top: 100px;
+  }
+}
+
+.library_section h2 {
+  font-size: max(2.29vw, 32px);
+  font-family: "GilroyBlack";
+  margin-bottom: 36px;
+  color: var(--titleColor);
+  margin-bottom: 36px;
+}
+@media (max-width: 1600px) {
+  .library_section h2 {
+    font-size: 2.34vw;
+  }
+}
+@media (max-width: 1100px) {
+  .library_section h2 {
+    font-size: 4.1667vw;
+  }
+}
+@media (max-width: 1100px) {
+  .library_section h2 {
+    font-size: 44px;
+    margin-bottom: 46px;
+  }
+}
+@media (max-width: 600px) {
+  .library_section h2 {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+}
+@media (max-width: 1600px) {
+  .library_section h2 {
+    margin-bottom: 36px;
+  }
+}
+@media (max-width: 1100px) {
+  .library_section h2 {
+    margin-bottom: 46px;
+  }
+}
+
+.library_filter {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 36px;
+}
+
+.checkbox_letter {
+  font-size: max(1.67vw, 24px);
+  line-height: 1;
+  font-family: "Gilroy";
+  cursor: pointer;
+  color: var(--titleColor);
+  min-height: 48px;
+  min-width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  padding: 5px;
+}
+.checkbox_letter:hover {
+  background: #e87b5a;
+  color: white;
+}
+.checkbox_letter.selected {
+  font-family: "GilroyBlack";
+}
+.checkbox_letter input {
+  display: none;
+}
+@media (max-width: 1600px) {
+  .checkbox_letter {
+    min-height: 42px;
+    min-width: 42px;
+  }
+}
+@media (max-width: 1100px) {
+  .checkbox_letter {
+    font-size: 24px;
+  }
+}
+
+.checkbox_letters_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+@media (max-width: 1880px) {
+  .checkbox_letters_wrapper {
+    justify-content: flex-start;
+  }
+}
+
+.library_items_wrapper {
+  margin-bottom: 48px;
+}
+
+.media_item {
+  -webkit-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  -moz-box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
+  position: relative;
+  background: white;
+  border-radius: 40px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 11px 0;
+  min-height: 80px;
+}
+.media_item h5 {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  line-height: 20px;
+  font-family: "OpenSansSemiBold";
+  margin: 0;
+}
+@media (max-width: 1600px) {
+  .media_item h5 {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .media_item h5 {
+    font-size: 16px;
+  }
+}
+.media_item h6 {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  line-height: 20px;
+  font-family: "OpenSansLight";
+  margin: 0;
+}
+@media (max-width: 1600px) {
+  .media_item h6 {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .media_item h6 {
+    font-size: 16px;
+  }
+}
+
+.media_name_wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 20px;
+  margin-left: 18px;
+}
+
+.media_name {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.media_name h5 {
+  font-family: "GilroyBold";
+  line-height: 1.2;
+}
+@media (max-width: 1100px) {
+  .media_name h5 {
+    margin-bottom: -18px;
+  }
+}
+@media (max-width: 600px) {
+  .media_name h5 {
+    margin-bottom: -10px;
+  }
+}
+.media_name h6 {
+  font-family: "OpenSansLight";
+  line-height: 1.2;
+  margin: 0;
+}
+.media_name .file_size {
+  font-family: "OpenSansLight";
+  font-size: 12px;
+  margin-top: 10px;
+}
+@media (max-width: 1100px) {
+  .media_name {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.media_icon {
+  font-size: 46px;
+  line-height: 30px;
+  margin-right: 20px;
+}
+
+.media_link_container {
+  display: flex;
+  align-items: center;
+}
+
+.media_link {
+  display: inline-block;
+  border: 1px solid #e87b5a;
+  border-radius: 30px;
+  padding: 6px;
+  background: transparent;
+  margin-left: 16px;
+}
+@media (max-width: 600px) {
+  .media_link {
+    all: unset;
+  }
+}
+
+.media_link_inner {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  line-height: 30px;
+  font-family: "OpenSansSemiBold";
+  /*
+  padding: 8px 26px;
+  */
+  padding: 8px 26px;
+  border-radius: 27px;
+  display: flex;
+  align-items: center;
+  /*  word-spacing: 2px;
+    letter-spacing: 1px;*/
+  white-space: nowrap;
+  color: black;
+}
+@media (max-width: 1600px) {
+  .media_link_inner {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .media_link_inner {
+    font-size: 16px;
+  }
+}
+.media_link_inner.hover {
+  color: white;
+  background: #688ab7;
+}
+@media (max-width: 600px) {
+  .media_link_inner {
+    display: none;
+  }
+}
+@media (max-width: 1100px) {
+  .media_link_inner span:last-child {
+    display: none;
+  }
+}
+
+.cloud_download_icon {
+  display: inline;
+  font-size: 20px;
+  margin-right: 14px;
+}
+.cloud_download_icon path {
+  fill: #688ab7;
+}
+.cloud_download_icon.hover path {
+  fill: white;
+}
+
+.media_link_file_name {
+  font-size: max(0.8333vw, 14px);
+  line-height: 1.875;
+  font-family: "OpenSansLight";
+}
+@media (max-width: 1600px) {
+  .media_link_file_name {
+    line-height: 26px;
+  }
+}
+@media (max-width: 1100px) {
+  .media_link_file_name {
+    font-size: 16px;
+  }
+}
+
+.show_more_wrapper {
+  display: flex;
+  justify-content: center;
+}
+.show_more_wrapper button {
+  font-family: "OpenSansSemiBold";
+  font-size: 16px;
+  line-height: 1;
+  padding: 15px 30px;
+  border-radius: 20px;
+  border: 1px solid #e87b5a;
+  color: white;
+  background: #e87b5a;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 30px;
+}
+.show_more_wrapper button:hover {
+  background: #e87b5a;
+}
+@media (max-width: 1100px) {
+  .show_more_wrapper button {
+    margin-bottom: 46px;
+  }
+}
+
+/*# sourceMappingURL=library.css.map */
