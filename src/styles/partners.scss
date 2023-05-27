@@ -1,0 +1,72 @@
+@import "../styles/variables";
+
+.partners{
+  @include main;
+  padding-top: 148px;
+  @media (max-width: $laptop) {
+    padding-top: 100px;
+  }
+}
+.partners_section{
+  & h2{
+    @include titlePage;
+    margin-bottom: 48px;
+    @media (max-width: $laptop) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 46px;
+    }
+  }
+  @media (max-width: $tablet) {
+    margin-bottom: 48px;
+  }
+}
+
+.partners_wrapper{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  @media (max-width: $tablet) {
+    flex-wrap: wrap;
+  }
+}
+
+.partners_item{
+  @include shadowSmall;
+  display: inline-block;
+  background: white;
+  border-radius: 30px;
+  flex-basis: calc(25% - 20px);
+  padding: 28px 32px;
+  overflow: hidden;
+  & h5{
+    @include font18;
+    font-family: $gilroyBold;
+    line-height: 20px;
+    margin: 8px 0 20px 0;
+  }
+  & p{
+    @include font16;
+    font-family: $openSans;
+    line-height: 24px;
+    margin: 0;
+  }
+  @media (max-width: $tablet) {
+    flex-basis: calc(50% - 80px);
+  }
+  @media (max-width: $mobile) {
+    flex-basis: 100%;
+  }
+}
+
+.partners_image_wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 144px;
+  & img{
+    width: 100%;
+    height: auto;
+  }
+}

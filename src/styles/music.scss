@@ -1,0 +1,158 @@
+@import "../styles/variables";
+
+.music{
+  @include main;
+  padding-top: 148px;
+  @media (max-width: $laptop) {
+    padding-top: 100px;
+  }
+  @media (max-width: $tablet) {
+    border-radius: 0;
+  }
+}
+.music_section{
+  position: relative;
+  & h2{
+    @include titlePage;
+    margin-bottom: 48px;
+    @media (max-width: $laptop) {
+      margin-bottom: 36px;
+    }
+    @media (max-width: $tablet) {
+      margin-bottom: 46px;
+    }
+  }
+  @media (max-width: $tablet) {
+    margin-bottom: 48px;
+  }
+}
+
+.music_filter{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @media (max-width: $tablet) {
+    justify-content: flex-start;
+    margin-bottom: 48px;
+  }
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;  }
+}
+
+.music_filter_select{
+  @include select;
+}
+
+.checkbox_button{
+  @include checkboxButton;
+  margin-bottom: 48px;
+  @media (max-width: $laptop) {
+    margin-bottom: 32px;
+  }
+}
+
+
+.music_items_wrapper{
+  margin-bottom: 48px;
+}
+
+
+.audio_wrapper {
+  @include mediaOverlay;
+}
+.audio_container{
+  @include mediaTitleContainer;
+}
+.audio{
+  background: #e87b5a;
+  position: absolute;
+}
+.audio_controls {
+  position: relative;
+  width: 52px;
+  height: 46px;
+  margin-right: 20px;
+}
+.audio_button{
+  position: absolute;
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  transition: $transition;
+  &.play_icon{
+    z-index: 2;
+    opacity: 1;
+    &.played{
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+  &.pause_icon{
+    z-index: 1;
+    opacity: 0;
+    &.played{
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+}
+.audio_button_icon {
+  font-size: 46px;
+  cursor: pointer;
+  position: relative;
+}
+.audio_links{
+  display: flex;
+
+}
+.audio_link{
+  @include mediaLink;
+  margin-left: 10px;
+}
+.audio_link_inner{
+  @include mediaLinkInner($color2);
+  padding: 8px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: $tablet) {
+    width: 48px;
+    height: 48px;
+  }
+
+}
+.audio_link_icon_wrapper{
+  &.hover{
+    filter: brightness(0) invert(1);
+  }
+}
+.audio_link_icon{
+  font-size: 26px;
+  line-height: 30px;
+  margin: 0 15px 0 0;
+  display: block;
+  &.fa-apple{
+    color: black;
+    transform: translateY(-1px);
+  }
+  &.fa-itunes-note{
+    color: #cb6ae2;
+    transform: translateX(-1px);
+  }
+  &.fa-yandex{
+    color: #f43d1c;
+    transform: translateX(-1px);
+  }
+  @media (max-width: $tablet) {
+    margin: 0;
+  }
+}
+
+.music_stream_name{
+    @media (max-width: $tablet) {
+      display: none;
+  }
+}
+
