@@ -202,11 +202,14 @@
 }
 
 .show_more_map{
-  @include button($color2);
+  @include button($color2, $color3);
   position: relative;
   right: -50%;
   border-radius: 30px;
   transform: translateX(-50%);
+  &:hover{
+    border: 1px solid $color3;
+  }
   @media (max-width: $tablet) {
     margin-bottom: 82px;
   }

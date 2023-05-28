@@ -1162,8 +1162,6 @@
   background: #e87b5a;
   cursor: pointer;
   transition: 0.3s;
-  font-size: max(1.15vw, 16px);
-  line-height: 1;
   line-height: 0;
   min-height: 60px;
   border-radius: 30px;

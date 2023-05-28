@@ -437,7 +437,10 @@
   transform: translateX(-50%);
 }
 .show_more_map:hover {
-  background: #e87b5a;
+  background: #3c4a53;
+}
+.show_more_map:hover {
+  border: 1px solid #3c4a53;
 }
 @media (max-width: 1100px) {
   .show_more_map {

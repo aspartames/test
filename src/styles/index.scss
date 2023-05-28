@@ -807,7 +807,6 @@
   }
   & button{
     @include button($color2, $color2);
-    @include font22;
     line-height: 0;
     min-height: 60px;
     border-radius: 30px;

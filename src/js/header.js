@@ -13,7 +13,6 @@ const setHeaderClassesContentWidth = () => {
 
 // header fixed on scroll
 const setHeaderFixed = () => {
-    if(location.pathname.endsWith("index.html")) {
         if ($(this).scrollTop() > 10) {
             $('.header').addClass('header_fixed');
             $('.header_title_wrapper').addClass('header_fixed');
@@ -28,7 +27,6 @@ const setHeaderFixed = () => {
             $('.theme_toggle_wrapper').removeClass('header_fixed');
             $('.region').removeClass('scroll')
         }
-    }
 }
 
 
@@ -210,7 +208,6 @@ const tabletHeaderSettings = [setTabletHeader, setTabletThemeToggle]
 const mobilHeaderSettings = [setTabletHeader, setTabletThemeToggle,]
 
 const initHeaderSettings = [
-    setHeaderFixed,
     navItemOverlay,
     themeToggle,
 
@@ -231,11 +228,9 @@ const initHeaderSettings = [
     timeoutHeaderClassesContentWidth,
 ]
 
-const scrollHeaderSettings = [setHeaderFixed]
 
 const headerSettings = {
     init: initHeaderSettings,
-    scroll: scrollHeaderSettings,
     desktop: desktopHeaderSettings,
     tablet: tabletHeaderSettings,
     mobile: mobilHeaderSettings

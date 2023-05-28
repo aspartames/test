@@ -126,6 +126,7 @@ const cookie = () => {
 
 
 const initSettings = [
+    setHeaderFixed,
     sliderIntro,
     sliderMainPage,
     mainPageNavAnimate,
@@ -138,7 +139,7 @@ const initSettings = [
 
 const settings = {
     init: initSettings,
-    scroll: [],
+    scroll: [setHeaderFixed],
     desktop: [],
     tablet: [],
     mobile: []
