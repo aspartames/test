@@ -31,6 +31,9 @@
 .header li {
   list-style-type: none;
 }
+.header ul {
+  list-style-type: none;
+}
 .header.header_fixed {
   background: white;
 }

@@ -52,6 +52,9 @@ $concaveBottomLeft: bottomLeft;
   & li{
     list-style-type: none;
   }
+  & ul{
+    list-style-type: none;
+  }
   &.header_fixed{
     background: white;
   }
