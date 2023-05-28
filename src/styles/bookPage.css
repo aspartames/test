@@ -1419,7 +1419,7 @@
   box-shadow: -6px 5px 16px rgba(1, 2, 2, 0.2);
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #ffc800;
   width: 100%;
   z-index: 10;
 }
@@ -1429,8 +1429,11 @@
   width: 100%;
   text-align: left;
   padding: 10px;
-  background: white;
+  background: transparent;
   border: none;
+  font-family: "OpenSans";
+  font-size: 16px;
+  line-height: 30px;
 }
 
 .book_page_mobile_nav:hover .book_page_dropdown_content {

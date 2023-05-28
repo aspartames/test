@@ -78,6 +78,7 @@ const removeSlider = () =>{
 
 isDocumentReady({
     init: [mapCardSlider, commonHover, setContent],
+    tablet: [mapCardSlider],
     mobile: [removeSlider]
 })
 

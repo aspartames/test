@@ -658,7 +658,7 @@
   @include shadowSmall;
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
+  background-color: #ffc800;
   width: 100%;
   z-index: 10;
 }
@@ -668,8 +668,11 @@
   width: 100%;
   text-align: left;
   padding: 10px;
-  background: white;
+  background: transparent;
   border: none;
+  font-family: $openSans;
+  font-size: 16px;
+  line-height: 30px;
 
 }
 
