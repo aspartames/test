@@ -304,6 +304,7 @@
   .main_section {
     padding-top: 26px;
     padding-bottom: 0;
+    border-radius: 0;
   }
 }
 @media (max-width: 600px) {
@@ -1144,6 +1145,7 @@
 @media (max-width: 600px) {
   .cookie p {
     line-height: 24px;
+    text-align: center;
   }
 }
 .cookie a {
@@ -1193,6 +1195,12 @@
     gap: 20px;
     right: 20px;
     width: calc(100% - 40px);
+  }
+}
+@media (max-width: 600px) {
+  .cookie {
+    flex-direction: column;
+    justify-content: flex-start;
   }
 }
 

@@ -151,9 +151,11 @@ const removeTabletHeader = () => {
 }
 
 const setTabletThemeToggle = () => {
-    if ($('.header_container').children('.header_theme_toggle').length < 1) {
-        $('.header_theme_toggle').clone().appendTo($('.header_container'))
-        themeToggle()
+    if(isTablet()){
+        if ($('.header_container').children('.header_theme_toggle').length < 1) {
+            $('.header_theme_toggle').clone().appendTo($('.header_container'))
+            themeToggle()
+        }
     }
 }
 
@@ -219,6 +221,7 @@ const initHeaderSettings = [
     setTabletHeader,
     regionTablet,
     displayMenuMobile,
+    setTabletThemeToggle,
 
     // forms
     submitFormCitySelectTablet,

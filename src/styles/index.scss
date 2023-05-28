@@ -799,6 +799,7 @@
     }
     @media (max-width: $mobile) {
       line-height: 24px;
+      text-align: center;
     }
   }
   & a{
@@ -832,4 +833,9 @@
     right: $containerMargin3;
     width: calc(100% - $containerMargin3 * 2);
   }
+  @media (max-width: $mobile) {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
 }

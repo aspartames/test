@@ -41,7 +41,6 @@ const setMobileSettings = (callbacks) => (() => getCallbacks(callbacks))
 
 // execute
 const isDocumentReady = (settings) => {
-    console.log(settings)
     $(document).ready(function () {
 
         init(settings.init)

@@ -38,6 +38,7 @@
   .video {
     padding-top: 26px;
     padding-bottom: 0;
+    border-radius: 0;
   }
 }
 @media (max-width: 1600px) {
@@ -323,6 +324,9 @@
 .videos_item {
   position: relative;
   flex-basis: calc(25% - 15px);
+}
+.videos_item.hidden {
+  display: none;
 }
 @media (max-width: 1100px) {
   .videos_item {
