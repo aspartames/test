@@ -1,7 +1,3 @@
-const isDesktop= () => $(window).width() > 983
-const isTablet = () => $(window).width() <= 983
-const isMobile = () => $(window).width() <= 500
-
 
 // sliders
 const sliderIntro = () => {
@@ -74,6 +70,15 @@ const svgHover = () => {
             $(this).find('.book_download_path').removeClass('hover')
         }
     )
+    $('.introduction_button').hover(function (){
+        $(this).find('.arr').addClass('hover')
+        $(this).find('.buttonNextSVG').addClass('hover')
+    },
+        function (){
+            $(this).find('.arr').removeClass('hover')
+            $(this).find('.buttonNextSVG').removeClass('hover')
+        }
+        )
 }
 
 
@@ -112,85 +117,33 @@ const mobileSelectClasses = () => {
 }
 
 
-// check window size
-const windowSizeCheck = (desktopSetting, tabletSettings, mobileSettings) => {
-    if(isMobile()){
-        mobileSettings();
-    }
-    if (isTablet()) {
-        tabletSettings();
-    }
-    if(isDesktop()) {
-        desktopSetting();
-    }
-}
-
-// if window width > isTablet set this settings
-const setDesktopSettings = () => {
-    removeTabletHeader()
-    removeTabletThemeToggle()
-
-    const t = setTimeout(() => {
-        setHeaderClassesContentWidth()
-    }, 500)
-
-    return () => clearTimeout(t)
-}
-
-// if window width == isTablet set this settings
-const setTabletSettings = () => {
-    setTabletHeader()
-    setTabletThemeToggle()
-}
-
-// if window width == isMobile set this settings
-const setMobileSettings = () => {
-    setTabletHeader()
-    setTabletThemeToggle()
+// cookie
+const cookie = () => {
+    $('.cookie_button').click(function (){
+        $('.cookie').addClass('accepted')
+    })
 }
 
 
-const init = () =>{
-    setHeaderFixed()
-    navItemOverlay()
-    themeToggle()
-    sliderIntro()
-    sliderMainPage()
-    mainPageNavAnimate()
-    svgHover()
-    region()
-    modalWindow()
+const initSettings = [
+    sliderIntro,
+    sliderMainPage,
+    mainPageNavAnimate,
+    svgHover,
 
-    // tablet and mobile
-    setTabletHeader()
-    regionTablet()
-    displayMenuMobile()
-    mobileSelectClasses()
+    mobileSelectClasses,
 
-    // forms
-    submitFormCitySelectTablet()
-    submitFormCitySelect()
+    cookie,
+]
 
-    const t = setTimeout(() => {
-        setHeaderClassesContentWidth()
-    }, 500)
-
-    return () => clearTimeout(t)
+const settings = {
+    init: initSettings,
+    scroll: [],
+    desktop: [],
+    tablet: [],
+    mobile: []
 }
 
 
-const onScroll = () =>{
-    setHeaderFixed()
-}
-
-
-$(document).ready(function () {
-
-    init()
-
-    $(window).on('resize', ()=> windowSizeCheck(setDesktopSettings, setTabletSettings, setMobileSettings))
-
-    $(window).scroll(()=> onScroll())
-
-});
-
+// execute
+isDocumentReady(settings)

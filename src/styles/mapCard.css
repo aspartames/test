@@ -1,5 +1,25 @@
 @import '../fonts/stylesheet.css';
 @import '../styles/ThemeColors.css';
+.container {
+  margin: 0 105px;
+  box-sizing: border-box;
+}
+@media (max-width: 1600px) {
+  .container {
+    margin: 0 70px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
 .map_card {
   position: relative;
   width: 100%;
@@ -211,6 +231,91 @@
   .map_card_slider_wrapper {
     display: none;
   }
+}
+
+.buttonNextSVG {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px #e87b5a solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.buttonNextSVG svg {
+  width: 20px;
+  height: auto;
+  margin: 0;
+  transform: rotate(0);
+}
+.buttonNextSVG.arr {
+  transition: 0.3s;
+}
+
+.buttonPrevSVG {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px #e87b5a solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+.buttonPrevSVG svg {
+  width: 20px;
+  height: auto;
+  margin: 0;
+  transform: rotate(180deg);
+}
+.buttonPrevSVG.arr {
+  transition: 0.3s;
+}
+
+.slick_controls {
+  position: absolute;
+  right: 105px;
+  bottom: 20px;
+  width: 198px;
+  height: 60px;
+  padding: 0 8px;
+  background: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+@media (max-width: 1600px) {
+  .slick_controls {
+    width: 180px;
+    right: 70px;
+  }
+}
+@media (max-width: 1100px) {
+  .slick_controls {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+.prev_arrow,
+.next_arrow {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.slide_number {
+  font-family: "GilroyLight";
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 5px;
 }
 
 .map_card_slick_control {

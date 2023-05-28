@@ -738,8 +738,15 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  transition: $transition;
   &.hidden{
     display: none;
+  }
+  &.scroll{
+    top: 120px;
+    @media (max-width: $laptop) {
+      top: 86px;
+    }
   }
   @media (max-width: $laptop) {
     right: $containerMargin2;

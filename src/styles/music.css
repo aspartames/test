@@ -1,5 +1,25 @@
 @import '../fonts/stylesheet.css';
 @import '../styles/ThemeColors.css';
+.container {
+  margin: 0 105px;
+  box-sizing: border-box;
+}
+@media (max-width: 1600px) {
+  .container {
+    margin: 0 70px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
 .music {
   position: relative;
   width: 100%;
@@ -28,6 +48,7 @@
 @media (max-width: 1100px) {
   .music {
     border-radius: 0;
+    padding-bottom: 48px;
   }
 }
 
@@ -111,9 +132,12 @@
   background-image: url("../images/angleDown.png");
   background-position: calc(100% - 20px) calc(50% + 1px);
   background-repeat: no-repeat;
-}
-.music_filter_select option {
-  font-size: 22px;
+  /*  & option{
+      font-size: 22px;
+      @media (max-width: $mobile) {
+        font-size: 16px;
+      }
+    }*/
 }
 .music_filter_select:focus {
   outline: none;
@@ -217,6 +241,11 @@
     font-size: 16px;
   }
 }
+@media (max-width: 1600px) {
+  .audio_wrapper h5 {
+    line-height: 20px;
+  }
+}
 .audio_wrapper h6 {
   font-size: max(0.8333vw, 14px);
   line-height: 1.875;
@@ -232,6 +261,11 @@
 @media (max-width: 1100px) {
   .audio_wrapper h6 {
     font-size: 16px;
+  }
+}
+@media (max-width: 1600px) {
+  .audio_wrapper h6 {
+    line-height: 20px;
   }
 }
 

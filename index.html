@@ -207,7 +207,7 @@
                                 </div>
                                 <nav class="header_nav_item_drop">
                                     <ul class="header_nav_drop_list">
-                                        <li class="header_drop_list_item"><a href="#">Цитаты из священного писания</a></li>
+                                        <li class="header_drop_list_item"><a href="src/pages/quotes.html">Цитаты из священного писания</a></li>
                                         <li class="header_drop_list_item"><a href="#">Методические пособия</a></li>
                                         <li class="header_drop_list_item"><a href="#">Полезные книги</a></li>
                                         <li class="header_drop_list_item"><a href="#">Спросим у Даля</a></li>
@@ -262,6 +262,85 @@
                 </nav>
             </div>
         </div>
+        <div class="modal">
+            <div class="city_select">
+                <form id="city_select_form" action="#" method="POST">
+                    <label class="city_input_label" for="city_input">Выбор региона</label>
+                    <input id="city_input" type="text" name="cityInput" placeholder="Введите название города">
+                    <button type="submit" class="mobile_city_submit">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
+                        </svg>
+                        Искать
+                    </button>
+
+
+                    <ul class="cities_tags">
+                        <li class="city_tag">
+                            <label for="city-moskva">Москва</label>
+                            <input type="radio" id="city-moskva" name="city" value="Москва">
+                        </li>
+                        <li class="city_tag">
+                            <label for="city-spb">Санкт-Петербург</label>
+                            <input type="radio" id="city-spb" name="city" value="Санкт-Петербург">
+                        </li>
+                        <li class="city_tag">
+                            <label for="city-kazan">Казань</label>
+                            <input type="radio" id="city-kazan" name="city" value="Казань">
+                        </li>
+                        <li class="city_tag">
+                            <label for="city-novosibirsk">Новосибирск</label>
+                            <input type="radio" id="city-novosibirsk" name="city" value="Новосибирск">
+                        </li>
+                        <li class="city_tag">
+                            <label for="city-samara">Самара</label>
+                            <input type="radio" id="city-samara" name="city" value="Самара">
+                        </li>
+
+                    </ul>
+                    <div class="cities_list_wrapper">
+                        <ul id="cities_list">
+                            <li>
+                                <span class="cities_list_letter">A</span>
+                                <ul>
+                                    <li class="cities_list_item">
+                                        <label for="city-abakan">Абакан</label>
+                                        <input type="radio" id="city-abakan" name="city" value="Абакан">
+                                    </li>
+                                    <li class="cities_list_item">
+                                        <label for="city-aksayi">Аксай</label>
+                                        <input type="radio" id="city-aksayi" name="city" value="Аксай">
+                                    </li>
+                                    <li class="cities_list_item">
+                                        <label for="city-aleksin">Алексин</label>
+                                        <input type="radio" id="city-aleksin" name="city" value="Алексин">
+                                    </li>
+                                    <li class="cities_list_item">
+                                        <label for="city-altay">Алтайский край</label>
+                                        <input type="radio" id="city-altay" name="city" value="Алтайский край">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </form>
+                <div class="cities_list_gradient"></div>
+                <i class="fa fa-times modal_close" aria-hidden="true"></i>
+            </div>
+            <div class="modal_background"></div>
+        </div>
+        <div class="region">
+            <span class="region_city_name">Санкт-Петербург</span>
+            <div class="region_check_wrapper">
+                <div class="region_check">
+                    <span>Ваш город <span>Санкт-Петербург</span>?</span>
+                    <div class="region_buttons">
+                        <button class="region_hidden">Да, верно</button>
+                        <button class="modal_open">Нет, другой</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
     <main>
         <section class="introduction">
@@ -309,6 +388,7 @@
         </section>
         <section class="main_section">
             <div class="container">
+
                 <div class="main_title_container">
                     <h2 class="main_title">
                         <span>ВСЕ МАТЕРИАЛЫ</span>
@@ -443,85 +523,17 @@
             </div>
             <div class="mobile_main_classes_content"></div>
         </section>
-        <div class="modal">
-            <div class="city_select">
-                <form id="city_select_form" action="#" method="POST">
-                    <label class="city_input_label" for="city_input">Выбор региона</label>
-                    <input id="city_input" type="text" name="cityInput" placeholder="Введите название города">
-                    <button type="submit" class="mobile_city_submit">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                            <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/>
-                        </svg>
-                        Искать
-                    </button>
 
-
-                    <ul class="cities_tags">
-                        <li class="city_tag">
-                            <label for="city-moskva">Москва</label>
-                            <input type="radio" id="city-moskva" name="city" value="Москва">
-                        </li>
-                        <li class="city_tag">
-                            <label for="city-spb">Санкт-Петербург</label>
-                            <input type="radio" id="city-spb" name="city" value="Санкт-Петербург">
-                        </li>
-                        <li class="city_tag">
-                            <label for="city-kazan">Казань</label>
-                            <input type="radio" id="city-kazan" name="city" value="Казань">
-                        </li>
-                        <li class="city_tag">
-                            <label for="city-novosibirsk">Новосибирск</label>
-                            <input type="radio" id="city-novosibirsk" name="city" value="Новосибирск">
-                        </li>
-                        <li class="city_tag">
-                            <label for="city-samara">Самара</label>
-                            <input type="radio" id="city-samara" name="city" value="Самара">
-                        </li>
-
-                    </ul>
-                    <div class="cities_list_wrapper">
-                        <ul id="cities_list">
-                            <li>
-                                <span class="cities_list_letter">A</span>
-                                <ul>
-                                    <li class="cities_list_item">
-                                        <label for="city-abakan">Абакан</label>
-                                        <input type="radio" id="city-abakan" name="city" value="Абакан">
-                                    </li>
-                                    <li class="cities_list_item">
-                                        <label for="city-aksayi">Аксай</label>
-                                        <input type="radio" id="city-aksayi" name="city" value="Аксай">
-                                    </li>
-                                    <li class="cities_list_item">
-                                        <label for="city-aleksin">Алексин</label>
-                                        <input type="radio" id="city-aleksin" name="city" value="Алексин">
-                                    </li>
-                                    <li class="cities_list_item">
-                                        <label for="city-altay">Алтайский край</label>
-                                        <input type="radio" id="city-altay" name="city" value="Алтайский край">
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
-                </form>
-                <div class="cities_list_gradient"></div>
-                <i class="fa fa-times modal_close" aria-hidden="true"></i>
-            </div>
-            <div class="modal_background"></div>
-        </div>
-        <div class="region">
-            <span class="region_city_name">Санкт-Петербург</span>
-            <div class="region_check_wrapper">
-                <div class="region_check">
-                    <span>Ваш город <span>Санкт-Петербург</span>?</span>
-                    <div class="region_buttons">
-                        <button class="region_hidden">Да, верно</button>
-                        <button class="modal_open">Нет, другой</button>
-                    </div>
+        <div class="cookie">
+                <div>
+                    <p>Наш сайт использует файлы cookies, продолжая - Вы соглашаетесь</p>
+                    <p><a href="#">c политикой конфиденциальности.</a></p>
                 </div>
+                <button class="cookie_button">
+                    <i class="fa-solid fa-xmark"></i>
+                    Принять
+                </button>
             </div>
-        </div>
     </main>
     <footer class="footer">
         <div hidden class="footer_grid">
@@ -641,6 +653,7 @@
 </body>
 
 <script src="src/libraries/jquery.js"></script>
+<script type="text/javascript" src="src/js/init.js"></script>
 <script type="text/javascript" src="src/fonts/fontAwesomeAll.min.js"></script>
 <script type="text/javascript" src="src/libraries/slick.min.js"></script>
 <script type="text/javascript" src="src/js/themeToggle.js"></script>

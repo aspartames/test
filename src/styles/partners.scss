@@ -6,6 +6,10 @@
   @media (max-width: $laptop) {
     padding-top: 100px;
   }
+  @media (max-width: $tablet) {
+    padding-bottom: 46px;
+    border-radius: 0;
+  }
 }
 .partners_section{
   & h2{
@@ -45,6 +49,12 @@
     font-family: $gilroyBold;
     line-height: 20px;
     margin: 8px 0 20px 0;
+    @media (max-width: $laptop) {
+      margin: 4px 0 10px 0;
+    }
+    @media (max-width: $tablet) {
+      margin: 8px 0 20px 0;
+    }
   }
   & p{
     @include font16;
@@ -52,7 +62,11 @@
     line-height: 24px;
     margin: 0;
   }
+  @media (max-width: $laptop) {
+    padding: 22px 26px;
+  }
   @media (max-width: $tablet) {
+    padding: 28px 32px;
     flex-basis: calc(50% - 80px);
   }
   @media (max-width: $mobile) {

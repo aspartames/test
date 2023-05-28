@@ -3,6 +3,9 @@
 
 .container{
   @include container();
+  @media (max-width: 1199px) {
+    margin: 0 $containerMargin2;
+  }
 }
 
 .book_page{
@@ -126,6 +129,9 @@
   flex: 1;
 }
 
+
+
+
 /////////////////////////////////// essential content ////////////////////////////////////////////
 
 .book_page_paragraph{
@@ -146,6 +152,9 @@
   margin-top: 14px;
   margin-bottom: 40px;
   line-height: 20px;
+  @media (max-width: $laptop) {
+    line-height: 20px;
+  }
   & strong{
     &:first-child{
       font-family: $gilroyBlack;
@@ -217,10 +226,349 @@
 
 }
 
+
+
+
+/////////////////////////////////// quote ////////////////////////////////////////////
+
+
+.quote_wrapper{
+  @include mediaOverlay;
+  @include shadowSmall;
+  padding: 20px 10px 20px 40px;
+  margin-top: 48px;
+  & blockquote{
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+.quote_text{
+  @include font16;
+  line-height: 20px;
+  font-family: $openSansSemiBold;
+  margin: 0 18px 0 0;
+  @media (max-width: $laptop) {
+    line-height: 20px;
+  }
+}
+.quote_cite{
+  @include font16;
+  line-height: 20px;
+  font-family: $openSansLight;
+  font-style: normal;
+  position: relative;
+}
+.quote_link{
+  @include mediaLink;
+}
+.quote_link_inner{
+  @include mediaLinkInner($color2)
+}
+.quote_icon{
+  @include mediaLinkIcon(black);
+  font-size: 26px;
+}
+
+
+
+////////////////////////// music ////////////////////////////
+
+.book_page_content_music {
+  margin-bottom: 28px;
+  & h3{
+    @include sectionTitle;
+  }
+}
+
+.book_page_content_audio{
+  @include tabletContent;
+}
+.audio_wrapper {
+  @include mediaOverlay;
+}
+.audio_container{
+  @include mediaTitleContainer;
+}
+.audio{
+  background: #e87b5a;
+  position: absolute;
+}
+.audio_controls {
+  position: relative;
+  width: 52px;
+  height: 46px;
+  margin-right: 20px;
+}
+.audio_button{
+  position: absolute;
+  background: transparent;
+  border-radius: 50%;
+  border: none;
+  transition: $transition;
+  &.play_icon{
+    z-index: 2;
+    opacity: 1;
+    &.played{
+      opacity: 0;
+      z-index: 1;
+    }
+  }
+  &.pause_icon{
+    z-index: 1;
+    opacity: 0;
+    &.played{
+      opacity: 1;
+      z-index: 2;
+    }
+  }
+}
+.audio_button_icon {
+  font-size: 46px;
+  cursor: pointer;
+  position: relative;
+}
+.audio_links{
+  display: flex;
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.audio_link{
+  @include mediaLink;
+  margin-left: 10px;
+}
+.audio_link_inner{
+  @include mediaLinkInner($color2);
+  padding: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.audio_link_icon_wrapper{
+  &.hover{
+    filter: brightness(0) invert(1);
+  }
+}
+.audio_link_icon{
+  font-size: 26px;
+  line-height: 30px;
+  display: block;
+  &.fa-apple{
+    color: black;
+    transform: translateY(-1px);
+  }
+  &.fa-itunes-note{
+    color: #cb6ae2;
+    transform: translateX(-1px);
+  }
+  &.fa-yandex{
+    color: #f43d1c;
+    transform: translateX(-1px);
+  }
+}
+
+//////////////////// documents /////////////////////////////////
+
+.book_page_content_documents{
+  @include tabletContent;
+  margin-bottom: 28px;
+  & h3{
+    @include sectionTitle;
+  }
+}
+
+.documents_downloads_wrapper{
+  @include mediaOverlay;
+}
+.documents_name_wrapper{
+  @include mediaTitleContainer;
+  margin-left: 18px;
+}
+.document_name{
+  @include mediaTitle;
+}
+.documents_icon{
+  font-size: 46px;
+  line-height: 30px;
+  margin-right: 20px;
+}
+.document_link_container{
+  display: flex;
+  align-items: center;
+}
+.document_link{
+  @include mediaLink;
+}
+.document_link_inner{
+  @include mediaLinkInner(#688ab7);
+  & span:last-child{
+    @media (max-width: $tablet) {
+      display: none;
+    }
+  }
+}
+.cloud_download_icon{
+  @include mediaLinkIcon(#688ab7);
+}
+.document_link_file_name{
+  @include font16;
+  font-family: $openSansLight;
+}
+
+
+//////////////////// library //////////////////////////////////
+
+.main_book_content_library{
+  @include tabletContent;
+  margin-bottom: 28px;
+  & h3{
+    @include sectionTitle;
+  }
+}
+
+
+
+////////////////////////////// slider ///////////////////////
+
 .book_page_slider_container{
   @include tabletContent;
 
 }
+
+.book_page_slider_wrapper{
+  position: relative;
+  max-height: 31.25vw;
+  max-width: 44.01vw;
+  overflow: hidden;
+  border-radius: 40px;
+  margin-bottom: 20px;
+  @media (max-width: $tablet) {
+    max-height: 513px;
+    max-width: 100%;
+  }
+  @media (max-width: $mobile) {
+    all: unset;
+    max-height: 100%;
+    max-width: 100%;
+    margin-bottom: 40px;
+
+  }
+
+}
+
+.slick_controls{
+  position: absolute;
+  right: $containerMargin1;
+  bottom: 20px;
+  width: 198px;
+  height: 60px;
+  padding: 0 8px;
+  background: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  @media (max-width: $laptop) {
+    width: 180px;
+    right: $containerMargin2;
+  }
+  @media (max-width: $tablet) {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+.prev_arrow,
+.next_arrow {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.slide_number {
+  font-family: $gilroyLight;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 5px;
+}
+
+.buttonNextSVG{
+  @include buttonSVG(0)
+}
+.buttonPrevSVG{
+  @include buttonSVG(180deg)
+}
+
+.book_page_slide{
+  position: relative;
+  height: 31.25vw;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  @media (max-width: $tablet) {
+    height: 513px;
+  }
+  @media (max-width: $mobile) {
+    width: 100%;
+    height: 100%;
+  }
+
+}
+.book_page_slider_img_background{
+  position: absolute;
+  align-self: center;
+  width: 100%;
+  height: auto;
+  opacity: 0.5;
+  filter: blur(5px);
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+.book_page_slider_img{
+  position: absolute;
+  height: 100%;
+  width: auto;
+  @media (max-width: $mobile) {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
+.book_page_slide_name{
+  @include font16;
+  font-family: $openSansSemiBold;
+  text-align: center;
+  display: none;
+  color: var(--titleColor);
+  &.visible{
+    display: block;
+  }
+  @media (max-width: $mobile) {
+    display: block;
+    margin-bottom: 38px;
+  }
+}
+.book_page_slick_control{
+  right: 50%;
+  transform: translateX(50%);
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
+
+.book_page_slide_description{
+  @media (max-width: $mobile) {
+    display: none;
+  }
+}
+
 
 /////////////////////////////////// geography ////////////////////////////////////////////
 
@@ -229,9 +577,9 @@
 }
 
 .book_page_geography_title{
-
   @include sectionTitle;
   text-align: left;
+  margin-bottom: 48px;
 }
 
 .map_wrapper{
@@ -303,292 +651,8 @@
 }
 
 
-/////////////////////////////////// quote ////////////////////////////////////////////
 
-
-
-
-
-.quote_wrapper{
-  @include mediaOverlay;
-  @include shadowSmall;
-  padding: 20px 10px 20px 40px;
-  margin-top: 48px;
-  & blockquote{
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-.quote_text{
-  @include font16;
-  line-height: 20px;
-  font-family: $openSansSemiBold;
-  margin: 0 18px 0 0;
-}
-.quote_cite{
-  @include font16;
-  line-height: 20px;
-  font-family: $openSansLight;
-  font-style: normal;
-  position: relative;
-}
-.quote_link{
- @include mediaLink;
-}
-.quote_link_inner{
-  @include mediaLinkInner($color2)
-}
-.quote_icon{
-  @include mediaLinkIcon(black);
-  font-size: 26px;
-}
-
-
-.book_page_content_audio{
-  @include tabletContent;
-}
-.audio_wrapper {
-  @include mediaOverlay;
-}
-.audio_container{
-  @include mediaTitleContainer;
-}
-.audio{
-  background: #e87b5a;
-  position: absolute;
-}
-.audio_controls {
-  position: relative;
-  width: 52px;
-  height: 46px;
-  margin-right: 20px;
-}
-.audio_button{
-  position: absolute;
-  background: transparent;
-  border-radius: 50%;
-  border: none;
-  transition: $transition;
-  &.play_icon{
-    z-index: 2;
-    opacity: 1;
-    &.played{
-      opacity: 0;
-      z-index: 1;
-    }
-  }
-  &.pause_icon{
-    z-index: 1;
-    opacity: 0;
-    &.played{
-      opacity: 1;
-      z-index: 2;
-    }
-  }
-}
-.audio_button_icon {
-  font-size: 46px;
-  cursor: pointer;
-  position: relative;
-}
-.audio_links{
-  display: flex;
-  @media (max-width: $mobile) {
-    display: none;
-  }
-}
-.audio_link{
-  @include mediaLink;
-  margin-left: 10px;
-}
-.audio_link_inner{
-  @include mediaLinkInner($color2);
-  padding: 0;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-}
-.audio_link_icon_wrapper{
-    &.hover{
-    filter: brightness(0) invert(1);
-  }
-}
-.audio_link_icon{
-  font-size: 26px;
-  line-height: 30px;
-  display: block;
-  &.fa-apple{
-    color: black;
-    transform: translateY(-1px);
-  }
-  &.fa-itunes-note{
-    color: #cb6ae2;
-    transform: translateX(-1px);
-  }
-  &.fa-yandex{
-    color: #f43d1c;
-    transform: translateX(-1px);
-  }
-}
-
-
-.documents_downloads_wrapper{
-  @include mediaOverlay;
-}
-.documents_name_wrapper{
-  @include mediaTitleContainer;
-  margin-left: 18px;
-}
-.documents_icon{
-  font-size: 46px;
-  line-height: 30px;
-  margin-right: 20px;
-}
-.document_link_container{
-  display: flex;
-  align-items: center;
-}
-.document_link{
-  @include mediaLink;
-}
-.document_link_inner{
-  @include mediaLinkInner(#688ab7);
-}
-.cloud_download_icon{
-  @include mediaLinkIcon(#688ab7);
-}
-.document_link_file_name{
-  @include font16;
-  font-family: $openSansLight;
-}
-
-
-
-
-////////////////////////// music ////////////////////////////
-
-.book_page_content_music {
-  margin-bottom: 28px;
-  & h3{
-   @include sectionTitle;
- }
-}
-
-
-//////////////////// documents /////////////////////////////////
-
-.book_page_content_documents{
-  @include tabletContent;
-  margin-bottom: 28px;
-  & h3{
-    @include sectionTitle;
-  }
-}
-
-//////////////////// library //////////////////////////////////
-
-.main_book_content_library{
-  @include tabletContent;
-  margin-bottom: 28px;
-  & h3{
-    @include sectionTitle;
-  }
-}
-
-
-
-
-.book_page_slider_wrapper{
-  position: relative;
-  max-height: 31.25vw;
-  max-width: 44.01vw;
-  overflow: hidden;
-  border-radius: 40px;
-  margin-bottom: 20px;
-  @media (max-width: $tablet) {
-    max-height: 513px;
-    max-width: 100%;
-  }
-  @media (max-width: $mobile) {
-    all: unset;
-    max-height: 100%;
-    max-width: 100%;
-    margin-bottom: 40px;
-
-  }
-
-}
-
-.book_page_slide{
-  position: relative;
-  height: 31.25vw;
-  width: 100%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  @media (max-width: $tablet) {
-    height: 513px;
-  }
-  @media (max-width: $mobile) {
-    width: 100%;
-    height: 100%;
-  }
-
-}
-.book_page_slider_img_background{
-  position: absolute;
-  align-self: center;
-  width: 100%;
-  height: auto;
-  opacity: 0.5;
-  filter: blur(5px);
-  @media (max-width: $mobile) {
-    display: none;
-  }
-}
-.book_page_slider_img{
-  position: absolute;
-  height: 100%;
-  width: auto;
-  @media (max-width: $mobile) {
-    position: relative;
-    width: 100%;
-    height: auto;
-  }
-}
-.book_page_slide_name{
-  @include font16;
-  font-family: $openSansSemiBold;
-  text-align: center;
-  display: none;
-  color: var(--titleColor);
-  &.visible{
-    display: block;
-  }
-  @media (max-width: $mobile) {
-    display: block;
-    margin-bottom: 38px;
-  }
-}
-.book_page_slick_control{
-  right: 50%;
-  transform: translateX(50%);
-  @media (max-width: $mobile) {
-    display: none;
-  }
-}
-
-.book_page_slide_description{
-  @media (max-width: $mobile) {
-    display: none;
-  }
-}
-
+///////////////////////////////////////// mobile //////////////////////////////////////////////
 
 .book_page_dropdown_content {
   @include shadowSmall;
@@ -648,5 +712,9 @@
     margin: 2px 0;
   }
 }
+
+
+
+
 
 

@@ -1,5 +1,25 @@
 @import '../fonts/stylesheet.css';
 @import '../styles/ThemeColors.css';
+.container {
+  margin: 0 105px;
+  box-sizing: border-box;
+}
+@media (max-width: 1600px) {
+  .container {
+    margin: 0 70px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
 .video {
   position: relative;
   width: 100%;
@@ -153,10 +173,13 @@
   background-image: url("../images/angleDown.png");
   background-position: calc(100% - 20px) calc(50% + 1px);
   background-repeat: no-repeat;
+  /*  & option{
+      font-size: 22px;
+      @media (max-width: $mobile) {
+        font-size: 16px;
+      }
+    }*/
   margin-right: 20px;
-}
-.video_classes_select option {
-  font-size: 22px;
 }
 .video_classes_select:focus {
   outline: none;
@@ -185,9 +208,12 @@
   background-image: url("../images/angleDown.png");
   background-position: calc(100% - 20px) calc(50% + 1px);
   background-repeat: no-repeat;
-}
-.video_filter_select option {
-  font-size: 22px;
+  /*  & option{
+      font-size: 22px;
+      @media (max-width: $mobile) {
+        font-size: 16px;
+      }
+    }*/
 }
 .video_filter_select:focus {
   outline: none;
@@ -266,6 +292,7 @@
   line-height: 20px;
   font-family: "OpenSansSemiBold";
   color: var(--titleColor);
+  margin-top: 20px;
 }
 @media (max-width: 1600px) {
   .videos_wrapper h5 {

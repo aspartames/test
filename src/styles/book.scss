@@ -90,6 +90,11 @@
   &.active{
     display: block;
   }
+  & a {
+    &:hover{
+      color: $color2;
+    }
+  }
   @media (max-width: $tablet) {
     column-count: 1;
     background: white;
@@ -100,6 +105,7 @@
 .content_item{
   display: inline-block;
   margin-bottom: 22px;
+
 }
 
 #book_class_select{

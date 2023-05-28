@@ -24,6 +24,7 @@ $containerMargin4: 10px;
 
 $color1: #f3f3f3;
 $color2: #e87b5a;
+$color3: #3c4a53;
 
 $paddingButtonMax: clamp(30px, 2vmax, 40px);
 $paddingButtonMid: clamp(10px, 2vmax, 30px);
@@ -389,9 +390,12 @@ $transition: 0.3s;
   background-image: url("../images/angleDown.png");
   background-position: calc(100% - 20px) calc(50% + 1px);
   background-repeat: no-repeat;
-  & option{
+/*  & option{
     font-size: 22px;
-  }
+    @media (max-width: $mobile) {
+      font-size: 16px;
+    }
+  }*/
   &:focus{
     outline: none;
   }
@@ -419,12 +423,18 @@ $transition: 0.3s;
     line-height: 20px;
     font-family: $openSansSemiBold;
     margin: 0;
+    @media (max-width: $laptop) {
+      line-height: 20px;
+    }
   }
   & h6{
     @include font16;
     line-height: 20px;
     font-family: $openSansLight;
     margin: 0;
+    @media (max-width: $laptop) {
+      line-height: 20px;
+    }
   }
 }
 @mixin mediaTitleContainer(){
@@ -509,4 +519,10 @@ $transition: 0.3s;
       fill: white;
     }
   }
+}
+
+
+
+.container{
+  @include container;
 }

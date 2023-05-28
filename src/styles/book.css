@@ -1,5 +1,25 @@
 @import '../fonts/stylesheet.css';
 @import '../styles/ThemeColors.css';
+.container {
+  margin: 0 105px;
+  box-sizing: border-box;
+}
+@media (max-width: 1600px) {
+  .container {
+    margin: 0 70px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
 .book {
   position: relative;
   width: 100%;
@@ -173,6 +193,9 @@
 }
 .classes_content_list.active {
   display: block;
+}
+.classes_content_list a:hover {
+  color: #e87b5a;
 }
 @media (max-width: 1100px) {
   .classes_content_list {

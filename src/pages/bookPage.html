@@ -1,9 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../styles/index.css">
     <link rel="stylesheet" type="text/css" href="../styles/bookPage.css">
     <link rel="stylesheet" type="text/css" href="../styles/style.css">
     <link rel="stylesheet" type="text/css" href="../styles/footer.css">
@@ -16,7 +15,7 @@
     <title>Title</title>
 </head>
 <body>
-<header class="header background">
+<header class="header background header_fixed">
     <div class="header_container">
         <div class="mobile_menu_icon">
             <div class="menu_icon mobile_icon_container">
@@ -25,12 +24,12 @@
                 <span></span>
             </div>
         </div>
-        <div class="header_title_wrapper">
+        <div class="header_title_wrapper header_fixed">
             <h1 class="gradient">
                 <a href="#">Основы духовно-нравственной культуры народов России</a>
             </h1>
         </div>
-        <div class="header_nav_container">
+        <div class="header_nav_container header_fixed">
             <nav class="header_nav">
                 <ul class="header_nav_list">
                     <li class="header_nav_item classes">
@@ -241,7 +240,7 @@
                     </li>
                 </ul>
             </nav>
-            <div class="theme_toggle_wrapper header_theme_toggle">
+            <div class="theme_toggle_wrapper header_theme_toggle header_fixed">
                 <i class="fa-solid fa-eye theme_toggle_eye header_eye"></i>
                 <label>
                     <input type="checkbox" class="theme_toggle">
@@ -342,8 +341,8 @@
         </div>
     </div>
 </header>
-<main class="book_page">
 
+<main class="book_page">
     <div class="container">
         <section class="book_page_nav">
             <button class="book_page_nav_button" onclick="window.location.href='#'">
@@ -502,8 +501,6 @@
                             <div class="book_page_slider">
                                 <div class="book_page_slide_wrapper">
                                     <div class="book_page_slide">
-                                        <img class="book_page_slider_img_background" src="../images/Layer%2023.png"
-                                             alt="slide">
                                         <img class="book_page_slider_img" src="../images/Layer%2023.png" alt="slide">
                                     </div>
                                     <p class="book_page_slide_name">Съезд князей. Свидание Владимира Мономаха со
@@ -511,11 +508,17 @@
                                 </div>
                                 <div class="book_page_slide_wrapper">
                                     <div class="book_page_slide">
-                                        <img class="book_page_slider_img_background" src="../images/museum.png" alt="slide">
-                                        <img class="book_page_slider_img" src="../images/museum.png" alt="slide">
+                                        <img class="book_page_slider_img" src="../images/image1.png" alt="slide">
                                     </div>
                                     <p class="book_page_slide_name">Описание 2</p>
                                 </div>
+                                <div class="book_page_slide_wrapper">
+                                    <div class="book_page_slide">
+                                        <img class="book_page_slider_img" src="../images/image5.png" alt="slide">
+                                    </div>
+                                    <p class="book_page_slide_name">Описание 3</p>
+                                </div>
+
                             </div>
                             <div class="slick_controls book_page_slick_control">
                                         <span class="buttonSVG buttonPrevSVG prev_arrow">
@@ -638,13 +641,15 @@
                     </div>
                     <div class="book_page_content_documents">
                         <h3>Документы</h3>
-                        <div class="documents_downloads_wrapper">
-                            <div class="documents_name_wrapper">
-                                <i class="far fa-file-powerpoint documents_icon" style="color: #e66945;"></i>
-                                <h5>Презентация в PowerPoint</h5>
+                        <div class="documents_downloads_wrapper media_item">
+                            <div class="documents_name_wrapper media_name_wrapper">
+                                <i class="far fa-file-powerpoint documents_icon media_icon" style="color: #e66945;"></i>
+                                <div class="document_name media_name">
+                                    <h5><strong>Презентация в PowerPoint</strong></h5> &ensp;
+                                </div>
                             </div>
-                            <div class="document_link_container">
-                                <span class="document_link_file_name">Файл: ppt (1645.49 KB)</span>
+                            <div class="document_link_container media_link_container">
+                                <span class="media_link_file_name document_link_file_name">Файл: <span>pdf (565.20 KB)</span></span>
                                 <a class="document_link media_link" href="#" download>
                                     <span class="document_link_inner media_link_inner">
                                         <i class="fas fa-cloud-download cloud_download_icon media_link_icon"></i>
@@ -653,14 +658,16 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="documents_downloads_wrapper">
-                            <div class="documents_name_wrapper">
-                                <i class="far fa-file-word documents_icon" style="color: #285192;"></i>
-                                <h5>Льюис Клайв Стейплз.</h5> &ensp;
-                                <h6>Четыре любви</h6>
+                        <div class="documents_downloads_wrapper media_item">
+                            <div class="documents_name_wrapper media_name_wrapper">
+                                <i class="far fa-file-word documents_icon media_icon" style="color: #285192;"></i>
+                                <div class="document_name media_name">
+                                    <h5><strong>Льюис Клайв Стейплз.</strong></h5> &ensp;
+                                    <h6>Четыре любви</h6>
+                                </div>
                             </div>
-                            <div class="document_link_container">
-                                <span class="document_link_file_name">Файл: ppt (1645.49 KB)</span>
+                            <div class="document_link_container media_link_container">
+                                <span class="media_link_file_name document_link_file_name">Файл: <span>pdf (565.20 KB)</span></span>
                                 <a class="document_link media_link" href="#" download>
                                     <span class="document_link_inner media_link_inner">
                                         <i class="fas fa-cloud-download cloud_download_icon media_link_icon"></i>
@@ -672,13 +679,16 @@
                     </div>
                     <div class="main_book_content_library">
                         <h3>Библиотека</h3>
-                        <div class="documents_downloads_wrapper">
-                            <div class="documents_name_wrapper">
-                                <i class="far fa-file-alt documents_icon" style="color: #285192;"></i>
-                                <h5>Презентация в PowerPoint</h5>
+                        <div class="documents_downloads_wrapper media_item">
+                            <div class="documents_name_wrapper media_name_wrapper">
+                                <i class="far fa-file-pdf documents_icon media_icon" style="color: #ad0b00;"></i>
+                                <div class="document_name media_name">
+                                    <h5><strong>Льюис Клайв Стейплз.</strong></h5> &ensp;
+                                    <h6>Четыре любви</h6>
+                                </div>
                             </div>
-                            <div class="document_link_container">
-                                <span class="document_link_file_name">Файл: ppt (1645.49 KB)</span>
+                            <div class="document_link_container media_link_container">
+                                <span class="media_link_file_name document_link_file_name">Файл: <span>pdf (565.20 KB)</span></span>
                                 <a class="document_link media_link" href="#" download>
                                     <span class="document_link_inner media_link_inner">
                                         <i class="fas fa-cloud-download cloud_download_icon media_link_icon"></i>
@@ -687,14 +697,15 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="documents_downloads_wrapper">
-                            <div class="documents_name_wrapper">
-                                <i class="far fa-file-pdf documents_icon" style="color: #ad0b00;"></i>
-                                <h5>Льюис Клайв Стейплз.</h5> &ensp;
-                                <h6>Четыре любви</h6>
+                        <div class="documents_downloads_wrapper media_item">
+                            <div class="documents_name_wrapper media_name_wrapper">
+                                <i class="far fa-file-alt documents_icon media_icon" style="color: #285192;"></i>
+                                <div class="document_name media_name">
+                                    <h5><strong>Презентация в PowerPoint</strong></h5> &ensp;
+                                </div>
                             </div>
-                            <div class="document_link_container">
-                                <span class="document_link_file_name">Файл: ppt (1645.49 KB)</span>
+                            <div class="document_link_container media_link_container">
+                                <span class="media_link_file_name document_link_file_name">Файл: <span>pdf (565.20 KB)</span></span>
                                 <a class="document_link media_link" href="#" download>
                                     <span class="document_link_inner media_link_inner">
                                         <i class="fas fa-cloud-download cloud_download_icon media_link_icon"></i>
@@ -759,9 +770,6 @@
             </div>
         </section>
     </div>
-
-
-
 </main>
 
 <footer class="footer">
@@ -881,14 +889,14 @@
 </footer>
 </body>
 <script src="../libraries/jquery.js"></script>
+<script type="text/javascript" src="../js/init.js"></script>
 <script type="text/javascript" src="../fonts/fontAwesomeAll.min.js"></script>
 <script type="text/javascript" src="../libraries/slick.min.js"></script>
 <script type="text/javascript" src="../js/themeToggle.js"></script>
 <script type="text/javascript" src="../js/region.js"></script>
 <script type="text/javascript" src="../js/citySelectForm.js"></script>
-<script type="text/javascript" src="../js/header.js"></script>
-<script type="text/javascript" src="../js/mediaLinksHover.js"></script>
 <script type="text/javascript" src="../js/mediaLinks.js"></script>
+<script type="text/javascript" src="../js/header.js"></script>
 <script type="text/javascript" src="../js/bookPage.js"></script>
 
 </html>

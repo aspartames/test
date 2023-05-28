@@ -76,6 +76,48 @@
   }
 }
 
+
+.buttonNextSVG{
+  @include buttonSVG(0)
+}
+.buttonPrevSVG{
+  @include buttonSVG(180deg)
+}
+.slick_controls{
+  position: absolute;
+  right: $containerMargin1;
+  bottom: 20px;
+  width: 198px;
+  height: 60px;
+  padding: 0 8px;
+  background: #ffffff;
+  border-radius: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+  @media (max-width: $laptop) {
+    width: 180px;
+    right: $containerMargin2;
+  }
+  @media (max-width: $tablet) {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+.prev_arrow,
+.next_arrow {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+.slide_number {
+  font-family: $gilroyLight;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 5px;
+}
+
 .map_card_slick_control{
   right: 50%;
   transform: translateX(50%);

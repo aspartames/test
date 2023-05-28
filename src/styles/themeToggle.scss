@@ -20,13 +20,13 @@
   }
   &.header_theme_toggle{
     border: 1px solid #fe8a83;
-    @media (max-width: 1000px) {
+    @media (max-width: $tablet) {
       border: 1px solid white;
       background: white;
     }
   }
   &.header_fixed{
-    @media (max-width: 1000px) {
+    @media (max-width: $tablet) {
       border: 1px solid #fe8a83;
     }
   }
@@ -35,12 +35,12 @@
       display: flex;
     }
   }
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     width: 102px;
     height: 42px;
     padding: 0 6px;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet) {
     width: 150px;
     height: 60px;
     padding: 0 12px;
@@ -51,7 +51,7 @@
     right: $containerMargin3;
     display: none;
   }
-  @media (max-width: 500px) {
+  @media (max-width: $mobile) {
     display: none;
   }
 }
@@ -63,11 +63,11 @@
   &.header_eye{
     color: black;
   }
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     font-size: 16px;
     margin: 0 3px 0 6px;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet) {
     font-size: 26px;
     margin: 0 12px;
   }
@@ -95,12 +95,12 @@
     top: 10px;
     z-index: 0;
     transition: 0.3s;
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
       width: 16px;
       height: 16px;
       top: 7px;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: $tablet) {
       height: 20px;
       width: 20px;
       top: 10px;
@@ -110,10 +110,10 @@
     background: url("../images/themeToggle/sun.png") center no-repeat;
     background-size: cover;
     left: 12px;
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
       left: 8px;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: $tablet) {
       left: 12px;
     }
   }
@@ -123,10 +123,10 @@
     right: 12px;
     opacity: 0;
     transform: translateX(-143%);
-    @media (max-width: 1600px) {
+    @media (max-width: $laptop) {
       right: 8px;
     }
-    @media (max-width: 1000px) {
+    @media (max-width: $tablet) {
       right: 12px;
     }
   }
@@ -140,11 +140,11 @@
       opacity: 1;
     }
   }
-  @media (max-width: 1600px) {
+  @media (max-width: $laptop) {
     width: 50px;
     height: 30px;
   }
-  @media (max-width: 1000px) {
+  @media (max-width: $tablet) {
     width: 72px;
     height: 40px;
   }

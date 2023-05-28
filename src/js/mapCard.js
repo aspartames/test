@@ -1,9 +1,4 @@
-const isDesktop= () => $(window).width() > 983
-const isTablet = () => $(window).width() <= 983
-const isMobile = () => $(window).width() <= 500
 
-
-// sliders
 const mapCardSlider = () =>{
         let $carousel = $('.map_card_slider');
         let $slideNumber = $('.slide_number');
@@ -34,7 +29,6 @@ const mapCardSlider = () =>{
         $slideNumber.html($carousel.slick('getSlick').options.customSlideNumber($carousel.slick('getSlick'), 0));
 }
 
-
 const setContent = () =>{
     $('.map_card_description').click(function (){
         $('.map_card_section').find('*').removeClass('active');
@@ -57,110 +51,34 @@ const setContent = () =>{
     })
 }
 
+const removeSlider = () =>{
 
 
+    const x = $('<div></div>', { class: "book_page_mobile_image" }); // Исправление создания элемента с классом
 
+    $('.book_page_slide_wrapper').each(function () {
+        const img = $(this).find('.book_page_slider_img');
+        const text = $(this).find('.book_page_slide_name');
 
-// check window size
-const windowSizeCheck = (desktopSetting, tabletSettings, mobileSettings) => {
-    if(isMobile()){
-        mobileSettings();
-    }
-    if (isTablet()) {
-        tabletSettings();
-    }
-    if(isDesktop()) {
-        desktopSetting();
-    }
-}
+        const template = `
+                            <div class="book_page_mobile_image_wrapper">
+                              ${img[0].outerHTML}
+                              ${text[0].outerHTML}
+                            </div>
+                          `;
+        x.append($(template));
+        text[0].remove()
+        img[0].remove()
+    });
 
-// if window width > isTablet set this settings
-const setDesktopSettings = () => {
-    removeTabletHeader()
-    removeTabletThemeToggle()
-
-    const t = setTimeout(() => {
-        setHeaderClassesContentWidth()
-    }, 500)
-
-    return () => clearTimeout(t)
-}
-
-// if window width == isTablet set this settings
-const setTabletSettings = () => {
-    setTabletHeader()
-    setTabletThemeToggle()
-}
-
-// if window width == isMobile set this settings
-const setMobileSettings = () => {
-    setTabletHeader()
-    setTabletThemeToggle()
-    removeSlider()
+    $(".book_page_content").append(x);
+    $('.book_page_slider_container').remove()
 }
 
 
-const init = () =>{
-    setHeaderFixed()
-    navItemOverlay()
-    themeToggle()
+isDocumentReady({
+    init: [mapCardSlider, commonHover, setContent],
+    mobile: [removeSlider]
+})
 
-    region()
-    modalWindow()
-
-    // tablet and mobile
-    setTabletHeader()
-    regionTablet()
-    displayMenuMobile()
-
-    // forms
-    submitFormCitySelectTablet()
-    submitFormCitySelect()
-
-
-
-
-
-
-    mapCardSlider()
-    commonHover()
-    setContent()
-
-
-
-    const t = setTimeout(() => {
-        setHeaderClassesContentWidth()
-    }, 500)
-
-    return () => clearTimeout(t)
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-const onScroll = () =>{
-    setHeaderFixed()
-}
-
-
-$(document).ready(function () {
-
-    init()
-
-    $(window).on('resize', ()=> windowSizeCheck(setDesktopSettings, setTabletSettings, setMobileSettings))
-
-    $(window).scroll(()=> onScroll())
-
-});
 

@@ -13,17 +13,21 @@ const setHeaderClassesContentWidth = () => {
 
 // header fixed on scroll
 const setHeaderFixed = () => {
-    if ($(this).scrollTop() > 10) {
-        $('.header').addClass('header_fixed');
-        $('.header_title_wrapper').addClass('header_fixed');
-        $('.header_nav_container').addClass('header_fixed');
-        $('.theme_toggle_wrapper').addClass('header_fixed');
+    if(location.pathname.endsWith("index.html")) {
+        if ($(this).scrollTop() > 10) {
+            $('.header').addClass('header_fixed');
+            $('.header_title_wrapper').addClass('header_fixed');
+            $('.header_nav_container').addClass('header_fixed');
+            $('.theme_toggle_wrapper').addClass('header_fixed');
+            $('.region').addClass('scroll')
 
-    } else {
-        $('.header').removeClass('header_fixed');
-        $('.header_title_wrapper').removeClass('header_fixed');
-        $('.header_nav_container').removeClass('header_fixed');
-        $('.theme_toggle_wrapper').removeClass('header_fixed');
+        } else {
+            $('.header').removeClass('header_fixed');
+            $('.header_title_wrapper').removeClass('header_fixed');
+            $('.header_nav_container').removeClass('header_fixed');
+            $('.theme_toggle_wrapper').removeClass('header_fixed');
+            $('.region').removeClass('scroll')
+        }
     }
 }
 
@@ -189,3 +193,51 @@ const displayMenuMobile = () => {
 }
 
 
+const timeoutHeaderClassesContentWidth = () => {
+    const t = setTimeout(() => {
+        setHeaderClassesContentWidth()
+    }, 500)
+
+    return () => clearTimeout(t)
+}
+
+
+// settings
+const desktopHeaderSettings = [removeTabletHeader, removeTabletThemeToggle, timeoutHeaderClassesContentWidth]
+const tabletHeaderSettings = [setTabletHeader, setTabletThemeToggle]
+const mobilHeaderSettings = [setTabletHeader, setTabletThemeToggle,]
+
+const initHeaderSettings = [
+    setHeaderFixed,
+    navItemOverlay,
+    themeToggle,
+
+    region,
+    modalWindow,
+
+    // tablet and mobile
+    setTabletHeader,
+    regionTablet,
+    displayMenuMobile,
+
+    // forms
+    submitFormCitySelectTablet,
+    submitFormCitySelect,
+
+
+    timeoutHeaderClassesContentWidth,
+]
+
+const scrollHeaderSettings = [setHeaderFixed]
+
+const headerSettings = {
+    init: initHeaderSettings,
+    scroll: scrollHeaderSettings,
+    desktop: desktopHeaderSettings,
+    tablet: tabletHeaderSettings,
+    mobile: mobilHeaderSettings
+}
+
+
+// execute
+isDocumentReady(headerSettings)

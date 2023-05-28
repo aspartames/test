@@ -1,6 +1,26 @@
 @charset "UTF-8";
 @import '../fonts/stylesheet.css';
 @import '../styles/ThemeColors.css';
+.container {
+  margin: 0 105px;
+  box-sizing: border-box;
+}
+@media (max-width: 1600px) {
+  .container {
+    margin: 0 70px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    margin: 0 20px;
+  }
+}
+
 .header {
   position: fixed;
   width: 100vw;
@@ -767,9 +787,18 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  transition: 0.3s;
 }
 .region.hidden {
   display: none;
+}
+.region.scroll {
+  top: 120px;
+}
+@media (max-width: 1600px) {
+  .region.scroll {
+    top: 86px;
+  }
 }
 @media (max-width: 1600px) {
   .region {

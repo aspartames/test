@@ -1,9 +1,5 @@
-const isDesktop= () => $(window).width() > 983
-const isTablet = () => $(window).width() <= 983
-const isMobile = () => $(window).width() <= 500
 
-
-// sliders
+// slider
 const setSlideDescription = (currentSlide) => {
     let slideWrapper = $('.book_page_slider').find('.book_page_slide_wrapper').eq(currentSlide + 1)
     let slideName = slideWrapper.find('.book_page_slide_name').clone()
@@ -11,7 +7,7 @@ const setSlideDescription = (currentSlide) => {
     $('.book_page_slide_description').html(copy);
 }
 
-const book_page_slider = () =>{
+const bookPageSlider = () =>{
     if(!isMobile()) {
         let $carousel = $('.book_page_slider');
         let $slideNumber = $('.slide_number');
@@ -44,9 +40,11 @@ const book_page_slider = () =>{
     }
 }
 
-$('.book_page_slider').on('init', function (event, slick ){
-    setSlideDescription(slick.currentSlide)
-})
+const slideDescription = () =>{
+    $('.book_page_slider').on('init', function (event, slick ){
+        setSlideDescription(slick.currentSlide)
+    })
+}
 
 const removeSlider = () =>{
 
@@ -72,8 +70,15 @@ const removeSlider = () =>{
     $('.book_page_slider_container').remove()
 }
 
-// hover
+const setSlideBG = () =>{
+    $('.book_page_slide').each(function (){
+        const img = $(this).find('.book_page_slider_img').clone()
+        const imgBG = img.removeClass('book_page_slider_img').addClass('book_page_slider_img_background')
+        $(this).prepend(imgBG)
+    })
+}
 
+// hover
 const bookPageHovers = () => {
     $('.book_page_nav_button').hover(
         function () {
@@ -134,7 +139,7 @@ const setContent = () =>{
     })
 }
 
-$(document).ready(function() {
+const mobileBookPageNav = () => {
     $('.book_page_mobile_nav_bg').click(function() {
         $('.book_page_dropdown_content').toggle();
     });
@@ -151,112 +156,23 @@ $(document).ready(function() {
             $('.book_page_dropdown_content').hide();
         }
     });
-});
-
-
-// check window size
-const windowSizeCheck = (desktopSetting, tabletSettings, mobileSettings) => {
-    if(isMobile()){
-        mobileSettings();
-    }
-    if (isTablet()) {
-        tabletSettings();
-    }
-    if(isDesktop()) {
-        desktopSetting();
-    }
-}
-
-// if window width > isTablet set this settings
-const setDesktopSettings = () => {
-    removeTabletHeader()
-    removeTabletThemeToggle()
-
-    const t = setTimeout(() => {
-        setHeaderClassesContentWidth()
-    }, 500)
-
-    return () => clearTimeout(t)
-}
-
-// if window width == isTablet set this settings
-const setTabletSettings = () => {
-    setTabletHeader()
-    setTabletThemeToggle()
-}
-
-// if window width == isMobile set this settings
-const setMobileSettings = () => {
-    setTabletHeader()
-    setTabletThemeToggle()
-    removeSlider()
 }
 
 
-const init = () =>{
-    setHeaderFixed()
-    navItemOverlay()
-    themeToggle()
-
-    region()
-    modalWindow()
-
-    // tablet and mobile
-    setTabletHeader()
-    regionTablet()
-    displayMenuMobile()
-
-    // forms
-    submitFormCitySelectTablet()
-    submitFormCitySelect()
+const settings =[
+    bookPageHovers,
+    mediaLinksHover,
+    setMobileLink,
+    setAudioControl,
+    slideDescription,
+    bookPageSlider,
+    setSlideBG,
+    setContent,
+    mobileBookPageNav,
+]
 
 
-
-
-
-    bookPageHovers()
-    mediaLinksHover()
-    setAudioControl()
-    book_page_slider()
-    setContent()
-
-
-
-
-    const t = setTimeout(() => {
-        setHeaderClassesContentWidth()
-    }, 500)
-
-    return () => clearTimeout(t)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}
-
-
-const onScroll = () =>{
-    setHeaderFixed()
-}
-
-
-$(document).ready(function () {
-
-    init()
-
-    $(window).on('resize', ()=> windowSizeCheck(setDesktopSettings, setTabletSettings, setMobileSettings))
-
-    $(window).scroll(()=> onScroll())
-
-});
-
+isDocumentReady({
+    init: settings,
+    mobile: [removeSlider]
+})

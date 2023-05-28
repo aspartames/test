@@ -9,7 +9,6 @@
 .buttonPrevSVG{
   @include buttonSVG(180deg)
 }
-
 /////////////////////////////////////// introduction ///////////////////////////////////////
 
 @mixin introHeight{
@@ -36,6 +35,14 @@
   pointer-events: none;
   user-select: none;
   margin: 0;
+  & .slick-next{
+    right: 130px;
+    display: none;
+  }
+  & .slick-prev{
+    left: 130px;
+    display: none;
+  }
 }
 .introduction_slide{
   @include introHeight;
@@ -125,6 +132,20 @@
       margin: 0px -8px 0 0;
     }
   }
+
+  & .arr{
+    transition: $transition;
+    &.hover{
+      fill: white;
+    }
+  }
+  & .buttonNextSVG{
+    transition: $transition;
+    &.hover{
+      background: $color2;
+    }
+  }
+
 
   @media (max-width: $laptop) {
     height: 84px;
@@ -744,3 +765,71 @@
 
 
 
+
+/////////////////////////////////////// cookie ////////////////////////////////////////////////////
+
+.cookie{
+  position: fixed;
+  bottom: 0;
+  right: $containerMargin1 - 20px;
+  background-color: rgb(58,71,90);
+  z-index: 100;
+  background: -webkit-linear-gradient(left, rgba(58,71,90,1) 0%, rgba(22,25,43,1) 100%);
+  background: -moz-linear-gradient(left, rgba(58,71,90,1) 0%, rgba(22,25,43,1) 100%);
+  background: -o-linear-gradient(left, rgba(58,71,90,1) 0%, rgba(22,25,43,1) 100%);
+  background: -ms-linear-gradient(left, rgba(58,71,90,1) 0%, rgba(22,25,43,1) 100%);
+  background: linear-gradient(to right, rgba(58,71,90,1) 0%, rgba(22,25,43,1) 100%);
+  border-radius: 30px 30px 0 0;
+  padding: 30px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.25vw;
+  &.accepted{
+    display: none;
+  }
+
+  & p{
+    @include font16;
+    font-family: $openSans;
+    line-height: 14px;
+    color: $color1;
+    @media (max-width: $laptop) {
+      line-height: 20px;
+    }
+    @media (max-width: $mobile) {
+      line-height: 24px;
+    }
+  }
+  & a{
+    color: $color2;
+  }
+  & button{
+    @include button($color2, $color2);
+    @include font22;
+    line-height: 0;
+    min-height: 60px;
+    border-radius: 30px;
+    padding: 20px 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    & .fa-xmark{
+      margin-right: 10px;
+      transform: translateY(1px);
+      @media (max-width: $tablet) {
+        transform: translateY(0px);
+      }
+    }
+  }
+
+  @media (max-width: $laptop) {
+    right: $containerMargin2 - 20px;
+  }
+  @media (max-width: $tablet) {
+    gap: 20px;
+    right: $containerMargin3;
+    width: calc(100% - $containerMargin3 * 2);
+  }
+}
