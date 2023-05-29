@@ -70,12 +70,13 @@ const imageZoom = () => {
         modal.addClass('active')
         $('body').addClass('disableScroll')
         $('header').css('display', 'none')
+        $('.gallery_modal_close').addClass('active')
     })
     modal.click(function (){
         $(this).removeClass('active')
         $('body').removeClass('disableScroll')
         $('header').css('display', 'block')
-
+        $('.gallery_modal_close').removeClass('active')
     })
 }
 

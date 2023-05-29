@@ -35,15 +35,16 @@
   pointer-events: none;
   user-select: none;
   margin: 0;
-  & .slick-next{
+  &.slick-next{
     right: 130px;
-    display: none;
+    display: none !important;
   }
-  & .slick-prev{
+  &.slick-prev{
     left: 130px;
-    display: none;
+    display: none !important;
   }
 }
+
 .introduction_slide{
   @include introHeight;
   background-repeat: no-repeat;

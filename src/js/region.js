@@ -25,7 +25,7 @@ const modalWindow = () => {
         $('.modal').addClass('active')
         $('body').addClass('disableScroll')
     })
-    $('.modal_close').click(function () {
+    $('.modal_close_wrap').click(function () {
         closeModal()
     })
     $('.modal_background').click(function () {

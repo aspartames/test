@@ -142,7 +142,7 @@
 }
 @media (max-width: 1880px) {
   .checkbox_letters_wrapper {
-    justify-content: flex-start;
+    justify-content: center;
   }
 }
 

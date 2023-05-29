@@ -399,6 +399,7 @@
   background: rgba(0, 0, 0, 0.9);
   display: none;
   z-index: 999;
+  cursor: pointer;
 }
 .gallery_modal.active {
   display: flex;
@@ -406,6 +407,21 @@
 .gallery_modal img {
   width: auto;
   height: 90vh;
+}
+
+.gallery_modal_close {
+  position: absolute;
+  right: 105px;
+  top: 5vh;
+  z-index: 999;
+  font-size: 48px;
+  color: #e87b5a;
+  opacity: 0.5;
+  display: none;
+  pointer-events: none;
+}
+.gallery_modal_close.active {
+  display: inline-block;
 }
 
 /*# sourceMappingURL=gallery.css.map */

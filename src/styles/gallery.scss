@@ -147,6 +147,7 @@
   background: rgba(0, 0, 0, 0.9);
   display: none;
   z-index: 999;
+  cursor: pointer;
   &.active{
     display: flex;
   }
@@ -156,6 +157,19 @@
   }
 }
 
-
+.gallery_modal_close{
+  position: absolute;
+  right: $containerMargin1;
+  top: 5vh;
+  z-index: 999;
+  font-size: 48px;
+  color: $color2;
+  opacity: 0.5;
+  display: none;
+  pointer-events: none;
+  &.active{
+    display: inline-block;
+  }
+}
 
 

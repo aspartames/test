@@ -110,13 +110,13 @@
   user-select: none;
   margin: 0;
 }
-.introduction_slider .slick-next {
+.introduction_slider.slick-next {
   right: 130px;
-  display: none;
+  display: none !important;
 }
-.introduction_slider .slick-prev {
+.introduction_slider.slick-prev {
   left: 130px;
-  display: none;
+  display: none !important;
 }
 
 .introduction_slide {
