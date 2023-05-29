@@ -149,6 +149,11 @@
   padding: 0 38px;
   min-height: 80px;
 }
+@media (min-width: 2000px) {
+  #map_search_input {
+    font-size: 20px;
+  }
+}
 #map_search_input:focus {
   outline: none;
   border: 1px solid #e87b5a;

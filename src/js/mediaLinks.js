@@ -26,11 +26,20 @@ const setMobileLink = () => {
         $('.media_item').each(function () {
             const link = $(this).find('a')
             const name = $(this).find('.media_name_wrapper')
-            const fileSize = $(this).find('.file_size')
+            const fileSize = $(this).find('.file_size').clone()
             const mediaName = $(this).find('.media_name')
 
-            $(this).html(link.append(name))
-            mediaName.append(fileSize)
+            const newLink = `<a class="mobile_media_link" href="${link.attr('href')}" download></a>`
+            !$(this).parent().is('.mobile_media_link') && $(this).wrap(newLink)
+            mediaName.find('.file_size').length < 1 && mediaName.append(fileSize)
+        })
+    }
+}
+
+const removeMobileLink = () => {
+    if(!isMobile()){
+        $('.media_item').each(function () {
+            $(this).parent().is('.mobile_media_link') && $(this).unwrap()
         })
     }
 }

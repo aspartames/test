@@ -276,6 +276,14 @@
   align-items: center;
   padding-right: 20px;
 }
+.audio_container .file_size {
+  display: none;
+}
+@media (max-width: 600px) {
+  .audio_container .file_size {
+    display: inline;
+  }
+}
 
 .audio {
   background: #e87b5a;
@@ -285,6 +293,8 @@
 .audio_controls {
   position: relative;
   width: 52px;
+  min-width: 52px;
+  max-width: 52px;
   height: 46px;
   margin-right: 20px;
 }

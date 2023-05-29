@@ -100,6 +100,9 @@ $transition: 0.3s;
 @mixin font22 {
   font-size: max(1.15vw, 16px);
   line-height: 1;
+  @media (min-width: 2000px) {
+    font-size: 20px;
+  }
 }
 @mixin font24 {
   font-size: max(1.25vw, 16px);
@@ -116,6 +119,9 @@ $transition: 0.3s;
 @mixin font32 {
   font-size: max(1.67vw, 24px);
   line-height: 1;
+  @media (min-width: 2000px) {
+    font-size: 32px;
+  }
 }
 @mixin font38 {
   font-size: max(1.9792vw, 26px);
@@ -443,6 +449,12 @@ $transition: 0.3s;
   justify-content: flex-start;
   align-items: center;
   padding-right: 20px;
+  & .file_size {
+    display: none;
+    @media (max-width: $mobile) {
+      display: inline;
+    }
+  }
 }
 @mixin mediaTitle{
   display: flex;
@@ -473,6 +485,11 @@ $transition: 0.3s;
     justify-content: center;
     align-items: flex-start;
   }
+}
+@mixin mediaLinkContainer{
+   @media (max-width: $mobile) {
+     display: none;
+   }
 }
 @mixin mediaLink{
   display: inline-block;

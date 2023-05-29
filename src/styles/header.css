@@ -293,6 +293,11 @@
   font-family: "GilroySemiBold";
   line-height: 30px;
 }
+@media (min-width: 2000px) {
+  .header_nav_item_title {
+    font-size: 20px;
+  }
+}
 .header_nav_item_title.classes {
   padding-left: 0;
 }
@@ -454,6 +459,11 @@
   line-height: 46px;
   white-space: nowrap;
 }
+@media (min-width: 2000px) {
+  .header_drop_list_item {
+    font-size: 20px;
+  }
+}
 @media (max-width: 1600px) {
   .header_drop_list_item {
     line-height: 34px;
@@ -519,6 +529,11 @@
   list-style-type: none;
   line-height: 54px;
   color: #656565;
+}
+@media (min-width: 2000px) {
+  .class_number {
+    font-size: 32px;
+  }
 }
 .class_number.hover {
   color: black;
@@ -881,6 +896,11 @@
   line-height: 1;
   font-family: "GilroyBold";
   margin-bottom: 20px;
+}
+@media (min-width: 2000px) {
+  .region_check span {
+    font-size: 20px;
+  }
 }
 .region_check:before {
   content: "";

@@ -203,9 +203,9 @@ const timeoutHeaderClassesContentWidth = () => {
 
 
 // settings
-const desktopHeaderSettings = [removeTabletHeader, removeTabletThemeToggle, timeoutHeaderClassesContentWidth]
+const desktopHeaderSettings = [removeTabletHeader, removeTabletThemeToggle, timeoutHeaderClassesContentWidth, closeModal]
 const tabletHeaderSettings = [setTabletHeader, setTabletThemeToggle]
-const mobilHeaderSettings = [setTabletHeader, setTabletThemeToggle,]
+const mobilHeaderSettings = [setTabletHeader, setTabletThemeToggle]
 
 const initHeaderSettings = [
     navItemOverlay,

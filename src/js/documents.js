@@ -22,7 +22,12 @@ const loadItems = () =>{
     });
 }
 
-isDocumentReady({init: [mediaLinksHover,  setMobileLink]})
+isDocumentReady({
+    init: [mediaLinksHover, setMobileLink],
+    tablet: [removeMobileLink],
+    mobile: [setMobileLink]
+
+})
 
 
 

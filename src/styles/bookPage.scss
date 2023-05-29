@@ -297,6 +297,8 @@
 .audio_controls {
   position: relative;
   width: 52px;
+  min-width: 52px;
+  max-width: 52px;
   height: 46px;
   margin-right: 20px;
 }
@@ -397,6 +399,7 @@
   margin-right: 20px;
 }
 .document_link_container{
+  @include mediaLinkContainer;
   display: flex;
   align-items: center;
 }
@@ -405,11 +408,7 @@
 }
 .document_link_inner{
   @include mediaLinkInner(#688ab7);
-  & span:last-child{
-    @media (max-width: $tablet) {
-      display: none;
-    }
-  }
+
 }
 .cloud_download_icon{
   @include mediaLinkIcon(#688ab7);
@@ -436,7 +435,9 @@
 
 .book_page_slider_container{
   @include tabletContent;
-
+  &.hidden{
+    display: none;
+  }
 }
 
 .book_page_slider_wrapper{
@@ -449,6 +450,7 @@
   @media (max-width: $tablet) {
     max-height: 513px;
     max-width: 100%;
+    width: 100%;
   }
   @media (max-width: $mobile) {
     all: unset;

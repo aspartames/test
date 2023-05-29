@@ -115,6 +115,11 @@
   color: black;
   margin: 0 16px 0 0;
 }
+@media (min-width: 2000px) {
+  .nav_button_back .nav_arrow {
+    font-size: 20px;
+  }
+}
 .nav_button_back .nav_arrow.next {
   margin: 0 0 0 16px;
 }

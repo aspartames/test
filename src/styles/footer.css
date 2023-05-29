@@ -184,6 +184,11 @@
   list-style-type: none;
   color: white;
 }
+@media (min-width: 2000px) {
+  .footer_about li {
+    font-size: 20px;
+  }
+}
 .footer_about li:hover {
   color: #e87b5a;
 }
@@ -210,6 +215,11 @@
   color: white;
   line-height: 1.3;
 }
+@media (min-width: 2000px) {
+  .footer_about p {
+    font-size: 20px;
+  }
+}
 
 .footer_media {
   padding-top: 10px;
@@ -227,6 +237,11 @@
   display: inline-block;
   font-family: "GilroyExtraBold";
   color: white;
+}
+@media (min-width: 2000px) {
+  .footer_media span {
+    font-size: 20px;
+  }
 }
 .footer_media span:hover {
   color: #e87b5a;
@@ -267,6 +282,11 @@
   font-family: "GilroyLight";
   list-style-type: none;
   color: white;
+}
+@media (min-width: 2000px) {
+  .footer_media li {
+    font-size: 20px;
+  }
 }
 .footer_media li:hover {
   color: #e87b5a;
@@ -314,6 +334,11 @@
   font-family: "GilroyExtraBold";
   color: white;
 }
+@media (min-width: 2000px) {
+  .footer_library span {
+    font-size: 20px;
+  }
+}
 .footer_library span:hover {
   color: #e87b5a;
 }
@@ -354,6 +379,11 @@
   list-style-type: none;
   color: white;
 }
+@media (min-width: 2000px) {
+  .footer_library li {
+    font-size: 20px;
+  }
+}
 .footer_library li:hover {
   color: #e87b5a;
 }
@@ -391,6 +421,11 @@
   display: inline-block;
   font-family: "GilroyExtraBold";
   color: white;
+}
+@media (min-width: 2000px) {
+  .footer_geography span {
+    font-size: 20px;
+  }
 }
 .footer_geography span:hover {
   color: #e87b5a;
@@ -459,6 +494,11 @@
   margin-top: 20px;
   margin-bottom: 14px;
   display: inline-block;
+}
+@media (min-width: 2000px) {
+  .footer_copyright {
+    font-size: 20px;
+  }
 }
 @media (max-width: 600px) {
   .footer_copyright {

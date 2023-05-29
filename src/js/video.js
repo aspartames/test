@@ -10,6 +10,7 @@ const videoFilter = () =>{
     });
 }
 
+
 const classSelect = () =>{
     const x = (classNum, xThis) => {
         /*
@@ -18,6 +19,25 @@ const classSelect = () =>{
         $('.video_class_number').removeClass('active')
         xThis && $(xThis).addClass('active')
         $(`.class${classNum}`).addClass('active')
+/*
+        $('.videos_item').addClass('hidden')
+
+        $('.checkbox_button').each(function (){
+            const input = $(this).find('input[type="checkbox"]');
+
+            if(input.is(':checked')){
+                $('.videos_item').each(function (){
+                    if($(this).data('class') === classNum && $(this).data('value') === input.val()){
+                        console.log($(this).data('class'))
+                        console.log($(this).data('value'))
+                        $(this).removeClass('hidden')
+                    }
+
+
+                })
+            }
+        })*/
+
     }
 
     $('#all').click(function (){

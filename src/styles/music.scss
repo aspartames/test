@@ -74,6 +74,8 @@
 .audio_controls {
   position: relative;
   width: 52px;
+  min-width: 52px;
+  max-width: 52px;
   height: 46px;
   margin-right: 20px;
 }

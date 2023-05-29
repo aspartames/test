@@ -107,6 +107,11 @@
   border-radius: 50%;
   padding: 5px;
 }
+@media (min-width: 2000px) {
+  .checkbox_letter {
+    font-size: 32px;
+  }
+}
 .checkbox_letter:hover {
   background: #e87b5a;
   color: white;
