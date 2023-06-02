@@ -8,6 +8,18 @@ const setHeaderClassesContentWidth = () => {
         .css('--headerNavContainerWidth', `${headerNavContainerWidth}px`)
         .css('--headerNavDropListWidth', `${overlayClassesWidth}px`)
     ;
+    let x = $('.header_classes_content')
+    let xo  = x.offset()
+
+    const xs = $('.header_nav_container').offset()
+    console.log(x.position().left)
+    console.log(x.position().left)
+
+    $('.drop_list_bg')
+        .css('--dlbgt',`${xo.top - 20}px`)
+        .css('--dlbgl',`${x.position().left}px`)
+        .css('--dlbgw', `${x.outerWidth()}px`)
+        .css('--dlbgh', `${x.outerHeight()}px`)
 }
 
 
@@ -61,6 +73,9 @@ const navItemOverlay = () => {
             $(this).find('.header_arrow').removeClass('hover')
             $(this).find('.menu_icon').removeClass('active')
             $(this).parent('.header_nav_item').removeClass('hover')
+            $('.drop_list_bg').removeClass('hover')
+            $('.header_classes_content').removeClass('hover')
+
         }
     )
 
@@ -78,6 +93,8 @@ const navItemOverlay = () => {
             $(this).parent('.classes_list').addClass('classes_hover')
             $(this).parent('.header_nav_item_overlay').addClass('classes_hover')
             $('.header_nav_item_overlay.classes').removeClass('concave_disable')
+            $('.drop_list_bg').addClass('hover')
+
 
         },
         function () {}
@@ -110,7 +127,7 @@ const setTabletHeader = () => {
                             </div>` : ``}
                         </li>`)
     if (mobileList.children.length < 1) {
-        !isMobile() && classesItems.forEach(el => {
+        /*!isMobile() &&*/ classesItems.forEach(el => {
             if (el.classList.contains('disabled')) {
                 return ''
             }

@@ -16,7 +16,7 @@
 }
 @media (max-width: 600px) {
   .container {
-    margin: 0 20px;
+    margin: 0 10px;
   }
 }
 
@@ -73,7 +73,7 @@
 }
 @media (max-width: 600px) {
   .map_card_section {
-    margin: 0 20px;
+    margin: 0 10px;
   }
 }
 

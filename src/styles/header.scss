@@ -10,6 +10,8 @@ $concaveBottomLeft: bottomLeft;
     width: 20px;
     height: 20px;
     padding:13px 15px;
+    transition: $transition;
+    opacity: 0;
     @media (max-width: $laptop) {
     }
     @if $position == topRight {
@@ -115,7 +117,7 @@ $concaveBottomLeft: bottomLeft;
     line-height: 30px;
     margin: 0;
     color: white;
-    transition: 0.3s;
+    transition: $transition;
     &.gradient{
       background: var(--headerTitle);
       -webkit-background-clip: text;
@@ -209,8 +211,12 @@ $concaveBottomLeft: bottomLeft;
 .header_nav_item{
   display: flex;
   align-items: center;
+  transition: $transition;
   &.hover{
     filter: drop-shadow(0 0 6px rgba(0, 0, 0, 0.2));
+  }
+  &.disableOverlayShadow{
+    filter: unset;
   }
 }
 
@@ -231,12 +237,17 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
   align-items: center;
   padding: $paddingOverlay;
   cursor: pointer;
+  transition: $transition;
+  height: calc(100% - 10px);
+  border-radius: 20px 20px 0 0;
+
+  @include concave($concaveTopRight);
 
   &.hover{
     background: $color1;
-    height: calc(100% - 10px);
-    border-radius: 20px 20px 0 0;
-    @include concave($concaveTopRight);
+    &:after{
+      opacity: 1;
+    }
   }
   &.classes{
     padding: $paddingOverlayClasses;
@@ -245,7 +256,9 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     border-radius: 40px 30px 0 0;
     &.concave_disable{
       &:after{
-        all: unset;
+        user-select: none;
+        pointer-events: none;
+        opacity: 0;
       }
     }
     @media (max-width: $laptop) {
@@ -298,7 +311,7 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
   height: 12px;
   width: auto;
   margin-left: 10px;
-  transition: 0.3s;
+  transition: $transition;
   &.hover{
     transform: rotate(180deg);
   }
@@ -323,7 +336,7 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
     width: 100%;
     height: 3px;
     background-color: #000;
-    transition: 0.3s;
+    transition: $transition;
     &:nth-child(1) {
       top: 0;
     }
@@ -394,7 +407,10 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
 /////////////////////////////////////////// drop list //////////////////////////////////
 
 .header_nav_drop_list {
+  /*
   display: none;
+  */
+  opacity: 0;
   background: $color1;
   position: absolute;
   left: 0;
@@ -404,9 +420,16 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
   border-radius: 0 20px 20px 20px;
   margin: 0;
   z-index: 999;
-
+  transition: $transition;
+  user-select: none;
+  pointer-events: none;
   &.hover {
+    /*
     display: block;
+    */
+    opacity: 1;
+    user-select: auto;
+    pointer-events: auto;
   }
 
   @media (max-width: $laptop) {
@@ -422,10 +445,13 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
   padding: 4px 12px 12px 0;
   border-radius: 0 0 20px 20px;
   width: var(--width);
+  @include concave($concaveBottomLeft);
   &.classes_hover{
-    @include concave($concaveBottomLeft);
     padding: 4px 12px 12px 0;
     border-radius: 0 0 0 20px;
+    &:after{
+      opacity: 1;
+    }
   }
 }
 
@@ -506,7 +532,9 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
 
 .header_classes_content{
   $left: var(--headerNavDropListWidth);
+  /*
   background: $color1;
+  */
   position: absolute;
   left: $left;
   top: 0;
@@ -516,21 +544,44 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   z-index: 345;
   width: calc(var(--headerNavContainerWidth) - $left) !important;
   height: $headerClassesContentHeight;
-  display: none;
+  transition: $transition;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
   &.hover{
-    display: block;
+    opacity: 1;
+    user-select: auto;
+    pointer-events: auto;
   }
   @media (max-width: $laptop) {
     height: $headerClassesContentHeight2;
   }
 }
-
+.drop_list_bg{
+  position: absolute;
+  top: var(--dlbgt);
+  left: var(--dlbgl);
+  width: var(--dlbgw);
+  height: var(--dlbgh);
+  border-radius: 0 20px 20px 20px;
+  transition: $transition;
+  background: $color1;
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  &.hover{
+    opacity: 1;
+  }
+}
 .header_classes_content_list{
   display: flex;
   flex-flow: column wrap;
   white-space: normal;
   gap: 14px;
   height: $headerClassesContentListHeight;
+  user-select: none;
+  pointer-events: none;
+
   @media (max-width: $laptop) {
     height: $headerClassesContentHeight2;
   }
@@ -606,7 +657,7 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   align-items: center;
   cursor: pointer;
   display: none;
-  transition: 0.3s;
+  transition: $transition;
   z-index: 100;
   margin-right: 20px;
   @media (max-width: $tablet) {
@@ -631,12 +682,17 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   @media (max-width: $tablet) {
     display: block;
     opacity: 1;
-    transition: 0.3s;
+    transition: $transition;
     transform: translateY(-720px);
+    margin-left: $containerMargin4;
     &.active{
       opacity: 1;
       transform: translateY(0%);
     }
+  }
+  @media (max-width: $mobile) {
+    transform: translateY(-750px);
+
   }
 
 }
@@ -700,7 +756,7 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   height: 15px;
   position: relative;
   & span{
-    transition: 0.3s;
+    transition: $transition;
     position: absolute;
     width: 100%;
     height: 3px;
@@ -857,6 +913,9 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
 
 .mobile_region{
   padding: 26px $containerMargin3 0;
+  @media (max-width: $mobile) {
+    padding: 26px $containerMargin4 0;
+  }
 }
 .mobile_region_name_wrapper{
   display: flex;
@@ -950,6 +1009,7 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     font-size: 16px;
     line-height: 22px;
     padding: 20px 24px;
+    height: 80px;
   }
 
 }
@@ -1019,6 +1079,15 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     & path{
       fill: white;
     }
+    @media (max-width: $mobile) {
+      margin-right: 0;
+      height: 30px;
+    }
+  }
+  & .submit_text{
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
   @media (max-width: $tablet) {
     display: flex;
@@ -1027,8 +1096,10 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     font-size: 16px;
     line-height: 22px;
     padding: 10px 0;
-    top: -54px;
-    right: 10px;
+    top: -70px;
+    right: 12px;
+    width: 80px;
+    height: 60px;
   }
 }
 

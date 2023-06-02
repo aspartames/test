@@ -72,49 +72,16 @@ const svgHover = () => {
         }
     )
     $('.introduction_button').hover(function (){
+        $(this).addClass('hover')
         $(this).find('.arr').addClass('hover')
         $(this).find('.buttonNextSVG').addClass('hover')
     },
         function (){
+            $(this).removeClass('hover')
             $(this).find('.arr').removeClass('hover')
             $(this).find('.buttonNextSVG').removeClass('hover')
         }
         )
-}
-
-
-// mobile select classes
-const mobileSelectClasses = () => {
-    const mobileClassesContent = $('.mobile_main_classes_content')
-    const setContent = (number) => {
-        const clone = $('.header_classes_content').clone()[number].children
-        mobileClassesContent.append(clone)
-    }
-
-    setContent(0)
-
-    $('#mobile_selected_class').change(function () {
-        mobileClassesContent.empty()
-
-        const selectedClassNumber = $('#mobile_selected_class').val()
-
-        switch (true) {
-            case selectedClassNumber === '5':
-                setContent(0)
-                break
-            case selectedClassNumber === '6':
-                setContent(1)
-                break
-            case selectedClassNumber === '7':
-                setContent(2)
-                break
-            case selectedClassNumber === '8':
-                setContent(3)
-                break
-            default:
-                return ''
-        }
-    })
 }
 
 
@@ -132,8 +99,6 @@ const initSettings = [
     sliderMainPage,
     mainPageNavAnimate,
     svgHover,
-
-    mobileSelectClasses,
 
     cookie,
 ]
