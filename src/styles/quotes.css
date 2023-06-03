@@ -280,10 +280,10 @@
   border-radius: 30px;
 }
 .show_more_wrapper button:hover {
-  background: #3c4a53;
+  background: #d7613d;
 }
 .show_more_wrapper button:hover {
-  border: 1px solid #3c4a53;
+  border: 1px solid #d7613d;
 }
 @media (max-width: 1100px) {
   .show_more_wrapper button {

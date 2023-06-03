@@ -80,40 +80,70 @@ const bookPageHovers = () => {
 
 // set content
 const setContent = () =>{
-    $('.book_page_nav_text').click(function (){
+    const materials = () => {
         $('.book_page_content').find('*').removeClass('active');
         $('.book_page_content_nav').find('*').removeClass('active');
 
         $(this).addClass('active')
         $('.book_page_content_essential').addClass('active')
         $('.book_page_geography').addClass('active')
+    }
 
-    })
-    $('.book_page_nav_audio').click(function (){
-        $('.book_page_content').find('*').removeClass('active');
-        $('.book_page_content_nav').find('*').removeClass('active');
-        $('.book_page_geography').removeClass('active')
-        $(this).addClass('active')
-        $('.book_page_content_audio').addClass('active')
-        $('.book_page_content_video').addClass('active')
-    })
-    $('.book_page_nav_picture').click(function (){
+    const images = () => {
         sliderRefresh()
         $('.book_page_content').find('*').removeClass('active');
         $('.book_page_content_nav').find('*').removeClass('active');
         $('.book_page_geography').removeClass('active')
         $(this).addClass('active')
         $('.book_page_slider_container').addClass('active')
-    })
-    $('.book_page_nav_download').click(function (){
+    }
+
+    const audio = () => {
+        $('.book_page_content').find('*').removeClass('active');
+        $('.book_page_content_nav').find('*').removeClass('active');
+        $('.book_page_geography').removeClass('active')
+        $(this).addClass('active')
+        $('.book_page_content_audio').addClass('active')
+        $('.book_page_content_video').addClass('active')
+    }
+
+    const download = () => {
         $('.book_page_content').find('*').removeClass('active');
         $('.book_page_content_nav').find('*').removeClass('active');
         $('.book_page_geography').removeClass('active')
         $(this).addClass('active')
         $('.book_page_content_documents').addClass('active')
         $('.main_book_content_library').addClass('active')
+    }
 
+    $('.book_page_nav_text').click(function (){
+        materials()
     })
+    $('.book_page_nav_picture').click(function (){
+        images()
+    })
+    $('.book_page_nav_audio').click(function (){
+        audio()
+    })
+    $('.book_page_nav_download').click(function (){
+        download()
+    })
+
+
+    $('.book_page_mobile_select').change(function (){
+        const value = $(this).val()
+        switch (value){
+            case 'materials': materials()
+                break
+            case 'images': images()
+                break
+            case 'audio': audio()
+                break
+            case 'download': download()
+                break
+        }
+    })
+
 }
 
 const mobileBookPageNav = () => {

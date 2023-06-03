@@ -373,6 +373,11 @@
     display: block;
   }
 }
+@media (max-width: 1600px) {
+  .map_card_links {
+    display: block;
+  }
+}
 
 .map_card_address_string {
   position: relative;
@@ -386,6 +391,7 @@
   line-height: 30px;
   font-family: "OpenSans";
   color: var(--textColor);
+  font-family: "OpenSansLight";
 }
 @media (max-width: 1600px) {
   .map_card_address_string span:first-child {
@@ -403,9 +409,10 @@
   font-size: max(0.8333vw, 14px);
   line-height: 1.875;
   line-height: 1.5;
-  font-family: "OpenSansSemiBold";
+  font-family: "OpenSansBold";
   color: var(--titleColor);
-  transform: translateY(-2px);
+  transform: translateY(4px);
+  max-width: 400px;
 }
 @media (max-width: 1600px) {
   .map_card_address_string span:last-child {
@@ -427,12 +434,25 @@
     max-width: 60%;
   }
 }
+@media (max-width: 600px) {
+  .map_card_address_string span:last-child {
+    max-width: 240px;
+    text-align: right;
+  }
+}
 .map_card_address_string a {
+  font-family: "OpenSans";
   color: #e87b5a;
 }
 @media (max-width: 1100px) {
   .map_card_address_string {
     margin-bottom: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .map_card_address_string {
+    display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -446,6 +466,11 @@
     content: ".....................................";
   }
 }
+@media (max-width: 600px) {
+  .address_span1::after {
+    display: none;
+  }
+}
 
 .address_span2::after {
   content: ".....................";
@@ -455,6 +480,11 @@
 @media (max-width: 1600px) {
   .address_span2::after {
     content: "..........................";
+  }
+}
+@media (max-width: 600px) {
+  .address_span2::after {
+    display: none;
   }
 }
 
@@ -468,6 +498,11 @@
     content: ".................";
   }
 }
+@media (max-width: 600px) {
+  .address_span3::after {
+    display: none;
+  }
+}
 
 .address_span4::after {
   content: ".................";
@@ -479,14 +514,28 @@
     content: "......................";
   }
 }
+@media (max-width: 600px) {
+  .address_span4::after {
+    display: none;
+  }
+}
 
 .map_card_link_icon {
   font-size: 46px;
-  margin: 4px;
 }
-@media (max-width: 1100px) {
+.map_card_link_icon:first-child {
+  margin-left: 8px;
+  margin-right: 4px;
+}
+@media (max-width: 1600px) {
+  .map_card_link_icon:first-child {
+    margin-left: 0;
+    margin-right: 8px;
+  }
+}
+@media (max-width: 1600px) {
   .map_card_link_icon {
-    margin-bottom: 22px;
+    margin-bottom: 36px;
   }
 }
 

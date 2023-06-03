@@ -11,4 +11,16 @@ const mapFilter = () =>{
     });
 }
 
-isDocumentReady({init: [commonHover, mapFilter]})
+const mapItemHover = () => {
+    $('.map_item').hover(function () {
+            $(this).addClass('hover')
+            $(this).find('.map_item_image_wrapper').addClass('hover')
+        },
+        function () {
+            $(this).removeClass('hover')
+            $(this).find('.map_item_image_wrapper').removeClass('hover')
+        }
+    )
+}
+
+isDocumentReady({init: [commonHover, mapFilter, mapItemHover]})

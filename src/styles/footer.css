@@ -152,6 +152,9 @@
     margin-left: 4.7vw;
   }
 }
+.footer_classes_list li:hover {
+  color: #e87b5a;
+}
 @media (max-width: 1600px) {
   .footer_classes_list li {
     margin: 0 2.35vw;

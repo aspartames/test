@@ -37,6 +37,7 @@
   align-items: center;
   border-radius: 50%;
   padding: 5px;
+  transition: $transition;
   &:hover{
     background: $color2;
     color: white;
@@ -56,6 +57,15 @@
 
   }
 }
+.checkbox_all_wrapper{
+  & label {
+    &:hover{
+      background: unset;
+      color: $color2;
+    }
+  }
+}
+
 
 .checkbox_letters_wrapper{
   width: 100%;
@@ -113,10 +123,10 @@
   display: flex;
   justify-content: center;
   & button{
-    @include button($color2, $color3);
+    @include button($color2, $color4);
     border-radius: 30px;
     &:hover{
-      border: 1px solid $color3;
+      border: 1px solid $color4;
     }
     @media (max-width: $tablet) {
       margin-bottom: 46px;

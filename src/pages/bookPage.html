@@ -351,7 +351,9 @@
             </button>
             <div class="book_page_nav_next">
                 <span class="next_title">
-                    II раздел. В начале было Слово. § 3. «Ни в сказке сказать, ни пером описать...». Русская сказка и фольклор
+                    <a href="#">
+                        II раздел. В начале было Слово. § 3. «Ни в сказке сказать, ни пером описать...». Русская сказка и фольклор
+                    </a>
                 </span>
                 <button class="book_page_nav_button" onclick="window.location.href='#'">
                     Дальше
@@ -368,23 +370,14 @@
                 <button class="book_page_nav_picture">Изображения</button>
                 <button class="book_page_nav_download">Скачать</button>
             </div>
-            <div class="book_page_mobile_nav">
-                <div class="book_page_mobile_nav_bg">
-                        <div class="book_page_mobile_menu_icon">
-                            <span class="menu_line"></span>
-                            <span class="menu_line"></span>
-                            <span class="menu_line"></span>
-                        </div>
-                    <span class="book_page_mobile_dropbtn">Дополнительные материалы</span>
-
-                </div>
-                <div class="book_page_dropdown_content">
-                    <button class="book_page_nav_text active">Дополнительные материалы</button>
-                    <button class="book_page_nav_audio">Аудио и видео</button>
-                    <button class="book_page_nav_picture">Изображения</button>
-                    <button class="book_page_nav_download">Скачать</button>
-                </div>
-            </div>
+            <label>
+                <select class="book_page_mobile_select">
+                    <option value="materials">Дополнительные материалы</option>
+                    <option value="images">Изображения</option>
+                    <option value="audio">Аудио и видео</option>
+                    <option value="download">Скачать</option>
+                </select>
+            </label>
 
             <div class="book_page_content">
                 <div class="book_page_content_essential active">

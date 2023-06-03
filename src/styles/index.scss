@@ -213,6 +213,8 @@
       background: var(--mainPageHeaderGradient1);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      transform: translateX(-40%);
+      transition: 2s ease-out;
       @media (max-width: $mobile) {
         text-align: center;
       }
@@ -223,11 +225,20 @@
       background: var(--mainPageHeaderGradient2);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      transform: translateX(40%);
+      transition: 2s ease-out;
       @media (max-width: $mobile) {
         text-align: center;
       }
     }
+    }
+
+  &.animated{
+    & span{
+      transform: translateX(0%);
+    }
   }
+
   @media (max-width: $tablet) {
     letter-spacing: 3px;
   }

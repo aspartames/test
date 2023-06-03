@@ -181,6 +181,9 @@ $classesMargin2: 2.35vw;
         margin-left: $classesMargin2 * 2;
       }
     }
+    &:hover{
+      color: $color2;
+    }
     @media (max-width: $laptop) {
       margin: 0 $classesMargin2;
     }

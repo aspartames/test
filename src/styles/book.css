@@ -28,6 +28,7 @@
   border-radius: 0 0 45px 45px;
   z-index: 2;
   padding-top: 146px;
+  min-height: 1110px;
 }
 @media (max-width: 1600px) {
   .book {
@@ -44,11 +45,13 @@
 @media (max-width: 1600px) {
   .book {
     padding-top: 116px;
+    min-height: 980px;
   }
 }
 @media (max-width: 1100px) {
   .book {
     padding-top: 98px;
+    min-height: unset;
   }
 }
 
@@ -149,7 +152,9 @@
   float: right;
   border-radius: 40px 0 0 40px;
   width: 64.58vw;
+  /*
   min-height: 51.56vw;
+  */
   background: white;
   padding: 26px 54px;
   position: relative;

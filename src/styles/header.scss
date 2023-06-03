@@ -1046,6 +1046,10 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   border-radius: 30px;
   cursor: pointer;
   list-style-type: none;
+  transition: $transition;
+  &:hover{
+    background: $color4;
+  }
   & label{
     @include font16;
     font-family: $openSansSemiBold;
@@ -1143,6 +1147,9 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     @include font16;
     font-family: $openSans;
     cursor: pointer;
+    &:hover{
+      color: $color2;
+    }
   }
   & input{
     display: none;

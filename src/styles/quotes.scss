@@ -65,10 +65,10 @@
   display: flex;
   justify-content: center;
   & button{
-    @include button($color2, $color3);
+    @include button($color2, $color4);
     border-radius: 30px;
     &:hover{
-      border: 1px solid $color3;
+      border: 1px solid $color4;
     }
     @media (max-width: $tablet) {
       margin-bottom: 46px;

@@ -150,7 +150,9 @@
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
-
+  @media (max-width: $laptop) {
+    display: block;
+  }
 }
 
 .map_card_address_string {
@@ -160,27 +162,38 @@
     vertical-align: top;
     &:first-child{
       @include text;
+      font-family: $openSansLight;
     }
     &:last-child{
       display: inline-block;
       @include font16;
       line-height: 1.5;
-      font-family: $openSansSemiBold;
+      font-family: $openSansBold;
       color: var(--titleColor);
-      transform: translateY(-2px);
+      transform: translateY(4px);
+      max-width: 400px;
       @media (max-width: $laptop) {
         max-width: 26vw;
       }
       @media (max-width: $tablet) {
         max-width: 60%;
       }
+      @media (max-width: $mobile) {
+        max-width: 240px;
+        text-align: right;
+      }
     }
   }
   & a{
+    font-family: $openSans;
     color: $color2;
   }
   @media (max-width: $tablet) {
     margin-bottom: 18px;
+  }
+  @media (max-width: $mobile) {
+   display: flex;
+    justify-content: space-between;
   }
 }
 
@@ -192,6 +205,9 @@
     @media (max-width: $laptop) {
       content: ".....................................";
     }
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
 .address_span2{
@@ -201,6 +217,9 @@
     margin-left: 5px;
     @media (max-width: $laptop) {
       content: "..........................";
+    }
+    @media (max-width: $mobile) {
+      display: none;
     }
   }
 }
@@ -212,6 +231,9 @@
     @media (max-width: $laptop) {
       content: ".................";
     }
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
 .address_span4{
@@ -222,14 +244,24 @@
     @media (max-width: $laptop) {
       content: "......................";
     }
+    @media (max-width: $mobile) {
+      display: none;
+    }
   }
 }
 
 .map_card_link_icon{
   font-size: 46px;
-  margin: 4px;
-  @media (max-width: $tablet) {
-    margin-bottom: 22px;
+  &:first-child{
+    margin-left: 8px;
+    margin-right: 4px;
+    @media (max-width: $laptop) {
+      margin-left: 0;
+      margin-right: 8px;
+    }
+  }
+  @media (max-width: $laptop) {
+    margin-bottom: 36px;
   }
 }
 

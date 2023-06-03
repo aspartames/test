@@ -1238,6 +1238,10 @@
   border-radius: 30px;
   cursor: pointer;
   list-style-type: none;
+  transition: 0.3s;
+}
+.city_tag:hover {
+  background: #d7613d;
 }
 .city_tag label {
   font-size: max(0.8333vw, 14px);
@@ -1385,6 +1389,9 @@
   .cities_list_item label {
     font-size: 16px;
   }
+}
+.cities_list_item label:hover {
+  color: #e87b5a;
 }
 .cities_list_item input {
   display: none;

@@ -85,6 +85,26 @@ const svgHover = () => {
 }
 
 
+// animation
+const textAnimation = () => {
+        let windowTop = $(window).scrollTop() - 100;
+        let windowBottom = windowTop + $(window).height() + 200;
+
+        $('.main_title').each(function() {
+            let elemTop = $(this).offset().top;
+            let elemBottom = elemTop + $(this).height();
+
+            // Проверяем, если элемент в пределах видимости окна
+            if ((elemBottom <= windowBottom) && (elemTop >= windowTop)) {
+                // Добавьте здесь код для активации анимации для текущего элемента
+                $(this).addClass('animated');
+            } else {
+                // Добавьте здесь код для деактивации анимации для текущего элемента (если нужно)
+                $(this).removeClass('animated');
+            }
+        });
+}
+
 // cookie
 const cookie = () => {
     $('.cookie_button').click(function (){
@@ -99,13 +119,13 @@ const initSettings = [
     sliderMainPage,
     mainPageNavAnimate,
     svgHover,
-
+    textAnimation,
     cookie,
 ]
 
 const settings = {
     init: initSettings,
-    scroll: [setHeaderFixed],
+    scroll: [setHeaderFixed, textAnimation],
     desktop: [],
     tablet: [],
     mobile: []

@@ -3,11 +3,14 @@
 .book{
   @include main;
   padding-top: 146px;
+  min-height: 1110px;
   @media (max-width: $laptop) {
     padding-top: 116px;
+    min-height: 980px;
   }
   @media (max-width: $tablet) {
     padding-top: 98px;
+    min-height: unset;
   }
 }
 
@@ -47,7 +50,9 @@
   float: right;
   border-radius: 40px 0 0 40px;
   width: 64.58vw;
+  /*
   min-height: 51.56vw;
+  */
   background: white;
   padding: 26px 54px;
   position: relative;
