@@ -322,7 +322,6 @@
   padding: clamp(40px, 3.9063vmax, 76px) 0 110px 0;
   border-radius: 0 0 45px 45px;
   z-index: 2;
-  overflow: hidden;
 }
 @media (max-width: 1600px) {
   .main_section {
@@ -358,6 +357,8 @@
   text-transform: uppercase;
   letter-spacing: 10px;
   margin: 0;
+  background: #7292bc;
+  overflow: hidden;
 }
 @media (max-width: 1600px) {
   .main_title {
