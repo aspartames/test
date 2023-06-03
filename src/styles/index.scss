@@ -187,6 +187,8 @@
 /*  position: absolute;
   top: clamp(466px, 33.3333vmax, 640px);*/
   @include main;
+  background: #7292bc;
+  overflow: hidden;
 }
 
 .main_title_container{
@@ -204,8 +206,6 @@
   text-transform: uppercase;
   letter-spacing: 10px;
   margin: 0;
-  background: #7292bc;
-  overflow: hidden;
   & span{
     display: inline-block;
     width: 100%;
