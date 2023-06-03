@@ -3,25 +3,16 @@ const setHeaderClassesContentWidth = () => {
     let overlayClassesWidth = $('.header_nav_item_overlay.classes').outerWidth()
     let headerNavContainerWidth = $('.header_nav_container').width();
 
+
     $('.classes_list').css('--width', `${overlayClassesWidth}px`)
     $('.header_classes_content')
         .css('--headerNavContainerWidth', `${headerNavContainerWidth}px`)
         .css('--headerNavDropListWidth', `${overlayClassesWidth}px`)
-    ;
-    let x = $('.header_classes_content')
-    let xo  = x.offset()
-
-    const xs = $('.header_nav_container').offset()
-    console.log(x.position().left)
-    console.log(x.position().left)
 
     $('.drop_list_bg')
-        .css('--dlbgt',`${xo.top - 20}px`)
-        .css('--dlbgl',`${x.position().left}px`)
-        .css('--dlbgw', `${x.outerWidth()}px`)
-        .css('--dlbgh', `${x.outerHeight()}px`)
+        .css('--headerNavContainerWidth', `${headerNavContainerWidth}px`)
+        .css('--headerNavDropListWidth', `${overlayClassesWidth}px`)
 }
-
 
 // header fixed on scroll
 const setHeaderFixed = () => {
