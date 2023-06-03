@@ -187,6 +187,7 @@
 /*  position: absolute;
   top: clamp(466px, 33.3333vmax, 640px);*/
   @include main;
+  overflow: hidden;
 }
 
 .main_title_container{
