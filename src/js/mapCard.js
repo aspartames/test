@@ -53,10 +53,22 @@ const setContent = () =>{
     })
 }
 
+const mapItemHover = () => {
+    $('.map_card_attractions_item').hover(function () {
+            $(this).addClass('hover')
+            $(this).find('.attractions_image_wrapper').addClass('hover')
+        },
+        function () {
+            $(this).removeClass('hover')
+            $(this).find('.attractions_image_wrapper').removeClass('hover')
+        }
+    )
+}
+
 
 
 isDocumentReady({
-    init: [mapCardSlider, commonHover, setContent],
+    init: [mapCardSlider, commonHover, setContent, mapItemHover],
     tablet: [mapCardSlider],
 })
 

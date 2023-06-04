@@ -1379,6 +1379,7 @@
   line-height: 20px;
   font-family: "OpenSansSemiBold";
   color: var(--titleColor);
+  transition: 0.3s;
 }
 @media (max-width: 1600px) {
   .book_page_attractions_item h5 {
@@ -1394,6 +1395,9 @@
   .book_page_attractions_item h5 {
     margin-top: 18px;
   }
+}
+.book_page_attractions_item.hover h5 {
+  color: #e87b5a;
 }
 @media (max-width: 1100px) {
   .book_page_attractions_item {
@@ -1419,7 +1423,11 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  transition: 0.3s;
   transform: translate(-50%, -50%);
+}
+.attractions_image_wrapper.hover img {
+  transform: translate(-50%, -50%) scale(1.03);
 }
 @media (max-width: 1100px) {
   .attractions_image_wrapper {

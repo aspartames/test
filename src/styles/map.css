@@ -215,6 +215,17 @@
 #map_search_submit svg path {
   fill: white;
 }
+@media (max-width: 600px) {
+  #map_search_submit svg {
+    height: 26px;
+    margin-left: 8px;
+  }
+}
+@media (max-width: 600px) {
+  #map_search_submit .submit_text {
+    display: none;
+  }
+}
 @media (max-width: 1100px) {
   #map_search_submit {
     top: 14px;
@@ -223,11 +234,10 @@
 }
 @media (max-width: 600px) {
   #map_search_submit {
-    font-size: 16px;
-    line-height: 22px;
-    padding: 10px 0;
-    top: 18px;
+    padding: 14px 0;
+    top: 12px;
     right: 18px;
+    width: 100px;
   }
 }
 
@@ -348,6 +358,11 @@
   .map_items_wrapper {
     grid-template-columns: repeat(2, 1fr);
     margin-bottom: 14px;
+  }
+}
+@media (max-width: 600px) {
+  .map_items_wrapper {
+    column-gap: 10px;
   }
 }
 

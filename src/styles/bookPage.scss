@@ -613,8 +613,14 @@
     line-height: 20px;
     font-family: $openSansSemiBold;
     color: var(--titleColor);
+    transition: $transition;
     @media (max-width: $tablet) {
       margin-top: 18px;
+    }
+  }
+  &.hover{
+    & h5{
+      color: $color2;
     }
   }
   @media (max-width: $tablet) {
@@ -638,8 +644,15 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    transition: $transition;
     transform: translate(-50%, -50%);
   }
+  &.hover{
+    & img{
+      transform: translate(-50%, -50%) scale(1.03);
+    }
+  }
+
   @media (max-width: $tablet) {
     width: 100%;
     height:  26.82vw;

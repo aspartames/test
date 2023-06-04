@@ -307,11 +307,17 @@
     line-height: 20px;
     font-family: $openSansSemiBold;
     color: var(--titleColor);
+    transition: $transition;
     @media (max-width: $laptop) {
       margin-top: 16px;
     }
     @media (max-width: $tablet) {
       margin-top: 18px;
+    }
+  }
+  &.hover{
+    & h5{
+      color: $color2;
     }
   }
   @media (max-width: $laptop) {
@@ -344,6 +350,12 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: $transition;
+  }
+  &.hover{
+    & img{
+      transform: translate(-50%, -50%) scale(1.03);
+    }
   }
   @media (max-width: $laptop) {
     height: 230px;

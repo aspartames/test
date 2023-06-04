@@ -79,6 +79,18 @@ const bookPageHovers = () => {
     }
 }
 
+const mapItemHover = () => {
+    $('.book_page_attractions_item').hover(function () {
+            $(this).addClass('hover')
+            $(this).find('.attractions_image_wrapper').addClass('hover')
+        },
+        function () {
+            $(this).removeClass('hover')
+            $(this).find('.attractions_image_wrapper').removeClass('hover')
+        }
+    )
+}
+
 
 // set content
 const setContent = () =>{
@@ -187,6 +199,7 @@ const settings =[
     setContent,
     mobileBookPageNav,
     sliderRefresh,
+    mapItemHover,
 ]
 
 

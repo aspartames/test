@@ -603,6 +603,7 @@
   line-height: 20px;
   font-family: "OpenSansSemiBold";
   color: var(--titleColor);
+  transition: 0.3s;
 }
 @media (max-width: 1600px) {
   .map_card_attractions_item h5 {
@@ -623,6 +624,9 @@
   .map_card_attractions_item h5 {
     margin-top: 18px;
   }
+}
+.map_card_attractions_item.hover h5 {
+  color: #e87b5a;
 }
 @media (max-width: 1600px) {
   .map_card_attractions_item:last-child {
@@ -657,6 +661,10 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  transition: 0.3s;
+}
+.attractions_image_wrapper.hover img {
+  transform: translate(-50%, -50%) scale(1.03);
 }
 @media (max-width: 1600px) {
   .attractions_image_wrapper {
