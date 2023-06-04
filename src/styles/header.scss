@@ -1150,9 +1150,6 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     @include font16;
     font-family: $openSans;
     cursor: pointer;
-    &:hover{
-      color: $color2;
-    }
   }
   & input{
     display: none;

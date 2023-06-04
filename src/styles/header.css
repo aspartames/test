@@ -1398,9 +1398,6 @@
     font-size: 16px;
   }
 }
-.cities_list_item label:hover {
-  color: #e87b5a;
-}
 .cities_list_item input {
   display: none;
 }

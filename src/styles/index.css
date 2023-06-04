@@ -380,7 +380,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: translateX(-40%);
-  transition: 2s ease-out;
+  transition: transform 2s ease-out;
 }
 @media (max-width: 600px) {
   .main_title span:first-child {
@@ -394,7 +394,7 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   transform: translateX(40%);
-  transition: 2s ease-out;
+  transition: transform 2s ease-out;
 }
 @media (max-width: 600px) {
   .main_title span:last-child {

@@ -215,7 +215,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transform: translateX(-40%);
-      transition: 2s ease-out;
+      transition: transform 2s ease-out;
       @media (max-width: $mobile) {
         text-align: center;
       }
@@ -227,7 +227,7 @@
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       transform: translateX(40%);
-      transition: 2s ease-out;
+      transition: transform 2s ease-out;
       @media (max-width: $mobile) {
         text-align: center;
       }
