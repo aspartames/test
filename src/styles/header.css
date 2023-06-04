@@ -399,6 +399,20 @@
     transform: rotate(-45deg) translate(50%, -50%);
   }
 }
+@media (max-width: 600px) {
+  .menu_icon.active {
+    transform: translateX(-29%);
+  }
+  .menu_icon.active span:nth-child(1) {
+    transform: rotate(45deg) translate(50%, 60%);
+  }
+  .menu_icon.active span:nth-child(2) {
+    opacity: 0;
+  }
+  .menu_icon.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(50%, -50%);
+  }
+}
 @media (max-width: 1600px) {
   .menu_icon {
     width: 14px;
@@ -1118,6 +1132,11 @@
   margin-right: 3px;
   margin-top: 12px;
   cursor: pointer;
+}
+@media (max-width: 600px) {
+  .m_form_close {
+    transform: translateX(1px);
+  }
 }
 
 .modal {

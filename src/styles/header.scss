@@ -395,6 +395,20 @@ $paddingOverlayClassesMid: $paddingOverlayMid - $paddingYellowClassesMid;
         }
       }
     }
+    @media (max-width: $mobile) {
+      transform: translateX(-29%);
+      & span {
+        &:nth-child(1) {
+          transform: rotate(45deg) translate(50%, 60%);
+        }
+        &:nth-child(2) {
+          opacity: 0;
+        }
+        &:nth-child(3) {
+          transform: rotate(-45deg) translate(50%, -50%);
+        }
+      }
+    }
   }
 
   @media (max-width: $laptop) {
@@ -946,6 +960,9 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   margin-right: 3px;
   margin-top: 12px;
   cursor: pointer;
+  @media (max-width: $mobile) {
+    transform: translateX(1px);
+  }
 }
 
 
