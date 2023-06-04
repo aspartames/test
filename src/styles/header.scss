@@ -960,6 +960,8 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   margin-right: 3px;
   margin-top: 12px;
   cursor: pointer;
+  opacity: 0;
+  transition: $transition;
   @media (max-width: $mobile) {
     transform: translateX(1px);
   }

@@ -1132,6 +1132,8 @@
   margin-right: 3px;
   margin-top: 12px;
   cursor: pointer;
+  opacity: 0;
+  transition: 0.3s;
 }
 @media (max-width: 600px) {
   .m_form_close {

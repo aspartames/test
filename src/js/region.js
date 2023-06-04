@@ -10,11 +10,15 @@ const region = () => {
 }
 
 const regionTablet = () =>{
+    const close = $('.m_form_close')
+
     $('.region_city_name').click(function () {
         $('.mobile_form_wrapper').slideDown()
+        close.css('opacity', '1')
     })
-    $('.m_form_close').click(function () {
+    close.click(function () {
         $('.mobile_form_wrapper').slideUp()
+        $(this).css('opacity', '0')
     })
 }
 
