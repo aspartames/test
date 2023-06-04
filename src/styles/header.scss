@@ -590,8 +590,6 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   white-space: normal;
   gap: 14px;
   height: $headerClassesContentListHeight;
-  user-select: none;
-  pointer-events: none;
 
   @media (max-width: $laptop) {
     height: $headerClassesContentHeight2;

@@ -630,8 +630,6 @@
   white-space: normal;
   gap: 14px;
   height: 646px;
-  user-select: none;
-  pointer-events: none;
 }
 @media (max-width: 1600px) {
   .header_classes_content_list {
