@@ -53,11 +53,12 @@
     border: 1px solid #fe8a83;
   }
 }
-@media (max-width: 640px) {
+@media (max-width: 1100px) {
   .theme_toggle_wrapper.visible {
     opacity: 1;
     user-select: auto;
     pointer-events: auto;
+    border: 1px solid #fe8a83;
   }
 }
 @media (max-width: 1600px) {

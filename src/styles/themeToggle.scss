@@ -31,10 +31,11 @@
     }
   }
   &.visible{
-    @media (max-width: 640px){
+    @media (max-width: $tablet){
       opacity: 1;
       user-select: auto;
       pointer-events: auto;
+      border: 1px solid #fe8a83;
     }
   }
   @media (max-width: $laptop) {

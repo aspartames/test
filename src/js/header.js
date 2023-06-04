@@ -194,9 +194,9 @@ const displayMenuMobile = () => {
         $('.header_title_wrapper').toggleClass('transparent')
         $('.mobile_header_menu').toggleClass('active')
         $('.theme_toggle_wrapper').toggleClass('visible')
-        if (isTablet()) {
+/*        if (isTablet()) {
             $('.theme_toggle_wrapper').toggleClass('header_fixed');
-        }
+        }*/
     })
 }
 
