@@ -748,7 +748,9 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
     line-height: 75px;
     color: black;
   }
-
+  @media (max-width: $mobile) {
+    padding-left: 0;
+  }
 }
 .m_nav_item_content {
   padding: 0 26px 20px 26px;
@@ -932,6 +934,9 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   justify-content: space-between;
   align-items: center;
   padding: 0 26px 22px 26px;
+  @media (max-width: $mobile) {
+    padding-left: 0;
+  }
 }
 .mobile_form_wrapper{
   display: none;

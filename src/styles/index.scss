@@ -280,7 +280,9 @@
   transform-origin: center center;
   list-style-type: none;
   &:hover{
-    transform: scale(1.03);
+    @media (min-width: $mobile) {
+      transform: scale(1.03);
+    }
   }
   @media (max-width: $laptop) {
     padding: 30px 16px 30px $paddingButtonMid;

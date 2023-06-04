@@ -825,6 +825,11 @@
   line-height: 75px;
   color: black;
 }
+@media (max-width: 600px) {
+  .m_nav_item_title {
+    padding-left: 0;
+  }
+}
 
 .m_nav_item_content {
   padding: 0 26px 20px 26px;
@@ -1097,6 +1102,11 @@
   justify-content: space-between;
   align-items: center;
   padding: 0 26px 22px 26px;
+}
+@media (max-width: 600px) {
+  .mobile_region_name_wrapper {
+    padding-left: 0;
+  }
 }
 
 .mobile_form_wrapper {

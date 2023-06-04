@@ -452,8 +452,10 @@
   transform-origin: center center;
   list-style-type: none;
 }
-.main_navigation_item:hover {
-  transform: scale(1.03);
+@media (min-width: 600px) {
+  .main_navigation_item:hover {
+    transform: scale(1.03);
+  }
 }
 @media (max-width: 1600px) {
   .main_navigation_item {
