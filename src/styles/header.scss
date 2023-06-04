@@ -1021,7 +1021,8 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
   border-radius: 10px;
   -webkit-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2) inset;
   -moz-box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2) inset;
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2) inset;  border: 1px solid $color1;
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.2) inset;
+  border: 1px solid $color1;
   padding: 0 30px;
 
   &:focus{
@@ -1098,7 +1099,7 @@ $headerClassesContentListHeight: $headerClassesContentHeight - $headerClassesCon
 .mobile_city_submit{
   @include button($color2, $color2);
   color: white;
-  top: -75px;
+  top: -76px;
   right: 20px;
   font-size: 18px;
   line-height: 30px;
