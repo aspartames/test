@@ -399,12 +399,13 @@ $transition: 0.3s;
   background-image: url("../images/angleDown.png");
   background-position: calc(100% - 20px) calc(50% + 1px);
   background-repeat: no-repeat;
-/*  & option{
-    font-size: 22px;
-    @media (max-width: $mobile) {
-      font-size: 16px;
-    }
-  }*/
+  color: black;
+  /*  & option{
+      font-size: 22px;
+      @media (max-width: $mobile) {
+        font-size: 16px;
+      }
+    }*/
   &:focus{
     outline: none;
   }

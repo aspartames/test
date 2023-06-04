@@ -1468,6 +1468,7 @@
   background-repeat: no-repeat;
   margin-bottom: 32px;
   display: none;
+  color: black;
 }
 @media (max-width: 600px) {
   .book_page_mobile_select {
