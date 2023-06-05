@@ -33,6 +33,7 @@ const mapScroll = () => {
     });
 
     mapWrapper.on("touchend", function(event) {
+        alert('sd')
         $(this).removeClass('active')
     });
 
