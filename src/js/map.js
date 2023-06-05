@@ -33,10 +33,9 @@ const mapScroll = () => {
     });
 
     mapWrapper.on("touchend", function(event) {
-        alert('sd')
         $(this).removeClass('active')
     });
 
 }
 
-isDocumentReady({init: [commonHover, mapFilter, mapItemHover, mapScroll]})
+isDocumentReady({init: [commonHover, mapFilter, mapItemHover]})
