@@ -37,6 +37,11 @@
 .header.header_fixed {
   background: white;
 }
+@media (max-width: 600px) {
+  .header.header_fixed {
+    background: var(--headerBG);
+  }
+}
 .header.background {
   background: var(--headerBG);
 }
@@ -64,7 +69,7 @@
   .header {
     padding: 20px 10px;
     height: 84px;
-    background: white;
+    background: var(--headerBG);
     max-height: 100vh;
   }
 }
@@ -123,7 +128,7 @@
     font-size: 18px;
     line-height: 20px;
     max-width: 276px;
-    background: linear-gradient(90deg, #fd5d10 0%, #f00b6b 100%);
+    background: var(--headerTitle);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -131,10 +136,10 @@
 .header_title_wrapper.header_fixed h1 {
   color: black;
 }
-@media (max-width: 1100px) {
+@media (max-width: 600px) {
   .header_title_wrapper.header_fixed h1 {
     color: white;
-    background: linear-gradient(90deg, #fd5d10 0%, #f00b6b 100%);
+    background: var(--headerTitle);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }

@@ -57,6 +57,9 @@ $concaveBottomLeft: bottomLeft;
   }
   &.header_fixed{
     background: white;
+    @media (max-width: $mobile) {
+      background: var(--headerBG) ;
+    }
   }
   &.background{
     background: var(--headerBG) ;
@@ -81,10 +84,9 @@ $concaveBottomLeft: bottomLeft;
   @media (max-width: $mobile) {
     padding: 20px $containerMargin4 ;
     height: 84px;
-    background: white;
+    background: var(--headerBG) ;
     max-height: 100vh;
   }
-
 }
 .header_container {
   display: grid;
@@ -132,7 +134,7 @@ $concaveBottomLeft: bottomLeft;
       font-size: 18px;
       line-height: 20px;
       max-width: 276px;
-      background: linear-gradient(90deg, rgba(253,93,16,1) 0%, rgba(240,11,107,1) 100%);
+      background: var(--headerTitle);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
@@ -141,9 +143,9 @@ $concaveBottomLeft: bottomLeft;
   &.header_fixed{
     & h1 {
       color: black;
-      @media (max-width: $tablet) {
+      @media (max-width: $mobile) {
         color: white;
-        background: linear-gradient(90deg, rgba(253,93,16,1) 0%, rgba(240,11,107,1) 100%);
+        background: var(--headerTitle);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
       }
