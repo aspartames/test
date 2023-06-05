@@ -35,14 +35,6 @@
   list-style-type: none;
 }
 .header.header_fixed {
-  background: white;
-}
-@media (max-width: 600px) {
-  .header.header_fixed {
-    background: var(--headerBG);
-  }
-}
-.header.background {
   background: var(--headerBG);
 }
 .header.activeMobile {
@@ -104,7 +96,9 @@
   line-height: 1.154;
   line-height: 30px;
   margin: 0;
-  color: white;
+  background: white;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   transition: 0.3s;
 }
 .header_title_wrapper h1.gradient {
@@ -134,7 +128,9 @@
   }
 }
 .header_title_wrapper.header_fixed h1 {
-  color: black;
+  background: var(--headerTitle);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media (max-width: 600px) {
   .header_title_wrapper.header_fixed h1 {

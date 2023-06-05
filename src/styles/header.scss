@@ -56,13 +56,7 @@ $concaveBottomLeft: bottomLeft;
     list-style-type: none;
   }
   &.header_fixed{
-    background: white;
-    @media (max-width: $mobile) {
-      background: var(--headerBG) ;
-    }
-  }
-  &.background{
-    background: var(--headerBG) ;
+    background: var(--headerBG);
   }
   &.activeMobile{
     height: 100vh;
@@ -116,7 +110,9 @@ $concaveBottomLeft: bottomLeft;
     @include font26;
     line-height: 30px;
     margin: 0;
-    color: white;
+    background: white;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transition: $transition;
     &.gradient{
       background: var(--headerTitle);
@@ -142,7 +138,9 @@ $concaveBottomLeft: bottomLeft;
   }
   &.header_fixed{
     & h1 {
-      color: black;
+      background: var(--headerTitle);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
       @media (max-width: $mobile) {
         color: white;
         background: var(--headerTitle);
