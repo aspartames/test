@@ -29,12 +29,12 @@ const mapScroll = () => {
     mapWrapper.on("touchstart", function(event) {
         if (event.originalEvent.touches.length === 2) {
             $(this).addClass('active')
-        } else {
-            $(this).removeClass('active')
         }
     });
 
-
+    mapWrapper.on("touchend", function(event) {
+        $(this).removeClass('active')
+    });
 
 }
 
