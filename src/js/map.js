@@ -26,7 +26,7 @@ const mapItemHover = () => {
 const mapScroll = () => {
     $('.map_wrapper').on('touchstart', function (event){
         if (event.originalEvent.touches.length === 2) {
-
+            $(this).addClass('active_map')
         }
     })
 }
