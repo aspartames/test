@@ -6,6 +6,10 @@
   @media (max-width: $laptop) {
     padding-top: 100px;
   }
+  @media (max-width: $mobile) {
+    padding-bottom: 38px;
+  }
+
 }
 .gallery_section{
   position: relative;

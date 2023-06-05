@@ -180,6 +180,9 @@
   .partners_item {
     flex-basis: 100%;
   }
+  .partners_item:last-child {
+    margin-bottom: 40px;
+  }
 }
 
 .partners_image_wrapper {

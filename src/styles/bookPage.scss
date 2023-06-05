@@ -18,6 +18,9 @@
   @media (max-width: $tablet) {
     padding-top: 152px;
   }
+  @media (max-width: $mobile) {
+    padding-bottom: 42px;
+  }
 }
 
 
@@ -628,6 +631,9 @@
   }
   @media (max-width: $mobile) {
     width: 100%;
+    &:last-child{
+      margin-bottom: -20px;
+    }
   }
 
 }
@@ -646,6 +652,10 @@
     left: 50%;
     transition: $transition;
     transform: translate(-50%, -50%);
+    @media (max-width: $mobile) {
+      height: auto;
+      width: 100%;
+    }
   }
   &.hover{
     & img{

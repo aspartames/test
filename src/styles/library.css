@@ -397,5 +397,10 @@
     margin-bottom: 46px;
   }
 }
+@media (max-width: 600px) {
+  .show_more_wrapper button {
+    margin-bottom: 80px;
+  }
+}
 
 /*# sourceMappingURL=library.css.map */

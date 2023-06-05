@@ -71,6 +71,9 @@
   }
   @media (max-width: $mobile) {
     flex-basis: 100%;
+    &:last-child{
+      margin-bottom: 40px;
+    }
   }
 }
 

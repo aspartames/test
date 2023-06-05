@@ -46,6 +46,11 @@
     padding-top: 100px;
   }
 }
+@media (max-width: 600px) {
+  .gallery {
+    padding-bottom: 38px;
+  }
+}
 
 .gallery_section {
   position: relative;

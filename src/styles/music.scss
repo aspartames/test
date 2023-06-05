@@ -63,6 +63,11 @@
 
 .audio_wrapper {
   @include mediaOverlay;
+  @media (max-width: $mobile) {
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
 }
 .audio_container{
   @include mediaTitleContainer;

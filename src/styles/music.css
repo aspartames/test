@@ -270,6 +270,11 @@
     line-height: 20px;
   }
 }
+@media (max-width: 600px) {
+  .audio_wrapper:last-child {
+    margin-bottom: 40px;
+  }
+}
 
 .audio_container {
   display: flex;
