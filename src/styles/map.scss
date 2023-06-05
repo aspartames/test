@@ -152,7 +152,7 @@
       user-select: none;
     }
   }
-  & .active_map{
+  &.active_map{
     & iframe{
       @media (max-width: $tablet) {
         pointer-events: auto;
