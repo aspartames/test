@@ -23,4 +23,12 @@ const mapItemHover = () => {
     )
 }
 
-isDocumentReady({init: [commonHover, mapFilter, mapItemHover]})
+const mapScroll = () => {
+    $('.map_wrapper').on('touchstart', function (event){
+        if (event.originalEvent.touches.length === 2) {
+
+        }
+    })
+}
+
+isDocumentReady({init: [commonHover, mapFilter, mapItemHover, mapScroll]})
