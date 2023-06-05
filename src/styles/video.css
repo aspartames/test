@@ -46,6 +46,11 @@
     padding-top: 100px;
   }
 }
+@media (max-width: 600px) {
+  .video {
+    padding-bottom: 60px;
+  }
+}
 
 .video_section {
   position: relative;

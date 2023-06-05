@@ -55,6 +55,11 @@
     background: var(--backgroundColor);
   }
 }
+@media (max-width: 600px) {
+  .map_card {
+    padding-bottom: 38px;
+  }
+}
 
 .map_card_section {
   margin: 0 105px;
@@ -359,6 +364,11 @@
     margin-bottom: 28px;
   }
 }
+@media (max-width: 600px) {
+  .card_map_wrapper {
+    padding-bottom: 20px;
+  }
+}
 
 .map_card_links {
   display: flex;
@@ -376,6 +386,16 @@
 @media (max-width: 1600px) {
   .map_card_links {
     display: block;
+  }
+}
+@media (max-width: 1100px) {
+  .map_card_links {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  .map_card_links {
+    padding-bottom: 38px;
   }
 }
 

@@ -6,6 +6,9 @@
   @media (max-width: $laptop) {
     padding-top: 100px;
   }
+  @media (max-width: $mobile) {
+    padding-bottom: 60px;
+  }
 }
 .video_section{
   position: relative;
