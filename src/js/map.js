@@ -24,11 +24,18 @@ const mapItemHover = () => {
 }
 
 const mapScroll = () => {
-    $('.map_wrapper').on('touchstart', function (event){
+    const mapWrapper = $('.map_wrapper')
+
+    mapWrapper.on("touchstart", function(event) {
         if (event.originalEvent.touches.length === 2) {
-            $(this).addClass('active_map')
+            $(this).addClass('active')
+        } else {
+            $(this).removeClass('active')
         }
-    })
+    });
+
+
+
 }
 
 isDocumentReady({init: [commonHover, mapFilter, mapItemHover, mapScroll]})
