@@ -1436,8 +1436,14 @@
 }
 @media (max-width: 600px) {
   .attractions_image_wrapper img {
-    height: auto;
     width: 100%;
+    height: auto;
+  }
+}
+@media (max-width: 430px) {
+  .attractions_image_wrapper img {
+    width: auto;
+    height: 100%;
   }
 }
 .attractions_image_wrapper.hover img {

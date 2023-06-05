@@ -435,6 +435,12 @@
     height: auto;
   }
 }
+@media (max-width: 430px) {
+  .map_item_image_wrapper img {
+    width: auto;
+    height: 100%;
+  }
+}
 .map_item_image_wrapper.hover img {
   transform: translate(-50%, -50%) scale(1.03);
 }

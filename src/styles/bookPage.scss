@@ -653,8 +653,12 @@
     transition: $transition;
     transform: translate(-50%, -50%);
     @media (max-width: $mobile) {
-      height: auto;
       width: 100%;
+      height: auto;
+    }
+    @media (max-width: 430px) {
+      width: auto;
+      height: 100%;
     }
   }
   &.hover{
